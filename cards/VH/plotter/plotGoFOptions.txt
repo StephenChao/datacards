@@ -1,0 +1,58 @@
+legendHeader 		===		#splitline{Saturated GoF Test}{#it{b-only model}}
+xtitle 				===		- 2 ln #lambda
+
+
+cmsLegend 			===		138 fb^{-1} (13 TeV);Run II
+obsGoFfile 			===		/uscms_data/d3/mwadud/combine_mod/CMSSW_14_1_0_pre4/src/CombineHarvester/CombineTools/test/datacards_VH_paper/feb_19_undecorrelate_jmr_jms/higgsCombine_obs_b_only.GoodnessOfFit.mH120.root
+toysGoFfile 		===		/uscms_data/d3/mwadud/combine_mod/CMSSW_14_1_0_pre4/src/CombineHarvester/CombineTools/test/datacards_VH_paper/feb_19_undecorrelate_jmr_jms/higgsCombine_100Toys_b_only.GoodnessOfFit.mH120.123456.root
+writeDir 			===		/uscms_data/d3/mwadud/combine_mod/CMSSW_14_1_0_pre4/src/CombineHarvester/CombineTools/test/datacards_VH_paper/feb_19_undecorrelate_jmr_jms/plots/
+tag 				===		GoF_b_only
+toyHistBinning		===		101, -1, 100
+
+
+cuts 				===		
+
+#################### drawing options
+toysLineWidth 							===		3
+toysLineColor 							===		2ca25f
+obsLineWidth 							===		5
+obsLineColor 							===		e34a33
+obsMaxHratio 							===		0.5
+obsArrowSize 							===		0.05
+pValHistFillStyle						===		3005
+
+canvasX									===		1400
+canvasY									===		1200
+
+canvasMarginL							===		0.16
+canvasMarginR							===		0.02
+canvasMarginR							===		0.03
+canvasMarginB							===		0.14
+canvasMarginT							===		0.08
+
+canvasAxisLabelSize						===		0.045
+canvasAxisTitleSize						===		0.06
+
+canvasXtitleOffset						===		1.
+canvasYtitleOffset						===		1.3
+
+canvasxNdivs							===		1015
+canvasyNdivs							===		1010
+canvaszNdivs 							===		2005
+
+paletteX1								===		0.82
+paletteX2								===		0.835
+paletteY1								===		0.16
+paletteY2								===		0.52
+
+legx1									===		0.53
+legx2									===		0.96
+legy1									===		0.6
+legy2									===		0.9
+legTextSize								===		0.03
+legHeaderTextSize 						===		0.04
+legFillStyle 							=== 	1000
+legFillColor 							=== 	d9d9d9
+legFillColorAlpha 						=== 	0.6
+
+cmsTitleScale 							===		0.68

@@ -1,0 +1,14 @@
+/uscms_data/d3/mwadud/combine_mod/CMSSW_14_1_0_pre4/src/CombineHarvester/CombineTools/test/datacards_VH_paper/feb_19_undecorrelate_jmr_jms/plotter/
+
+1. Pre/post fit plots are first generated with : https://github.com/TheQuantiser/CombineHarvester/blob/main/CombineTools/bin/ChronoSpectra.cpp#L63
+
+Command: 
+
+ChronoSpectra --workspace workspace.root --datacard model_combined.txt --output ChronoResults_b_only.root --postfit --fitresult=multidimfit_b_only_Fit.root:fit_mdf --samples 10000  --sepBinHists --groupBins "SR1fail:SR1fail2016,SR1fail2016APV,SR1fail2017,SR1fail2018;SR1pass:SR1pass2016,SR1pass2016APV,SR1pass2017,SR1pass2018;TopCRpass:TopCRpass2016,TopCRpass2016APV,TopCRpass2017,TopCRpass2018"
+
+
+2. Use the root output file from the previous step to plot with the script plotPostFitShapesFromWorkspace.C with ROOT. Input files, TDirectory names, histogram names, colors, etc are defined in plotPostFitShapesFromWorkspaceOptions.txt
+Commands:
+.L plotPostFitShapesFromWorkspace.C++
+plotYields("plotPostFitShapesFromWorkspaceOptions.txt")
+

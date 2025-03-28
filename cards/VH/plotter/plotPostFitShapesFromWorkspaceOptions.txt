@@ -1,0 +1,135 @@
+
+sourceFile                                  ===     ../ChronoResults_s_plus_b.root
+writeDir                                    ===     ../plots/
+
+
+
+#### postfit
+
+tdir                                        ===     postfit/SR1pass/
+postfix                                     ===     postfit_SR1pass
+
+tdir                                        ===     postfit/SR1fail/
+postfix                                     ===     postfit_SR1fail
+
+
+tdir                                        ===     postfit/TopCRpass/
+postfix                                     ===     postfit_TopCRpass
+
+
+#### prefitfit
+
+tdir                                        ===     prefit/SR1pass/
+postfix                                     ===     prefit_SR1pass
+
+
+tdir                                        ===     prefit/TopCRpass/
+postfix                                     ===     prefit_TopCRpass
+
+
+tdir                                        ===     prefit/SR1fail/
+postfix                                     ===     prefit_SR1fail
+
+CMStext                                     ===     Preliminary
+lumitext                                    ===     138 fb^{-1} (13 TeV)
+breakDown                                   ===     
+                                                    
+                                                    ttH       : : ttH       :   4A0020  ;
+                                                    WH        : : WH        :   f4a582  ;
+                                                    ZH_hww        : : ZH        :   9E0142  ;
+                                                    ggH_hww       : : ggF       :   FF5E00  ;
+                                                    qqH_hww       : : VBF       :   E3B505  ;
+
+                                                    fake      : : MisId l   :   005824  ;
+                                                    Diboson   : : VV        :   6A5ACD  ;
+                                                    DYJets    : : DY+jets   :   BA55D3  ;
+                                                    SingleTop : : t         :   008080  ;
+                                                    WJetsLNu  : : W#rightarrow l#nu :   4B0082  ;
+                                                    TTbar     : : t#bar{t}  :   1F77B4  ;
+                                                    
+
+obs                                         ===     data_obs : : Observed : 000000
+pred                                        ===     total : : Fit : 800080
+
+signal                                      ===     signal : : Signal : c51b7d
+scaleByWidth                                ===     0
+
+
+#### drawing options
+
+ratioRange                              ===     0.51,1.49
+obsLineWidth                            ===     3
+obsMkrSize                              ===     5
+totLineWidth                            ===     6
+totFillStyle                            ===     3004
+
+titleScale                              ===     0.65
+yieldPrec                               ===     1
+histAlpha                               ===     1.
+
+yMinPadding                             ===     0.01
+yMaxPadding                             ===     0.15
+yMinPaddingLog                          ===     0.00001
+yMaxPaddingLog                          ===     0.08
+yMinRPadding                            ===     0.04
+yMaxRPadding                            ===     0.04
+
+setMoreLogLabels                        ===     4
+
+canvasX                                 ===     2800
+canvasY                                 ===     2400
+
+pad0x1                                  ===     0.
+pad0x2                                  ===     1.
+pad0y1                                  ===     0.4
+pad0y2                                  ===     1.
+pad0marginL                             ===     0.15
+pad0marginR                             ===     0.04
+pad0marginB                             ===     0.015
+pad0marginT                             ===     0.07
+pad0axisLabelSize                       ===     0.085
+pad0axisTitleSize                       ===     0.1
+pad0XtitleOffset                        ===     1.1
+pad0YtitleOffset                        ===     0.8
+pad0ZtitleOffset                        ===     2.
+pad0xNdivs                              ===     510
+pad0yNdivs                              ===     505
+padGrid                                 ===     1,1
+
+pad1x1                                  ===     0.
+pad1x2                                  ===     1.
+pad1y1                                  ===     0.
+pad1y2                                  ===     0.4
+pad1marginL                             ===     0.15
+pad1marginR                             ===     0.04
+pad1marginB                             ===     0.38
+pad1marginT                             ===     0.0
+pad1axisLabelSize                       ===     0.13
+pad1axisTitleSize                       ===     0.145
+pad1XtitleOffset                        ===     1.
+pad1YtitleOffset                        ===     0.54
+pad1xNdivs                              ===     510
+pad1yNdivs                              ===     505
+
+legx1                                   ===     0.65
+legx2                                   ===     0.95
+legy1                                   ===     0.38
+legy2                                   ===     0.919
+legTextSize                             ===     0.034
+legHeadSize                             ===     0.045
+legFillStyle                            ===     1000
+legFillColor                            ===     d9d9d9
+legFillColorAlpha                       ===     1.
+legNcols                                ===     2
+legTitleSize                            ===     0.08
+legMargin                               ===     0.2
+legColSep                               ===     0.01
+legEntrySep                             ===     0.01
+
+yMinRockBottom                          ===     0.001
+
+yMaxDigits                              ===     4
+yExpOffstX                              ===     -0.09
+yExpOffstY                              ===     0 
+
+ratioTitle                              ===     Obs/Pred

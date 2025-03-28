@@ -1,0 +1,18 @@
+# best fits
+combine -M MultiDimFit -n _initialFit_Asimov --algo none --rMin -10 --robustFit 1 -d VH_HWW_Vww_RunII_combined.root --setParameters r=1 -t -1 --cminDefaultMinimizerStrategy 1 --verbose 5
+combine -M MultiDimFit -n _initialFit_Obs --algo none --rMin -10 --robustFit 1 -d VH_HWW_Vww_RunII_combined.root --cminDefaultMinimizerStrategy 1 --verbose 5
+
+
+# Impacts
+
+# asimov 
+combineTool.py -M Impacts -d VH_HWW_Vww_RunII_combined.root -m 120 --freezeParameters MH -n .impacts.Asimov -t -1 --setParameterRanges r=-10,10 --setParameters r=1 --doInitialFit --robustFit 1 --cminDefaultMinimizerStrategy 1 --verbose 5
+combineTool.py -M Impacts -d VH_HWW_Vww_RunII_combined.root -m 120 --freezeParameters MH -n .impacts.Asimov -t -1 --setParameterRanges r=-10,10 --setParameters r=1  --robustFit 1 --cminDefaultMinimizerStrategy 1 --doFits --verbose 5   --job-mode condor --dry-run
+combineTool.py -M Impacts -d VH_HWW_Vww_RunII_combined.root -m 120 --freezeParameters MH -n .impacts.Asimov -t -1 --setParameterRanges r=-10,10 -o impacts_asimov.json
+plotImpacts.py -i impacts_asimov.json -o impacts_asimov
+
+# observed
+combineTool.py -M Impacts -d VH_HWW_Vww_RunII_combined.root -m 120 --freezeParameters MH -n .impacts --setParameterRanges r=-10,10 --doInitialFit --robustFit 1 --cminDefaultMinimizerStrategy 1 --verbose 5
+combineTool.py -M Impacts -d VH_HWW_Vww_RunII_combined.root -m 120 --freezeParameters MH -n .impacts --setParameterRanges r=-10,10 --robustFit 1 --cminDefaultMinimizerStrategy 1 --doFits --verbose 5   --job-mode condor --dry-run
+combineTool.py -M Impacts -d VH_HWW_Vww_RunII_combined.root -m 120 --freezeParameters MH -n .impacts --setParameterRanges r=-10,10 -o impacts_observed.json
+plotImpacts.py -i impacts_observed.json -o impacts_observed

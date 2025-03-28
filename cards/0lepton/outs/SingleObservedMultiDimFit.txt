@@ -1,0 +1,32 @@
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is MultiDimFit
+>>> 0 out of 6 channels masked
+
+SimNLL created with 6 channels, 0 generic constraints, 267 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+ POI: r= 3.96401 -> [-15,15]
+Point 0/100 r = -14.85
+Point 1/100 r = -14.55
+Point 2/100 r = -14.25
+Point 3/100 r = -13.95
+Point 4/100 r = -13.65
+Point 5/100 r = -13.35
+Point 6/100 r = -13.05
+Point 7/100 r = -12.75
+Point 8/100 r = -12.45
+Point 9/100 r = -12.15
+Point 10/100 r = -11.85
+Point 11/100 r = -11.55
+Point 12/100 r = -11.25
+Point 13/100 r = -10.95
+Point 14/100 r = -10.65
+Point 15/100 r = -10.35
+Point 16/100 r = -10.05
+Point 17/100 r = -9.75
+Point 18/100 r = -9.45
+Point 19/100 r = -9.15
+Point 20/100 r = -8.85
+Point 21/100 r = -8.55
+Point 22/100 r = -8.25
+Point 23/100 r = -7.95
+Point 24/100 r = -7.65

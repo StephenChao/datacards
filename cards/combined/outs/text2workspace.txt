@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/data/pku/home/zhaoyz/backup/CMSSW_11_3_4/bin/slc7_amd64_gcc900/text2workspace.py", line 79, in <module>
+    DC = parseCard(file, options)
+  File "/data/pku/home/zhaoyz/backup/CMSSW_11_3_4/python/HiggsAnalysis/CombinedLimit/DatacardParser.py", line 574, in parseCard
+    doEditNuisance(ret, numbers[0], numbers[1:])
+  File "/data/pku/home/zhaoyz/backup/CMSSW_11_3_4/python/HiggsAnalysis/CombinedLimit/NuisanceModifier.py", line 465, in doEditNuisance
+    doRenameNuisance(datacard, args)
+  File "/data/pku/home/zhaoyz/backup/CMSSW_11_3_4/python/HiggsAnalysis/CombinedLimit/NuisanceModifier.py", line 281, in doRenameNuisance
+    raise RuntimeError("No nuisance parameter found with name %s in the datacard" % oldname)
+RuntimeError: Error reading line 625 of file ./combined.txt: No nuisance parameter found with name CMS_HWW_boosted_jms_wjets_2016 in the datacard
