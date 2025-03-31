@@ -197,46 +197,56 @@ if [ $nllscan = 1 ]; then
     if [ $obs = 1 ]; then
         echo "Observed NLL scan, split to stat. + syst."
 
+        # Running a grid search for the best fit value of r
         combine -M MultiDimFit -d ${wsm}.root \
         -m 125 --rMax 10 --rMin -10 \
         --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.01  \
-        -n SnapshotObserved --algo grid --points 100  2>&1 | tee $outsdir/ObservedMultiDimFit.txt
+        --algo grid --points 100 \
+        -n SnapshotObserved 2>&1 | tee $outsdir/ObservedMultiDimFit.txt
 
+        # Storing the bestfit snapshot (snapshot with the nuissances at the best fit value of r)
         combine -M MultiDimFit -d ${wsm}.root \
         -m 125 --rMax 10 --rMin -10 \
         --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.01 \
         -n BestfitSnapshotObserved --saveWorkspace 2>&1 | tee $outsdir/ObservedBestfitMultiDimFit.txt
 
+        # Freezing All Nuisances to their best fit value (above) and Re-running Fit with stat-only
         combine -M MultiDimFit higgsCombineBestfitSnapshotObserved.MultiDimFit.mH125.root -n ObservedfreezeAll \
         -m 125 --rMax 10 --rMin -10 \
         --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.03 \
-        --algo grid --points 100 \
-        --freezeParameters allConstrainedNuisances --snapshotName MultiDimFit 2>&1 | tee $outsdir/ObservedBreakdownMultiDimFit.txt
+        --algo grid --points 100 --freezeParameters allConstrainedNuisances \
+        --snapshotName MultiDimFit 2>&1 | tee $outsdir/ObservedBreakdownMultiDimFit.txt
         
-        python3 ../../../boostedhiggs/combine/CMSSW_14_1_0_pre4/src/HiggsAnalysis/CombinedLimit/scripts/plot1DScan.py higgsCombineSnapshotObserved.MultiDimFit.mH125.root --main-label "With systematics" --main-color 1 --others higgsCombineObservedfreezeAll.MultiDimFit.mH125.root:"Stat-only":2 -o ObservedBreakdown --breakdown Syst,Stat
+        python3 ../../../boostedhiggs/combine/CMSSW_14_1_0_pre4/src/HiggsAnalysis/CombinedLimit/scripts/plot1DScan.py \
+        higgsCombineSnapshotObserved.MultiDimFit.mH125.root --main-label "With systematics" --main-color 1 \
+        --others higgsCombineObservedfreezeAll.MultiDimFit.mH125.root:"Stat-only":2 -o ObservedBreakdown --breakdown Syst,Stat
     else
         echo "Expected NLL scan, split to stat. + syst."
         
+        # Running a grid search for the best fit value of r     
         combine -M MultiDimFit -d ${wsm}.root -t -1 --expectSignal 1 \
         -m 125 --rMax 10 --rMin -10 \
-        --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.1  \
-        -n SnapshotExpected --algo grid --points 100  2>&1 | tee $outsdir/ExpectedScanMultiDimFit.txt
+        --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.01  \
+         --algo grid --points 100 \
+        -n SnapshotExpected 2>&1 | tee $outsdir/ExpectedScanMultiDimFit.txt
 
+        # Storing the bestfit snapshot (snapshot with the nuissances at the best fit value of r)        
         combine -M MultiDimFit -d ${wsm}.root -t -1 --expectSignal 1 \
         -m 125 --rMax 10 --rMin -10 \
-        --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.1  \
+        --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.01  \
         -n BestfitSnapshotExpected --saveWorkspace 2>&1 | tee $outsdir/ExpectedBestfitMultiDimFit.txt
 
+        # Freezing All Nuisances to their best fit value (above) and Re-running Fit with stat-only      
         combine -M MultiDimFit higgsCombineBestfitSnapshotExpected.MultiDimFit.mH125.root -n ExpectedfreezeAll -t -1 --expectSignal 1 \
         -m 125 --rMax 10 --rMin -10 \
-        --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.1 \
-        --algo grid --points 100 \
-        --freezeParameters allConstrainedNuisances --snapshotName MultiDimFit 2>&1 | tee $outsdir/ExpectedBreakdownMultiDimFit.txt
+        --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.03 \
+        --algo grid --points 100 --freezeParameters allConstrainedNuisances \
+        --snapshotName MultiDimFit 2>&1 | tee $outsdir/ExpectedBreakdownMultiDimFit.txt
         
-        python3 ../../../boostedhiggs/combine/CMSSW_14_1_0_pre4/src/HiggsAnalysis/CombinedLimit/scripts/plot1DScan.py higgsCombineSnapshotExpected.MultiDimFit.mH125.root --main-label "With systematics" --main-color 1 --others higgsCombineExpectedfreezeAll.MultiDimFit.mH125.root:"Stat-only":2 -o ExpectedBreakdown --breakdown Syst,Stat
-
+        python3 ../../../boostedhiggs/combine/CMSSW_14_1_0_pre4/src/HiggsAnalysis/CombinedLimit/scripts/plot1DScan.py \
+        higgsCombineSnapshotExpected.MultiDimFit.mH125.root --main-label "With systematics" --main-color 1 \
+        --others higgsCombineExpectedfreezeAll.MultiDimFit.mH125.root:"Stat-only":2 -o ExpectedBreakdown --breakdown Syst,Stat
     fi
-
 
 fi
 
@@ -258,8 +268,8 @@ if [ $dfit = 1 ]; then
     
     echo "Fit Diagnostics: s+b fit"
     combine -M FitDiagnostics -d ${wsm}.root \
-    -m 125 --rMin -10 --rMax 10 -n Unblinded_sbfit --ignoreCovWarning --cminDefaultMinimizerStrategy 0 \
-    --saveShapes --saveNormalizations --saveWithUncertainties --saveOverallShapes 2>&1 | tee $outsdir/FitDiagnostics_SBfit.txt
+    -m 125 --rMin -10 --rMax 10 -n SBFit --ignoreCovWarning --cminDefaultMinimizerStrategy 0 \
+    --saveShapes --saveNormalizations --saveWithUncertainties --saveOverallShapes 2>&1 | tee $outsdir/FitDiagnostics_SBFit.txt
 
 fi
 
@@ -278,6 +288,7 @@ if [ $dfit_asimov = 1 ]; then
     PostFitShapesFromWorkspace --dataset toy_asimov -w ${wsm}_asimov.root --output FitShapesAsimov.root \
     -m 125 --rMax 10 --rMin -10 \
     -f fitDiagnosticsAsimov.root:fit_b --postfit --print 2>&1 | tee $outsdir/FitShapesAsimov.txt
+
 fi
 
 
