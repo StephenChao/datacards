@@ -33,27 +33,27 @@ workspace=0
 bfit=0
 limits=0
 significance=0
+obs=0
 dfit=0
 dfit_asimov=0
 gofdata=0
 goftoys=0
 impactsi=0
-impactsf=0
-impactsc=0
+nllscan=0
 seed=444
 numtoys=100
 bias=-1
 mintol=0.5 # --cminDefaultMinimizerTolerance
 # maxcalls=1000000000  # --X-rtd MINIMIZER_MaxCalls
 
-options=$(getopt -o "wblsdrgti" --long "workspace,bfit,limits,significance,dfit,dfitasimov,resonant,gofdata,goftoys,impactsi,impactsf:,impactsc:,bias:,seed:,numtoys:,mintol:" -- "$@")
+options=$(getopt -o "wblsdrgti" --long "workspace,bfit,limits,significance,obs,dfit,dfitasimov,resonant,gofdata,goftoys,impactsi,nllscan,bias:,seed:,numtoys:,mintol:" -- "$@")
 eval set -- "$options"
 
 while true; do
     case "$1" in
         -w|--workspace)
             workspace=1
-            ;;
+            ;;            
         -b|--bfit)
             bfit=1
             ;;
@@ -63,6 +63,9 @@ while true; do
         -s|--significance)
             significance=1
             ;;
+        -sobs|--obs)
+            obs=1
+            ;;            
         -d|--dfit)
             dfit=1
             ;;
@@ -74,17 +77,12 @@ while true; do
             ;;
         -t|--goftoys)
             goftoys=1
-            ;;
+            ;;                                   
         -i|--impactsi)
             impactsi=1
             ;;
-        --impactsf)
-            shift
-            impactsf=$1
-            ;;
-        --impactsc)
-            shift
-            impactsc=$1
+        --nllscan)
+            nllscan=1
             ;;
         --seed)
             shift
@@ -118,7 +116,8 @@ while true; do
 done
 
 echo "Arguments: workspace=$workspace bfit=$bfit limits=$limits \
-significance=$significance dfit=$dfit gofdata=$gofdata goftoys=$goftoys \
+significance=$significance obs=$obs nllscan=$nllscan \
+dfit=$dfit dfit_asimov=$dfit_asimov gofdata=$gofdata goftoys=$goftoys \
 seed=$seed numtoys=$numtoys"
 
 
@@ -134,12 +133,12 @@ dataset=data_obs
 cards_dir="."
 ws=${cards_dir}/combined
 wsm=${ws}_withmasks
-wsm_snapshot=higgsCombineSnapshot.MultiDimFit.mH125
 
 CMS_PARAMS_LABEL="CMS_HWW_boosted"
 
 outsdir=${cards_dir}/outs
 mkdir -p $outsdir
+
 
 # ####################################################################################################
 # # Combine cards, text2workspace, fit, limits, significances, fitdiagnositcs, GoFs
@@ -167,9 +166,9 @@ if [ $workspace = 1 ]; then
     echo "-------------------------"
     combineCards.py $ccargs_1l > $ws.txt
     echo "Running text2workspace"
-    text2workspace.py $ws.txt --channel-masks -o $wsm.root 2>&1 | tee $outsdir/text2workspace.txt
+    text2workspace.py $ws.txt --channel-masks -o ${wsm}.root 2>&1 | tee $outsdir/text2workspace.txt
 else
-    if [ ! -f "$wsm.root" ]; then
+    if [ ! -f "${wsm}.root" ]; then
         echo "Workspace doesn't exist! Use the -w|--workspace option to make workspace first"
         exit 1
     fi
@@ -177,57 +176,91 @@ fi
 
 
 if [ $significance = 1 ]; then
-    echo "Expected significance"
-
-    # combine -M Significance -d $ws -m 125 -t -1 --expectSignal=1 --rMin -1 --rMax 5
-
-    combine -M Significance -d ${wsm}.root -t -1 --expectSignal 1 2>&1 | tee $outsdir/ExpectedSignificance.txt
-    echo "Observed significance"
-
-    combine -M Significance -d ${wsm}.root  2>&1 | tee $outsdir/ObservedSignificance.txt
-
-    echo "Expected NLL scan, split to stat. + syst."
-    ### Expected breakdown
-    combine -M MultiDimFit -t -1 --expectSignal 1 -m 125 -d ${wsm}.root --rMax 5 --rMin 0 \
-    --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.1  \
-    -n SnapshotExpected --algo grid --points 100  2>&1 | tee $outsdir/ExpectedScanMultiDimFit.txt
-    combine -M MultiDimFit -t -1 --expectSignal 1 -m 125 -d ${wsm}.root --rMax 5 --rMin 0 \
-    --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.1  \
-    -n BestfitSnapshotExpected --saveWorkspace 2>&1 | tee $outsdir/ExpectedBestfitMultiDimFit.txt
-    combine -M MultiDimFit -t -1 --expectSignal 1 higgsCombineBestfitSnapshotExpected.MultiDimFit.mH125.root -n ExpectedfreezeAll \
-    -m 125 --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.1 \
-    --rMin 0 --rMax 5 --algo grid --points 100 \
-    --freezeParameters allConstrainedNuisances --snapshotName MultiDimFit 2>&1 | tee $outsdir/ExpectedBreakdownMultiDimFit.txt
     
-    plot1DScan.py higgsCombineSnapshotExpected.MultiDimFit.mH125.root --main-label "With systematics" --main-color 1 --others higgsCombineExpectedfreezeAll.MultiDimFit.mH125.root:"Stat-only":2 -o ExpectedBreakdown --breakdown Syst,Stat
-
-
-    echo "Observed NLL scan, split to stat. + syst."
-    ### Observed breakdown
-    combine -M MultiDimFit  -m 125 -d ${wsm}.root --rMax 5 --rMin -5 \
-    --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.01  \
-    -n SnapshotObserved --algo grid --points 100  2>&1 | tee $outsdir/ObservedMultiDimFit.txt
-    combine -M MultiDimFit  -m 125 -d ${wsm}.root --rMax 5 --rMin -5 \
-    --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.01 \
-    -n BestfitSnapshotObserved --saveWorkspace 2>&1 | tee $outsdir/ObservedBestfitMultiDimFit.txt
-
-    combine -M MultiDimFit higgsCombineBestfitSnapshotObserved.MultiDimFit.mH125.root -n ObservedfreezeAll \
-    -m 125 --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.03 \
-    --rMin -5 --rMax 5 --algo grid --points 100 \
-    --freezeParameters allConstrainedNuisances --snapshotName MultiDimFit 2>&1 | tee $outsdir/ObservedBreakdownMultiDimFit.txt
-    
-    plot1DScan.py higgsCombineSnapshotObserved.MultiDimFit.mH125.root --main-label "With systematics" --main-color 1 --others higgsCombineObservedfreezeAll.MultiDimFit.mH125.root:"Stat-only":2 -o ObservedBreakdown --breakdown Syst,Stat
+    if [ $obs = 1 ]; then
+        echo "Observed significance"
+        combine -M Significance -d ${wsm}.root -m 125 -n Observed 2>&1 | tee $outsdir/ObservedSignificance.txt
+    else
+        echo "Expected significance"
+        combine -M Significance -d ${wsm}.root -t -1 --expectSignal 1 -m 125 --rMin -10 --rMax 10 -n Expected 2>&1 | tee $outsdir/ExpectedSignificance.txt
+    fi
 
 fi
 
+
+if [ $nllscan = 1 ]; then
+    
+    if [ $obs = 1 ]; then
+        echo "Observed NLL scan, split to stat. + syst."
+        ### Observed breakdown
+        combine -M MultiDimFit  -m 125 -d ${wsm}.root --rMax 5 --rMin -5 \
+        --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.01  \
+        -n SnapshotObserved --algo grid --points 100  2>&1 | tee $outsdir/ObservedMultiDimFit.txt
+
+        combine -M MultiDimFit  -m 125 -d ${wsm}.root --rMax 5 --rMin -5 \
+        --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.01 \
+        -n BestfitSnapshotObserved --saveWorkspace 2>&1 | tee $outsdir/ObservedBestfitMultiDimFit.txt
+
+        combine -M MultiDimFit higgsCombineBestfitSnapshotObserved.MultiDimFit.mH125.root -n ObservedfreezeAll \
+        -m 125 --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.03 \
+        --rMin -5 --rMax 5 --algo grid --points 100 \
+        --freezeParameters allConstrainedNuisances --snapshotName MultiDimFit 2>&1 | tee $outsdir/ObservedBreakdownMultiDimFit.txt
+        
+        python3 ../../../boostedhiggs/combine/CMSSW_14_1_0_pre4/src/HiggsAnalysis/CombinedLimit/scripts/plot1DScan.py higgsCombineSnapshotObserved.MultiDimFit.mH125.root --main-label "With systematics" --main-color 1 --others higgsCombineObservedfreezeAll.MultiDimFit.mH125.root:"Stat-only":2 -o ObservedBreakdown --breakdown Syst,Stat
+    else
+        echo "Expected NLL scan, split to stat. + syst."
+        ### Expected breakdown
+        combine -M MultiDimFit -t -1 --expectSignal 1 -m 125 -d ${wsm}.root --rMax 5 --rMin 0 \
+        --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.1  \
+        -n SnapshotExpected --algo grid --points 100  2>&1 | tee $outsdir/ExpectedScanMultiDimFit.txt
+
+        combine -M MultiDimFit -t -1 --expectSignal 1 -m 125 -d ${wsm}.root --rMax 5 --rMin 0 \
+        --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.1  \
+        -n BestfitSnapshotExpected --saveWorkspace 2>&1 | tee $outsdir/ExpectedBestfitMultiDimFit.txt
+
+        combine -M MultiDimFit -t -1 --expectSignal 1 higgsCombineBestfitSnapshotExpected.MultiDimFit.mH125.root -n ExpectedfreezeAll \
+        -m 125 --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.1 \
+        --rMin 0 --rMax 5 --algo grid --points 100 \
+        --freezeParameters allConstrainedNuisances --snapshotName MultiDimFit 2>&1 | tee $outsdir/ExpectedBreakdownMultiDimFit.txt
+        
+        python3 ../../../boostedhiggs/combine/CMSSW_14_1_0_pre4/src/HiggsAnalysis/CombinedLimit/scripts/plot1DScan.py higgsCombineSnapshotExpected.MultiDimFit.mH125.root --main-label "With systematics" --main-color 1 --others higgsCombineExpectedfreezeAll.MultiDimFit.mH125.root:"Stat-only":2 -o ExpectedBreakdown --breakdown Syst,Stat
+
+    fi
+
+
+fi
+
+
+if [ $bfit = 1 ]; then
+
+    echo "Fit Diagnostics: b-only fit"
+    combine -M FitDiagnostics -m 125 -d ${wsm}.root \
+    --rMin -10 --rMax 10 -n Unblinded_bfit --ignoreCovWarning --cminDefaultMinimizerStrategy 0 \
+    --saveShapes --saveNormalizations --saveWithUncertainties --saveOverallShapes 2>&1 | tee $outsdir/FitDiagnostics_Bfit.txt
+
+    echo "Fit Shapes"
+    PostFitShapesFromWorkspace --dataset data_obs -w ${wsm}_bonly.root --output FitShapesB.root -m 125 -f fitDiagnosticsUnblinded.root:fit_b --postfit --print
+
+fi
+
+
+if [ $dfit = 1 ]; then
+    
+    echo "Fit Diagnostics: s+b fit"
+    combine -M FitDiagnostics -m 125 -d ${wsm}.root \
+    --rMin -10 --rMax 10 --expectSignal 1 -n Unblinded_sbfit --ignoreCovWarning --cminDefaultMinimizerStrategy 0 \
+    --saveShapes --saveNormalizations --saveWithUncertainties --saveOverallShapes 2>&1 | tee $outsdir/FitDiagnostics_SBfit.txt
+
+fi
+
+
 if [ $dfit_asimov = 1 ]; then
 
-    echo "Fit Diagnostics"
-    combine -M FitDiagnostics -m 125 -d $wsm.root \
-    -t -1 --expectSignal=1 --saveWorkspace --saveToys -n Asimov --ignoreCovWarning \
-    --saveShapes --saveNormalizations --saveWithUncertainties --saveOverallShapes 2>&1 | tee $outsdir/FitDiagnostics.txt
+    echo "Fit Diagnostics: Asimov fit"
+    combine -M FitDiagnostics -m 125 -d ${wsm}.root \
+    -t -1 --expectSignal 1 --saveWorkspace --saveToys -n Asimov --ignoreCovWarning \
+    --saveShapes --saveNormalizations --saveWithUncertainties --saveOverallShapes 2>&1 | tee $outsdir/FitDiagnostics_Asimov.txt
 
-    # python diffNuisances.py fitDiagnostfitDiagnosticsAsimov.root --abs
     combineTool.py -M ModifyDataSet ${wsm}.root:w ${wsm}_asimov.root:w:toy_asimov -d higgsCombineAsimov.FitDiagnostics.mH125.123456.root:toys/toy_asimov
 
     echo "Fit Shapes"
@@ -237,22 +270,33 @@ fi
 
 
 if [ $limits = 1 ]; then
-    # echo "Expected limits"
-    # combine -M AsymptoticLimits -m 125 -n "" -d ${wsm_snapshot}.root --snapshotName MultiDimFit -v 1 \
-    # --saveWorkspace --saveToys --bypassFrequentistFit -s $seed \
-    # --floatParameters r --toysFrequentist --run blind 2>&1 | tee $logsdir/AsymptoticLimits.txt
+    
+    if [ $obs = 1 ]; then
+        echo "Expected and Observed limits"
+        combine -M AsymptoticLimits -d ${wsm}.root -m 125 --rMax 10 --expectSignal 1 -s "$seed" --toysFrequentist -n Observed 2>&1 | tee $outsdir/AsymptoticLimitsObserved.txt
+    else
+        echo "Expected limits"
+        combine -M AsymptoticLimits --run expected -t -1 -d ${wsm}.root -m 125 --rMax 10 --expectSignal 1 -s "$seed" -n Expected 2>&1 | tee $outsdir/AsymptoticLimitsExpected.txt
+    fi 
 
-    combine -M AsymptoticLimits --run expected -d $wsm.root -t -1  -v 1 --expectSignal 1 2>&1 | tee $outsdir/AsymptoticLimits.txt
 fi
 
 
 if [ $impactsi = 1 ]; then
 
-    echo "Initial fit for impacts"
-    combineTool.py -M Impacts -d $wsm.root -t -1 --rMin -1 --rMax 2 -m 125 --robustFit 1 --doInitialFit --expectSignal 1 2>&1 | tee $outsdir/impact1.txt
-    combineTool.py -M Impacts -d $wsm.root -t -1 --rMin -1 --rMax 2 -m 125 --robustFit 1 --doFits --expectSignal 1 --parallel 50 2>&1 | tee $outsdir/impact2.txt
-    combineTool.py -M Impacts -d $wsm.root -t -1 --rMin -1 --rMax 2 -m 125 --robustFit 1 --output impacts.json --expectSignal 1 2>&1 | tee $outsdir/impact3.txt
-    plotImpacts.py -i impacts.json -o impacts
+    if [ $obs = 1 ]; then
+        echo "Initial fit for impacts (unblinded)"
+        combineTool.py -M Impacts -d ${wsm}.root --rMin -10 --rMax 10 -m 125 --robustFit 1 --doInitialFit --expectSignal 1
+        combineTool.py -M Impacts -d ${wsm}.root --rMin -10 --rMax 10 -m 125 --robustFit 1 --doFits --expectSignal 1 --parallel 50
+        combineTool.py -M Impacts -d ${wsm}.root --rMin -10 --rMax 10 -m 125 --robustFit 1 --output impacts_unblinded.json --expectSignal 1
+        plotImpacts.py -i impacts_unblinded.json -o impacts_unblinded   # you can add --blind to blind the observed signal strength in top right corner
+    else
+        echo "Initial fit for impacts (blinded)"
+        combineTool.py -M Impacts -d ${wsm}.root -t -1 --rMin -1 --rMax 2 -m 125 --robustFit 1 --doInitialFit --expectSignal 1 2>&1 | tee $outsdir/impact1.txt
+        combineTool.py -M Impacts -d ${wsm}.root -t -1 --rMin -1 --rMax 2 -m 125 --robustFit 1 --doFits --expectSignal 1 --parallel 50 2>&1 | tee $outsdir/impact2.txt
+        combineTool.py -M Impacts -d ${wsm}.root -t -1 --rMin -1 --rMax 2 -m 125 --robustFit 1 --output impacts_blinded.json --expectSignal 1 2>&1 | tee $outsdir/impact3.txt
+        plotImpacts.py -i impacts_blinded.json -o impacts_blinded
+    fi
 
 fi
 

@@ -1,9 +1,10 @@
  <<< Combine >>> 
->>> random number generator seed is 123456
->>> method used is MultiDimFit
+ <<< v10.0.1 >>>
+>>> Random number generator seed is 123456
+>>> Method used is MultiDimFit
 >>> 0 out of 6 channels masked
 
-SimNLL created with 6 channels, 0 generic constraints, 184 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+Doing initial fit: 
  POI: r= 1 -> [0,5]
 Point 0/100 r = 0.025
 Point 1/100 r = 0.075
@@ -105,4 +106,4 @@ Point 96/100 r = 4.825
 Point 97/100 r = 4.875
 Point 98/100 r = 4.925
 Point 99/100 r = 4.975
-Done in 0.89 min (cpu), 0.89 min (real)
+Done in 0.66 min (cpu), 0.66 min (real)
