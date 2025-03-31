@@ -1,0 +1,15 @@
+ <<< Combine >>> 
+ <<< v10.0.1 >>>
+>>> Random number generator seed is 123456
+>>> Method used is Significance
+ModelConfig 'ModelConfig' defines more than one parameter of interest. This is not supported in some statistical methods.
+Set Default Value of Parameter r_ggH_pt200_300 To : 1
+Set Default Value of Parameter r_ggH_pt300_450 To : 1
+Set Default Value of Parameter r_ggH_pt450_inf To : 1
+Set Default Value of Parameter r_qqH_mjj_1000_inf To : 1
+>>> 0 out of 6 channels masked
+
+
+ -- Significance -- 
+Significance: 0.316974
+Done in 0.05 min (cpu), 0.05 min (real)

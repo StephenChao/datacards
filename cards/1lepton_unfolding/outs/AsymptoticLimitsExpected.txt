@@ -1,0 +1,20 @@
+ <<< Combine >>> 
+ <<< v10.0.1 >>>
+>>> Random number generator seed is 444
+>>> Method used is AsymptoticLimits
+ModelConfig 'ModelConfig' defines more than one parameter of interest. This is not supported in some statistical methods.
+Set Default Value of Parameter r_ggH_pt200_300 To : 1
+Set Default Value of Parameter r_ggH_pt300_450 To : 1
+Set Default Value of Parameter r_ggH_pt450_inf To : 1
+Set Default Value of Parameter r_qqH_mjj_1000_inf To : 1
+>>> 0 out of 6 channels masked
+
+
+ -- AsymptoticLimits ( CLs ) --
+Expected  2.5%: r_ggH_pt200_300 < 5.8667
+Expected 16.0%: r_ggH_pt200_300 < 8.6303
+Expected 50.0%: r_ggH_pt200_300 < 13.9062
+Expected 84.0%: r_ggH_pt200_300 < 24.3273
+Expected 97.5%: r_ggH_pt200_300 < 42.1466
+
+Done in 1.24 min (cpu), 1.24 min (real)

@@ -1,4 +1,4 @@
-# Datacard for <Channel (WJetsCR) instance at 0x7f67c5037c10> generated on 2025-03-27 07:39:11.162973
+# Datacard for <Channel (WJetsCR) instance at 0x7f5d5591af40> generated on 2025-03-31 09:07:12.284705
 imax 1 # number of categories ('bins' but here we are using shape templates)
 jmax 13 # number of samples minus 1
 kmax 142 # number of nuisance parameters
@@ -7,7 +7,7 @@ bin WJetsCR
 observation 6665.000
 bin                                                                         WJetsCR          WJetsCR          WJetsCR          WJetsCR        WJetsCR        WJetsCR        WJetsCR        WJetsCR        WJetsCR        WJetsCR        WJetsCR        WJetsCR        WJetsCR  WJetsCR
 process                                                        qqH_hww_mjj_1000_Inf  ggH_hww_200_300  ggH_hww_300_450  ggH_hww_450_Inf         WH_hww         ZH_hww        ttH_hww          ttbar          wjets      singletop          zjets        diboson       ewkvjets     fake
-process                                                                          -6               -5               -4               -3             -2             -1              0              1              2              3              4              5              6        7
+process                                                                          -3               -2               -1                0              1              2              3              4              5              6              7              8              9       10
 rate                                                                          9.221           13.871           26.043            8.149          8.317          4.517          3.432       1064.601       5093.598         85.347        227.553        138.520        155.440  127.150
 BR_hww lnN                                                            0.9848/1.0153    0.9848/1.0153    0.9848/1.0153    0.9848/1.0153  0.9848/1.0153  0.9848/1.0153  0.9848/1.0153              -              -              -              -              -              -        -
 CMS_HWW_boosted_EW_unc lnN                                                        -                -                -                -  0.9424/1.0712  0.9429/1.0705  0.9712/1.0353              -              -              -              -              -              -        -
