@@ -5,7 +5,7 @@ Combine datacards for CMS boosted HWW analysis
 
 run `setup_env.sh` to set up the CMSSSW & Combine environment, the Combine & Rhalphabet package are already integrated in the `root://cmseos.fnal.gov//store/user/rkansal/CMSSW_11_3_4.tgz`, thanks to @rkansal47 for this!
 
-Since 0lepton datacards will need this Rhalphabet package to run, so this special environment is necessary. Note that an `slc7` cluster is needed.
+Since 0lepton datacards will need this Rhalphabet package to run, so this special environment is necessary. Note that an `slc7` cluster is needed to run `CMSSW_11_X`.
 
 ## Data-cards for each channel
 
