@@ -1,0 +1,16 @@
+ <<< Combine >>> 
+ <<< v10.0.1 >>>
+>>> Random number generator seed is 444
+>>> Method used is AsymptoticLimits
+>>> 0 out of 6 channels masked
+
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 1.3826
+Expected  2.5%: r < 0.6626
+Expected 16.0%: r < 0.9350
+Expected 50.0%: r < 1.4375
+Expected 84.0%: r < 2.3428
+Expected 97.5%: r < 3.7849
+
+Done in 1.12 min (cpu), 1.13 min (real)

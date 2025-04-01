@@ -1,9 +1,10 @@
  <<< Combine >>> 
->>> random number generator seed is 123456
->>> method used is Significance
+ <<< v10.0.1 >>>
+>>> Random number generator seed is 123456
+>>> Method used is Significance
 >>> 0 out of 6 channels masked
 
 
  -- Significance -- 
 Significance: 1.74169
-Done in 0.05 min (cpu), 0.05 min (real)
+Done in 0.04 min (cpu), 0.04 min (real)
