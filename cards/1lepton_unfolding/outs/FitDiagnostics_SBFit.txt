@@ -1,0 +1,20 @@
+ <<< Combine >>> 
+ <<< v10.0.1 >>>
+>>> Random number generator seed is 123456
+>>> Method used is MultiDimFit
+ModelConfig 'ModelConfig' defines more than one parameter of interest. This is not supported in some statistical methods.
+Set Default Value of Parameter r_ggH_pt200_300 To : 1
+Set Default Value of Parameter r_ggH_pt300_450 To : 1
+Set Default Value of Parameter r_ggH_pt450_inf To : 1
+Set Default Value of Parameter r_qqH_mjj_1000_inf To : 1
+>>> 0 out of 6 channels masked
+
+Doing initial fit: 
+
+ --- MultiDimFit ---
+best fit parameter values and profile-likelihood uncertainties: 
+      r_ggH_pt200_300 :    -4.474   -4.811/+4.246 (68%)
+      r_ggH_pt300_450 :    -0.787   -1.896/+1.975 (68%)
+      r_ggH_pt450_inf :    -0.060   -2.468/+2.548 (68%)
+   r_qqH_mjj_1000_inf :    +0.254   -0.771/+0.971 (68%)
+Done in 0.13 min (cpu), 0.13 min (real)
