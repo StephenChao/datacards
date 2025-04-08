@@ -1,0 +1,271 @@
+#!/bin/bash
+start_time=$(date +%s)
+for C in 1l_VH; do   #0l_All 1l_All 1l_VH FULL_COMB
+   echo ----------- $C ---------------
+   if [[ $C == 0l_All ]]; then
+     combineCards.py CR1=CR1.txt SR1a=SR1a.txt SR1b=SR1b.txt CR2=CR2.txt SR2a=SR2a.txt SR2b=SR2b.txt > 0l_All.txt;     
+     text2workspace.py 0l_All.txt -o WS_0l.root --channel-masks;
+     WS="WS_0l.root"; TAG=$C; R="--rMin -15 --rMax 15";
+   elif [[ $C == 1l_All ]]; then
+     combineCards.py WJetsCR=WJetsCR.txt TopCR=TopCR.txt ggFpt500toInf=ggFpt500toInf.txt ggFpt350to500=ggFpt350to500.txt ggFpt250to350=ggFpt250to350.txt VBF=VBF.txt > 1l_All.txt; 
+     text2workspace.py 1l_All.txt -o WS_1l.root --channel-masks;
+     WS="WS_1l.root"; TAG=$C; R="--rMin -15 --rMax 15";
+   elif [[ $C == 1l_VH ]]; then
+     combineCards.py SR1fail=VH_HWW_Vww_RunII_SR1fail.txt SR1pass=VH_HWW_Vww_RunII_SR1pass.txt TopCRpass=VH_HWW_Vww_RunII_TopCRpass.txt > 1l_VH.txt; 
+     text2workspace.py 1l_VH.txt -o WS_VH.root --channel-masks;
+     WS="WS_VH.root"; TAG="VH"; R="--rMin -50 --rMax 50";
+   elif [[ $C == FULL_COMB ]]; then
+     combineCards.py CR1=CR1.txt SR1a=SR1a.txt SR1b=SR1b.txt CR2=CR2.txt SR2a=SR2a.txt SR2b=SR2b.txt \
+                     WJetsCR=WJetsCR.txt TopCR=TopCR.txt ggFpt500toInf=ggFpt500toInf.txt ggFpt350to500=ggFpt350to500.txt ggFpt250to350=ggFpt250to350.txt VBF=VBF.txt \
+                     SR1fail=VH_HWW_Vww_RunII_SR1fail.txt SR1pass=VH_HWW_Vww_RunII_SR1pass.txt TopCRpass=VH_HWW_Vww_RunII_TopCRpass.txt > FULL_COMB.txt;   
+#     text2workspace.py FULL_COMB.txt -o WS_FULL_COMB.root --channel-masks;
+     WS="WS_FULL_COMB.root"; TAG="FULL_COMB"; 
+   fi
+   R="--rMin -10 --rMax 10"; P="--points 100"; T="--cminDefaultMinimizerTolerance 0.02"; S="--cminDefaultMinimizerStrategy 0";
+#   echo ----------------------------- Processing ${TAG} NLL Obs ----------------------------- 
+#   combine -M MultiDimFit -d $WS $R $S $T -n _${TAG}_Snapshot_Obs --algo grid $P
+#   combine -M MultiDimFit -d $WS $R $S $T -n _${TAG}_Bestfit_Obs --saveWorkspace
+#   combine -M MultiDimFit higgsCombine_${TAG}_Bestfit_Obs.MultiDimFit.mH120.root $R -n _${TAG}_Obs_freeze_All $S $T --algo grid $P --freezeParameters allConstrainedNuisances --snapshotName MultiDimFit
+#   echo ----------------------------- Processing ${TAG} NLL EXP ----------------------------- 
+#   combine -M MultiDimFit -d $WS $R $S $T -n _${TAG}_Snapshot_Exp --algo grid $P -t -1 --expectSignal=1 --setParameters r=1
+#   combine -M MultiDimFit -d $WS $R $S $T -n _${TAG}_Bestfit_Exp --saveWorkspace -t -1 --expectSignal=1 --setParameters r=1
+#   combine -M MultiDimFit higgsCombine_${TAG}_Bestfit_Exp.MultiDimFit.mH120.root $R -n _${TAG}_Exp_freeze_All $S $T --algo grid $P --freezeParameters allConstrainedNuisances -t -1 --expectSignal=1 --snapshotName MultiDimFit
+#   echo ----------------------------- Processing ${TAG} Signif and Lim ----------------------------- 
+#   combine -M Significance -n "" -d $WS $R | awk '/Significance:/{val=$2} END{print "Obs Significance: " val}' > Obs_${TAG}_Signif.txt
+#   combine -M Significance -n "" -d $WS $R --saveWorkspace -t -1 --expectSignal=1 --saveToys | awk '/Significance:/{val=$2} END{print "Exp Significance: " val}' > Exp_${TAG}_Signif.txt
+#   combine -M AsymptoticLimits -n "" -d $WS $R --saveWorkspace --saveToys | grep -E '^(Observed Lim|Expected 50)' > Limits_${TAG}_asympt.txt
+#   cat Obs_${TAG}_Signif.txt Exp_${TAG}_Signif.txt Limits_${TAG}_asympt.txt
+#   echo ----------------------------- Plot ${TAG} NLL summary ----------------------------- 
+####   plot1DScan.py higgsCombine_${TAG}_Snapshot_Obs.MultiDimFit.mH120.root --main-label "With systematics (Observed)" --main-color 1 --others higgsCombine_${TAG}_Obs_freeze_All.MultiDimFit.mH120.root:"Stat-only":2 --logo "CMS (${TAG})" --logo-sub "#splitline{#color[2]{$(cat Exp_${TAG}_Signif.txt)}}{#splitline{$(cat Obs_${TAG}_Signif.txt)}{#splitline{#color[2]{$(grep 'Expected' Limits_${TAG}_asympt.txt)}}{$(grep 'Observed Limit' Limits_${TAG}_asympt.txt)}}}"  -o NLL_${TAG}_Obs_Breakdown --breakdown Syst,Stat
+####   plot1DScan.py higgsCombine_${TAG}_Snapshot_Exp.MultiDimFit.mH120.root --main-label "With systematics (Expected)" --main-color 1 --others higgsCombine_${TAG}_Exp_freeze_All.MultiDimFit.mH120.root:"Stat-only":2 --logo "CMS (${TAG})" --logo-sub "#splitline{#color[2]{$(cat Exp_${TAG}_Signif.txt)}}{#splitline{$(cat Obs_${TAG}_Signif.txt)}{#splitline{#color[2]{$(grep 'Expected' Limits_${TAG}_asympt.txt)}}{$(grep 'Observed Limit' Limits_${TAG}_asympt.txt)}}}"  -o NLL_${TAG}_Exp_Breakdown --breakdown Syst,Stat
+##   plot1DScan.py higgsCombine_${TAG}_Snapshot_Obs.MultiDimFit.mH120.root --others higgsCombine_${TAG}_Obs_freeze_All.MultiDimFit.mH120.root:"stat. only":13:3 higgsCombine_${TAG}_Snapshot_Exp.MultiDimFit.mH120.root:"Exp. syst.+stat.":4:1 higgsCombine_${TAG}_Exp_freeze_All.MultiDimFit.mH120.root:"stat. only":64:3 --main-label "Obs. Syst.+stat." --main-color 1 --logo-sub "#splitline{#color[4]{$(cat Exp_${TAG}_Signif.txt)}}{#splitline{$(cat Obs_${TAG}_Signif.txt)}{#splitline{#color[4]{$(grep 'Expected' Limits_${TAG}_asympt.txt)}}{$(grep 'Observed Limit' Limits_${TAG}_asympt.txt)}}}" -o NLL_${TAG}_Combined --logo "CMS (${TAG})"
+##   echo ----------------------------- GoF ${TAG} ----------------------------- 
+   combine -M GoodnessOfFit $WS -n _${TAG}_GoF_obs --algo=saturated;
+   combine -M GoodnessOfFit $WS -n _${TAG}_GoF_toys --algo=saturated -t 200 --toysFreq --seed -1
+   mv higgsCombine_FULL_COMB_GoF_toys.GoodnessOfFit.mH120.*.root higgsCombine_FULL_COMB_GoF_toys.GoodnessOfFit.mH120.root
+   combineTool.py -M CollectGoodnessOfFit --input higgsCombine_${TAG}_GoF_obs.GoodnessOfFit.mH120.root higgsCombine_${TAG}_GoF_toys.GoodnessOfFit.mH120*.root -o gof.json;
+   plotGof.py gof.json --statistic saturated --mass 120.0 -o gof_${TAG};
+
+#   echo ----------------------------- Impacts & Pulls ${TAG} ----------------------------- 
+#   combineTool.py -M Impacts -d $WS -n _impacts_obs_${TAG} --doInitialFit --robustFit 1 $R $S $T | tee impacts_${TAG}_obs_init.txt
+#   combineTool.py -M Impacts -d $WS -n _impacts_obs_${TAG} --doFits       --robustFit 1 $R $S $T | tee impacts_${TAG}_obs_fits.txt
+#   combineTool.py -M Impacts -d $WS -n _impacts_obs_${TAG} -o impacts_${TAG}_obs.json
+#   plotImpacts.py -i impacts_${TAG}_obs.json -o impacts_${TAG}_obs_plot
+
+done &
+wait; end=$(date +%s); r=$((end - start_time)); printf " ----------[ Total runtime: %02d:%02d:%02d (hh:mm:ss) ]------------\n" $((r/3600)) $((r%3600/60)) $((r%60))
+
+
+
+______________________________________________________________
+
+#!/bin/bash
+for C in 0l_SR2b; do  #0l_All 0l_SR1a 0l_SR1b 0l_SR2a 0l_SR2b
+   if [[ $C == 0l_All ]]; then
+     combineCards.py CR1=CR1.txt SR1a=SR1a.txt SR1b=SR1b.txt CR2=CR2.txt SR2a=SR2a.txt SR2b=SR2b.txt > combined_All.txt;     text2workspace.py combined_All.txt -o WS_0l.root --channel-masks;
+     WS="WS_0l.root"; TAG=$C; R="--rMin -15 --rMax 15";
+   elif [[ $C == 0l_SR1* ]]; then
+     combineCards.py CR1=CR1.txt ${C#0l_}=${C#0l_}.txt > combined_CR1_${C#0l_}.txt;     text2workspace.py combined_CR1_${C#0l_}.txt -o WS_${C}.root --channel-masks;
+     WS="WS_${C}.root"; TAG=$C; R="--rMin -60 --rMax 60";
+   else
+     combineCards.py CR2=CR2.txt ${C#0l_}=${C#0l_}.txt > combined_CR2_${C#0l_}.txt;     text2workspace.py combined_CR2_${C#0l_}.txt -o WS_${C}.root --channel-masks;
+     WS="WS_${C}.root"; TAG=$C; R="--rMin -60 --rMax 60";
+   fi
+   if [[ $C == 0l_SR2b || $C == 0l_SR1b ]]; then 
+     R="--rMin -100 --rMax 100";
+   fi
+   echo ----------------------------- Processing ${TAG} NLL Obs ----------------------------- 
+   combine -M MultiDimFit -d $WS $R --cminDefaultMinimizerStrategy 1 --cminDefaultMinimizerTolerance 0.01 -n _${TAG}_Snapshot_Obs --algo grid --points 100
+   combine -M MultiDimFit -d $WS $R --cminDefaultMinimizerStrategy 0 $T -n _${TAG}_Bestfit_Obs --saveWorkspace
+   combine -M MultiDimFit higgsCombine_${TAG}_Bestfit_Obs.MultiDimFit.mH120.root $R -n _${TAG}_Obs_freeze_All --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.01 --algo grid --points 100 --freezeParameters allConstrainedNuisances --snapshotName MultiDimFit
+   echo ----------------------------- Processing ${TAG} NLL EXP ----------------------------- 
+   combine -M MultiDimFit -d $WS $R --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.01 -n _${TAG}_Snapshot_Exp --algo grid --points 100 -t -1 --expectSignal=1 --setParameters r=1
+   combine -M MultiDimFit -d $WS $R --cminDefaultMinimizerStrategy 0 $T -n _${TAG}_Bestfit_Exp --saveWorkspace -t -1 --expectSignal=1 --setParameters r=1
+   combine -M MultiDimFit higgsCombine_${TAG}_Bestfit_Exp.MultiDimFit.mH120.root $R -n _${TAG}_Exp_freeze_All --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.01 --algo grid --points 100 --freezeParameters allConstrainedNuisances -t -1 --expectSignal=1 --snapshotName MultiDimFit
+   echo ----------------------------- Processing ${TAG} Signif and Lim ----------------------------- 
+   combine -M Significance -n "" -d $WS $R | awk '/Significance:/{val=$2} END{print "Obs Significance: " val}' > Obs_${TAG}_Signif.txt
+   combine -M Significance -n "" -d $WS $R --saveWorkspace -t -1 --expectSignal=1 --saveToys | awk '/Significance:/{val=$2} END{print "Exp Significance: " val}' > Exp_${TAG}_Signif.txt
+   combine -M AsymptoticLimits -n "" -d $WS $R --saveWorkspace --saveToys | grep -E '^(Observed Lim|Expected 50)' > Limits_${TAG}_asympt.txt
+   cat Obs_${TAG}_Signif.txt Exp_${TAG}_Signif.txt Limits_${TAG}_asympt.txt
+   echo ----------------------------- Plot ${TAG} NLL summary ----------------------------- 
+   plot1DScan.py higgsCombine_${TAG}_Snapshot_Obs.MultiDimFit.mH120.root --main-label "With systematics (Observed)" --main-color 1 --others higgsCombine_${TAG}_Obs_freeze_All.MultiDimFit.mH120.root:"Stat-only":2 --logo "CMS (${TAG})" --logo-sub "#splitline{#color[2]{$(cat Exp_${TAG}_Signif.txt)}}{#splitline{$(cat Obs_${TAG}_Signif.txt)}{#splitline{#color[2]{$(grep 'Expected' Limits_${TAG}_asympt.txt)}}{$(grep 'Observed Limit' Limits_${TAG}_asympt.txt)}}}"  -o NLL_${TAG}_Obs_Breakdown --breakdown Syst,Stat
+   plot1DScan.py higgsCombine_${TAG}_Snapshot_Exp.MultiDimFit.mH120.root --main-label "With systematics (Expected)" --main-color 1 --others higgsCombine_${TAG}_Exp_freeze_All.MultiDimFit.mH120.root:"Stat-only":2 --logo "CMS (${TAG})" --logo-sub "#splitline{#color[2]{$(cat Exp_${TAG}_Signif.txt)}}{#splitline{$(cat Obs_${TAG}_Signif.txt)}{#splitline{#color[2]{$(grep 'Expected' Limits_${TAG}_asympt.txt)}}{$(grep 'Observed Limit' Limits_${TAG}_asympt.txt)}}}"  -o NLL_${TAG}_Exp_Breakdown --breakdown Syst,Stat
+   plot1DScan.py higgsCombine_${TAG}_Snapshot_Obs.MultiDimFit.mH120.root --others higgsCombine_${TAG}_Obs_freeze_All.MultiDimFit.mH120.root:"stat. only":13:3 higgsCombine_${TAG}_Snapshot_Exp.MultiDimFit.mH120.root:"Exp. syst.+stat.":4:1 higgsCombine_${TAG}_Exp_freeze_All.MultiDimFit.mH120.root:"stat. only":64:3 --main-label "Obs. Syst.+stat." --main-color 1 --logo-sub "#splitline{#color[4]{$(cat Exp_${TAG}_Signif.txt)}}{#splitline{$(cat Obs_${TAG}_Signif.txt)}{#splitline{#color[4]{$(grep 'Expected' Limits_${TAG}_asympt.txt)}}{$(grep 'Observed Limit' Limits_${TAG}_asympt.txt)}}}" -o NLL_${TAG}_Combined --logo "CMS (${TAG})"
+#   echo ----------------------------- Impacts & Pulls ${TAG} ----------------------------- 
+#   combineTool.py -M Impacts -d $WS -n _impacts_obs_${TAG} --doInitialFit --robustFit 1 $R --cminDefaultMinimizerStrategy 1 --cminDefaultMinimizerTolerance 0.01 | tee impacts_${TAG}_obs_init.txt
+#   combineTool.py -M Impacts -d $WS -n _impacts_obs_${TAG} --doFits       --robustFit 1 $R --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.01 | tee impacts_${TAG}_obs_fits.txt
+#   combineTool.py -M Impacts -d $WS -n _impacts_obs_${TAG} -o impacts_${TAG}_obs.json
+#   plotImpacts.py -i impacts_${TAG}_obs.json -o impacts_${TAG}_obs_plot
+done &
+./montage.bash &
+
+
+#!/bin/bash
+for C in 1l_ggF_All 1l_ggFpt250to350 1l_ggFpt350to500 1l_ggFpt500toInf ; do     # 1l_All  1l_VBF  1l_ggF_All 1l_ggFpt250to350 1l_ggFpt350to500 1l_ggFpt500toInf              
+   if [[ $C == 1l_All ]]; then
+     combineCards.py WJetsCR=WJetsCR.txt TopCR=TopCR.txt ggFpt500toInf=ggFpt500toInf.txt ggFpt350to500=ggFpt350to500.txt ggFpt250to350=ggFpt250to350.txt VBF=VBF.txt > combined_All.txt; text2workspace.py combined_All.txt -o WS_1l.root --channel-masks;
+     WS="WS_1l.root"; TAG=$C; R="--rMin -10 --rMax 10";
+   elif [[ $C == 1l_ggFpt* ]]; then
+     combineCards.py WJetsCR=WJetsCR.txt TopCR=TopCR.txt ${C#1l_}=${C#1l_}.txt > combined_CRs_${C#1l_}.txt; text2workspace.py combined_CRs_${C#1l_}.txt -o WS_${C}.root --channel-masks;
+     WS="WS_${C}.root"; TAG=$C; R="--rMin -30 --rMax 30";
+   elif [[ $C == 1l_VBF ]]; then
+     combineCards.py WJetsCR=WJetsCR.txt TopCR=TopCR.txt VBF=VBF.txt > combined_CRs_VBF.txt; text2workspace.py combined_CRs_VBF.txt -o WS_${C}.root --channel-masks;
+     WS="WS_${C}.root"; TAG=$C; R="--rMin -15 --rMax 15";
+   elif [[ $C == 1l_ggF_All ]]; then
+     combineCards.py WJetsCR=WJetsCR.txt TopCR=TopCR.txt ggFpt500toInf=ggFpt500toInf.txt ggFpt350to500=ggFpt350to500.txt ggFpt250to350=ggFpt250to350.txt > combined_CRs_ggF.txt; text2workspace.py combined_CRs_ggF.txt -o WS_${C}.root --channel-masks;
+     WS="WS_${C}.root"; TAG=$C; R="--rMin -15 --rMax 15";
+   fi
+   echo ----------------------------- Processing ${TAG} NLL Obs ----------------------------- 
+   combine -M MultiDimFit -d $WS $R --cminDefaultMinimizerStrategy 1 --cminDefaultMinimizerTolerance 0.01 -n _${TAG}_Snapshot_Obs --algo grid --points 100
+   combine -M MultiDimFit -d $WS $R --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.23 -n _${TAG}_Bestfit_Obs --saveWorkspace
+   combine -M MultiDimFit higgsCombine_${TAG}_Bestfit_Obs.MultiDimFit.mH120.root $R -n _${TAG}_Obs_freeze_All --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.01 --algo grid --points 100 --freezeParameters allConstrainedNuisances --snapshotName MultiDimFit
+   echo ----------------------------- Processing ${TAG} NLL EXP ----------------------------- 
+   combine -M MultiDimFit -d $WS $R --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.01 -n _${TAG}_Snapshot_Exp --algo grid --points 100 -t -1 --expectSignal=1 --setParameters r=1
+   combine -M MultiDimFit -d $WS $R --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.01 -n _${TAG}_Bestfit_Exp --saveWorkspace -t -1 --expectSignal=1 --setParameters r=1
+   combine -M MultiDimFit higgsCombine_${TAG}_Bestfit_Exp.MultiDimFit.mH120.root $R -n _${TAG}_Exp_freeze_All --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.01 --algo grid --points 100 --freezeParameters allConstrainedNuisances -t -1 --expectSignal=1 --snapshotName MultiDimFit
+   echo ----------------------------- Processing ${TAG} Signif and Lim ----------------------------- 
+   combine -M Significance -n "" -d $WS $R | awk '/Significance:/{val=$2} END{print "Obs Significance: " val}' > Obs_${TAG}_Signif.txt
+   combine -M Significance -n "" -d $WS $R --saveWorkspace -t -1 --expectSignal=1 --saveToys | awk '/Significance:/{val=$2} END{print "Exp Significance: " val}' > Exp_${TAG}_Signif.txt
+   combine -M AsymptoticLimits -n "" -d $WS $R --saveWorkspace --saveToys | grep -E '^(Observed Lim|Expected 50)' > Limits_${TAG}_asympt.txt
+   cat Obs_${TAG}_Signif.txt Exp_${TAG}_Signif.txt Limits_${TAG}_asympt.txt
+   echo ----------------------------- Plot ${TAG} NLL summary ----------------------------- 
+   plot1DScan.py higgsCombine_${TAG}_Snapshot_Obs.MultiDimFit.mH120.root --main-label "With systematics (Observed)" --main-color 1 --others higgsCombine_${TAG}_Obs_freeze_All.MultiDimFit.mH120.root:"Stat-only":2 --logo "CMS (${TAG})" --logo-sub "#splitline{#color[2]{$(cat Exp_${TAG}_Signif.txt)}}{#splitline{$(cat Obs_${TAG}_Signif.txt)}{#splitline{#color[2]{$(grep 'Expected' Limits_${TAG}_asympt.txt)}}{$(grep 'Observed Limit' Limits_${TAG}_asympt.txt)}}}"  -o NLL_${TAG}_Obs_Breakdown --breakdown Syst,Stat
+   plot1DScan.py higgsCombine_${TAG}_Snapshot_Exp.MultiDimFit.mH120.root --main-label "With systematics (Expected)" --main-color 1 --others higgsCombine_${TAG}_Exp_freeze_All.MultiDimFit.mH120.root:"Stat-only":2 --logo "CMS (${TAG})" --logo-sub "#splitline{#color[2]{$(cat Exp_${TAG}_Signif.txt)}}{#splitline{$(cat Obs_${TAG}_Signif.txt)}{#splitline{#color[2]{$(grep 'Expected' Limits_${TAG}_asympt.txt)}}{$(grep 'Observed Limit' Limits_${TAG}_asympt.txt)}}}"  -o NLL_${TAG}_Exp_Breakdown --breakdown Syst,Stat
+   plot1DScan.py higgsCombine_${TAG}_Snapshot_Obs.MultiDimFit.mH120.root --others higgsCombine_${TAG}_Obs_freeze_All.MultiDimFit.mH120.root:"stat. only":13:3 higgsCombine_${TAG}_Snapshot_Exp.MultiDimFit.mH120.root:"Exp. syst.+stat.":4:1 higgsCombine_${TAG}_Exp_freeze_All.MultiDimFit.mH120.root:"stat. only":64:3 --main-label "Obs. Syst.+stat." --main-color 1 --logo-sub "#splitline{#color[4]{$(cat Exp_${TAG}_Signif.txt)}}{#splitline{$(cat Obs_${TAG}_Signif.txt)}{#splitline{#color[4]{$(grep 'Expected' Limits_${TAG}_asympt.txt)}}{$(grep 'Observed Limit' Limits_${TAG}_asympt.txt)}}}" -o NLL_${TAG}_Combined --logo "CMS (${TAG})"
+#   echo ----------------------------- Impacts & Pulls ${TAG} ----------------------------- 
+#   combineTool.py -M Impacts -d $WS -n _impacts_obs_${TAG} --doInitialFit --robustFit 1 $R --cminDefaultMinimizerStrategy 1 --cminDefaultMinimizerTolerance 0.01 | tee impacts_${TAG}_obs_init.txt
+#   combineTool.py -M Impacts -d $WS -n _impacts_obs_${TAG} --doFits       --robustFit 1 $R --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.01 | tee impacts_${TAG}_obs_fits.txt
+#   combineTool.py -M Impacts -d $WS -n _impacts_obs_${TAG} -o impacts_${TAG}_obs.json
+#   plotImpacts.py -i impacts_${TAG}_obs.json -o impacts_${TAG}_obs_plot
+done &
+./montage.bash &
+
+
+#!/bin/bash
+combineCards.py SR1fail=VH_HWW_Vww_RunII_SR1fail.txt SR1pass=VH_HWW_Vww_RunII_SR1pass.txt TopCRpass=VH_HWW_Vww_RunII_TopCRpass.txt > combined_VH.txt; text2workspace.py combined_VH.txt -o WS_VH.root --channel-masks;
+WS="WS_VH.root"; TAG="VH"; R="--rMin -25 --rMax 25";
+text2workspace.py combined_VH.txt -o WS_VH.root --channel-masks 
+echo ----------------------------- Processing ${TAG} NLL Obs ----------------------------- 
+combine -M MultiDimFit -d $WS $R --cminDefaultMinimizerStrategy 1 --cminDefaultMinimizerTolerance 0.01 -n _${TAG}_Snapshot_Obs --algo grid --points 100
+combine -M MultiDimFit -d $WS $R --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.23 -n _${TAG}_Bestfit_Obs --saveWorkspace
+combine -M MultiDimFit higgsCombine_${TAG}_Bestfit_Obs.MultiDimFit.mH120.root $R -n _${TAG}_Obs_freeze_All --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.01 --algo grid --points 100 --freezeParameters allConstrainedNuisances --snapshotName MultiDimFit
+echo ----------------------------- Processing ${TAG} NLL EXP ----------------------------- 
+combine -M MultiDimFit -d $WS $R --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.01 -n _${TAG}_Snapshot_Exp --algo grid --points 100 -t -1 --expectSignal=1 --setParameters r=1
+combine -M MultiDimFit -d $WS $R --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.01 -n _${TAG}_Bestfit_Exp --saveWorkspace -t -1 --expectSignal=1 --setParameters r=1
+combine -M MultiDimFit higgsCombine_${TAG}_Bestfit_Exp.MultiDimFit.mH120.root $R -n _${TAG}_Exp_freeze_All --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.01 --algo grid --points 100 --freezeParameters allConstrainedNuisances -t -1 --expectSignal=1 --snapshotName MultiDimFit
+echo ----------------------------- Processing ${TAG} Signif and Lim ----------------------------- 
+combine -M Significance -n "" -d $WS $R | awk '/Significance:/{val=$2} END{print "Obs Significance: " val}' > Obs_${TAG}_Signif.txt
+combine -M Significance -n "" -d $WS $R --saveWorkspace -t -1 --expectSignal=1 --saveToys | awk '/Significance:/{val=$2} END{print "Exp Significance: " val}' > Exp_${TAG}_Signif.txt
+combine -M AsymptoticLimits -n "" -d $WS $R --saveWorkspace --saveToys | grep -E '^(Observed Lim|Expected 50)' > Limits_${TAG}_asympt.txt
+cat Obs_${TAG}_Signif.txt Exp_${TAG}_Signif.txt Limits_${TAG}_asympt.txt
+echo ----------------------------- Plot ${TAG} NLL summary ----------------------------- 
+plot1DScan.py higgsCombine_${TAG}_Snapshot_Obs.MultiDimFit.mH120.root --main-label "With systematics (Observed)" --main-color 1 --others higgsCombine_${TAG}_Obs_freeze_All.MultiDimFit.mH120.root:"Stat-only":2 --logo "CMS (${TAG})" --logo-sub "#splitline{#color[2]{$(cat Exp_${TAG}_Signif.txt)}}{#splitline{$(cat Obs_${TAG}_Signif.txt)}{#splitline{#color[2]{$(grep 'Expected' Limits_${TAG}_asympt.txt)}}{$(grep 'Observed Limit' Limits_${TAG}_asympt.txt)}}}"  -o NLL_${TAG}_Obs_Breakdown --breakdown Syst,Stat
+plot1DScan.py higgsCombine_${TAG}_Snapshot_Exp.MultiDimFit.mH120.root --main-label "With systematics (Expected)" --main-color 1 --others higgsCombine_${TAG}_Exp_freeze_All.MultiDimFit.mH120.root:"Stat-only":2 --logo "CMS (${TAG})" --logo-sub "#splitline{#color[2]{$(cat Exp_${TAG}_Signif.txt)}}{#splitline{$(cat Obs_${TAG}_Signif.txt)}{#splitline{#color[2]{$(grep 'Expected' Limits_${TAG}_asympt.txt)}}{$(grep 'Observed Limit' Limits_${TAG}_asympt.txt)}}}"  -o NLL_${TAG}_Exp_Breakdown --breakdown Syst,Stat
+plot1DScan.py higgsCombine_${TAG}_Snapshot_Obs.MultiDimFit.mH120.root --others higgsCombine_${TAG}_Obs_freeze_All.MultiDimFit.mH120.root:"stat. only":13:3 higgsCombine_${TAG}_Snapshot_Exp.MultiDimFit.mH120.root:"Exp. syst.+stat.":4:1 higgsCombine_${TAG}_Exp_freeze_All.MultiDimFit.mH120.root:"stat. only":64:3 --main-label "Obs. Syst.+stat." --main-color 1 --logo-sub "#splitline{#color[4]{$(cat Exp_${TAG}_Signif.txt)}}{#splitline{$(cat Obs_${TAG}_Signif.txt)}{#splitline{#color[4]{$(grep 'Expected' Limits_${TAG}_asympt.txt)}}{$(grep 'Observed Limit' Limits_${TAG}_asympt.txt)}}}" -o NLL_${TAG}_Combined --logo "CMS (${TAG})"
+#  echo ----------------------------- Impacts & Pulls ${TAG} ----------------------------- 
+#  combineTool.py -M Impacts -d $WS -n _impacts_obs_${TAG} --doInitialFit --robustFit 1 $R --cminDefaultMinimizerStrategy 1 --cminDefaultMinimizerTolerance 0.01 | tee impacts_${TAG}_obs_init.txt
+#  combineTool.py -M Impacts -d $WS -n _impacts_obs_${TAG} --doFits       --robustFit 1 $R --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.01 | tee impacts_${TAG}_obs_fits.txt
+#  combineTool.py -M Impacts -d $WS -n _impacts_obs_${TAG} -o impacts_${TAG}_obs.json
+#  plotImpacts.py -i impacts_${TAG}_obs.json -o impacts_${TAG}_obs_plot
+done &
+#./montage.bash &
+
+
+==================== commands to get Observed r, NLL, ================================
+combine -M MultiDimFit -d WS_VH.root --rMax 15 --rMin -15 --cminDefaultMinimizerStrategy 1 --cminDefaultMinimizerTolerance 0.01 -n _VH_Snapshot_Obs --algo grid --points 100 
+combine -M MultiDimFit -d WS_VH.root --rMax 15 --rMin -15 --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.01 -n _VH_Bestfit_Obs --saveWorkspace
+combine -M MultiDimFit higgsCombine_VH_Bestfit_Obs.MultiDimFit.mH120.root  --rMin -15 --rMax 15  -n _VH_Obs_freeze_All  --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.01 --algo grid --points 100 --freezeParameters allConstrainedNuisances --snapshotName MultiDimFit
+plot1DScan.py higgsCombine_VH_Snapshot_Obs.MultiDimFit.mH120.root --main-label "With systematics" --main-color 1 --others higgsCombine_VH_Obs_freeze_All.MultiDimFit.mH120.root:"Stat-only":2 -o NLL_VH_Obs_Breakdown --breakdown Syst,Stat
+display ./NLL_VH_Obs_Breakdown.png &
+============================ commands to get Expected r, NLL,=========================
+combine -M MultiDimFit -d WS_VH.root --rMax 15 --rMin -15 --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.01 -n _VH_Snapshot_Exp --algo grid --points 100 -t -1 --expectSignal=1 --setParameters r=1
+combine -M MultiDimFit -d WS_VH.root --rMax 15 --rMin -15 --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.01 -n _VH_Bestfit_Exp --saveWorkspace -t -1 --expectSignal=1 --setParameters r=1
+combine -M MultiDimFit higgsCombine_VH_Bestfit_Exp.MultiDimFit.mH120.root  --rMin -15 --rMax 15  -n _VH_Exp_freeze_All  --cminDefaultMinimizerStrategy 1 --cminDefaultMinimizerTolerance 0.01 --algo grid --points 100 --freezeParameters allConstrainedNuisances -t -1 --expectSignal=1 --snapshotName MultiDimFit
+plot1DScan.py higgsCombine_VH_Snapshot_Exp.MultiDimFit.mH120.root --main-label "With systematics" --main-color 1 --others higgsCombine_VH_Exp_freeze_All.MultiDimFit.mH120.root:"Stat-only":2 -o NLL_VH_Exp_Breakdown --breakdown Syst,Stat
+display ./NLL_VH_Exp_Breakdown.png &
+================================= Significance =======================================
+combine -M Significance -n "" -d WS_VH.root --rMin -15 --rMax 15                                                   | awk '/Significance:/{val=$2} END{print "Obs Significance: " val}' > Obs_VH_Signif.txt
+combine -M Significance -n "" -d WS_VH.root --rMin -15 --rMax 15 --saveWorkspace -t -1 --expectSignal=1 --saveToys | awk '/Significance:/{val=$2} END{print "Exp Significance: " val}' > Exp_VH_Signif.txt
+combine -M AsymptoticLimits -n "" -d WS_VH.root --rMax 15 --rMin -15 --saveWorkspace --saveToys                    | grep -E '^(Observed Lim|Expected 50)'                             > Limits_VH_asympt.txt
+cat *Signif*txt L*pt.txt
+plot1DScan.py higgsCombine_VH_Snapshot_Obs.MultiDimFit.mH120.root --others higgsCombine_VH_Obs_freeze_All.MultiDimFit.mH120.root:"stat. only":13:3 higgsCombine_VH_Snapshot_Exp.MultiDimFit.mH120.root:"Exp. syst.+stat.":4:1 higgsCombine_VH_Exp_freeze_All.MultiDimFit.mH120.root:"stat. only":64:3 --main-label "Obs. Syst.+stat." --main-color 1 --logo-sub "#splitline{#color[4]{$(<Exp_VH_Signif.txt)}}{#splitline{$(<Obs_VH_Signif.txt)}{#splitline{#color[4]{$(grep 'Expected' Limits_VH_asympt.txt)}}{$(grep 'Observed Limit' Limits_VH_asympt.txt)}}}" -o NLL_VH_Combined --logo "CMS (VH)"
+================================= Impact & NPs =========================================
+combineTool.py -M Impacts -d WS_VH.root -n _impacts_obs --doInitialFit --robustFit 1 --rMin -15 --rMax 15 --cminDefaultMinimizerStrategy 1 --cminDefaultMinimizerTolerance 0.01 | tee impacts_VH_obs_init.txt
+combineTool.py -M Impacts -d WS_VH.root -n _impacts_obs --doFits       --robustFit 1 --rMin -15 --rMax 15 --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.01 | tee impacts_VH_obs_fits.txt
+combineTool.py -M Impacts -d WS_VH.root -n _impacts_obs -o impacts_VH_obs.json
+plotImpacts.py -i impacts_VH_obs.json -o impacts_VH_obs_plot
+==================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+==================== commands to get Observed r, NLL, ================================
+combine -M MultiDimFit -d WS_0l.root $R --cminDefaultMinimizerStrategy 1 --cminDefaultMinimizerTolerance 0.01 -n _0l_Snapshot_Obs --algo grid --points 100
+combine -M MultiDimFit -d WS_0l.root $R --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.23 -n _0l_Bestfit_Obs --saveWorkspace
+combine -M MultiDimFit higgsCombine_0l_Bestfit_Obs.MultiDimFit.mH120.root  $R  -n _0l_Obs_freeze_All  --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.01 --algo grid --points 100 --freezeParameters allConstrainedNuisances --snapshotName MultiDimFit
+plot1DScan.py higgsCombine_0l_Snapshot_Obs.MultiDimFit.mH120.root --main-label "With systematics" --main-color 1 --others higgsCombine_0l_Obs_freeze_All.MultiDimFit.mH120.root:"Stat-only":2 -o NLL_0l_Obs_Breakdown --breakdown Syst,Stat
+============================ commands to get Expected r, NLL,=========================
+combine -M MultiDimFit -d WS_0l.root $R --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.01 -n _0l_Snapshot_Exp --algo grid --points 100 -t -1 --expectSignal=1 --setParameters r=1
+combine -M MultiDimFit -d WS_0l.root $R --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.23 -n _0l_Bestfit_Exp --saveWorkspace -t -1 --expectSignal=1 --setParameters r=1
+combine -M MultiDimFit higgsCombine_0l_Bestfit_Exp.MultiDimFit.mH120.root $R -n _0l_Exp_freeze_All --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.01 --algo grid --points 100 --freezeParameters allConstrainedNuisances -t -1 --expectSignal=1 --snapshotName MultiDimFit
+plot1DScan.py higgsCombine_0l_Snapshot_Exp.MultiDimFit.mH120.root --main-label "With systematics (Expected)" --main-color 1 --others higgsCombine_0l_Exp_freeze_All.MultiDimFit.mH120.root:"Stat-only":2 -o NLL_0l_Exp_Breakdown --breakdown Syst,Stat 
+================================= Significance =======================================
+combine -M Significance -n "" -d WS_0l.root      $R                                                    | awk '/Significance:/{val=$2} END{print "Obs Significance: " val}' > Obs_0l_Signif.txt
+combine -M Significance -n "" -d WS_0l.root      $R --saveWorkspace -t -1 --expectSignal=1 --saveToys  | awk '/Significance:/{val=$2} END{print "Exp Significance: " val}' > Exp_0l_Signif.txt
+combine -M AsymptoticLimits -n ""  -d WS_0l.root $R  --saveWorkspace --saveToys                        | grep -E '^(Observed Lim|Expected 50)'                             > Limits_0l_asympt.txt
+cat *0l*Signif*txt L*0l*pt.txt
+plot1DScan.py higgsCombine_0l_Snapshot_Obs.MultiDimFit.mH120.root --others higgsCombine_0l_Obs_freeze_All.MultiDimFit.mH120.root:"stat. only":13:3 higgsCombine_0l_Snapshot_Exp.MultiDimFit.mH120.root:"Exp. syst.+stat.":4:1 higgsCombine_0l_Exp_freeze_All.MultiDimFit.mH120.root:"stat. only":64:3 --main-label "Obs. Syst.+stat." --main-color 1 --logo-sub "#splitline{#color[4]{$(<Exp_0l_Signif.txt)}}{#splitline{$(<Obs_0l_Signif.txt)}{#splitline{#color[4]{$(grep 'Expected' Limits_0l_asympt.txt)}}{$(grep 'Observed Limit' Limits_0l_asympt.txt)}}}" -o NLL_0l_Combined --logo "CMS (0l)"
+================================= Impact & NPs =======================================
+combineTool.py -M Impacts -d WS_0l.root -n _impacts_obs --doInitialFit --robustFit 1 $R --cminDefaultMinimizerStrategy 1 --cminDefaultMinimizerTolerance 0.01 | tee impacts_0l_obs_init.txt
+combineTool.py -M Impacts -d WS_0l.root -n _impacts_obs --doFits       --robustFit 1 $R --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.01 | tee impacts_0l_obs_fits.txt
+combineTool.py -M Impacts -d WS_0l.root -n _impacts_obs -o impacts_0l_obs.json
+plotImpacts.py -i impacts_0l_obs.json -o impacts_0l_obs_plot
+======================================================================================
+
+
+combineCards.py VBF=VBF.txt ggFpt250to350=ggFpt250to350.txt ggFpt350to500=ggFpt350to500.txt ggFpt500toInf=ggFpt500toInf.txt TopCR=TopCR.txt WJetsCR=WJetsCR.txt > 1l_combined.txt
+text2workspace.py 1l_combined.txt -o WS_1l.root --channel-masks 
+==================== commands to get Observed r, NLL, ================================
+combine -M MultiDimFit -d WS_1l.root --rMax 15 --rMin -15 --cminDefaultMinimizerStrategy 1 --cminDefaultMinimizerTolerance 0.01 -n _1l_Snapshot_Obs --algo grid --points 100 
+combine -M MultiDimFit -d WS_1l.root --rMax 15 --rMin -15 --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.01 -n _1l_Bestfit_Obs --saveWorkspace
+combine -M MultiDimFit higgsCombine_1l_Bestfit_Obs.MultiDimFit.mH120.root  --rMin -15 --rMax 15  -n _1l_Obs_freeze_All  --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.01 --algo grid --points 100 --freezeParameters allConstrainedNuisances --snapshotName MultiDimFit
+plot1DScan.py higgsCombine_1l_Snapshot_Obs.MultiDimFit.mH120.root --main-label "With systematics" --main-color 1 --others higgsCombine_1l_Obs_freeze_All.MultiDimFit.mH120.root:"Stat-only":2 -o NLL_1l_Obs_Breakdown --breakdown Syst,Stat
+display ./NLL_1l_Obs_Breakdown.png &
+============================ commands to get Expected r, NLL,=========================
+combine -M MultiDimFit -d WS_1l.root --rMax 15 --rMin -15 --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.01 -n _1l_Snapshot_Exp --algo grid --points 100 -t -1 --expectSignal=1 --setParameters r=1
+combine -M MultiDimFit -d WS_1l.root --rMax 15 --rMin -15 --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.01 -n _1l_Bestfit_Exp --saveWorkspace -t -1 --expectSignal=1 --setParameters r=1
+combine -M MultiDimFit higgsCombine_1l_Bestfit_Exp.MultiDimFit.mH120.root  --rMin -15 --rMax 15  -n _1l_Exp_freeze_All  --cminDefaultMinimizerStrategy 1 --cminDefaultMinimizerTolerance 0.01 --algo grid --points 100 --freezeParameters allConstrainedNuisances -t -1 --expectSignal=1 --snapshotName MultiDimFit
+plot1DScan.py higgsCombine_1l_Snapshot_Exp.MultiDimFit.mH120.root --main-label "With systematics" --main-color 1 --others higgsCombine_1l_Exp_freeze_All.MultiDimFit.mH120.root:"Stat-only":2 -o NLL_1l_Exp_Breakdown --breakdown Syst,Stat
+display ./NLL_1l_Exp_Breakdown.png &
+================================= Significance =======================================
+combine -M Significance -n "" -d WS_1l.root --rMin -15 --rMax 15                                                   | awk '/Significance:/{val=$2} END{print "Obs Significance: " val}' > Obs_1l_Signif.txt
+combine -M Significance -n "" -d WS_1l.root --rMin -15 --rMax 15 --saveWorkspace -t -1 --expectSignal=1 --saveToys | awk '/Significance:/{val=$2} END{print "Exp Significance: " val}' > Exp_1l_Signif.txt
+combine -M AsymptoticLimits -n "" -d WS_1l.root --rMax 15 --rMin -15 --saveWorkspace --saveToys                    | grep -E '^(Observed Lim|Expected 50)'                             > Limits_1l_asympt.txt
+cat *Signif*txt L*pt.txt
+plot1DScan.py higgsCombine_1l_Snapshot_Obs.MultiDimFit.mH120.root --others higgsCombine_1l_Obs_freeze_All.MultiDimFit.mH120.root:"stat. only":13:3 higgsCombine_1l_Snapshot_Exp.MultiDimFit.mH120.root:"Exp. syst.+stat.":4:1 higgsCombine_1l_Exp_freeze_All.MultiDimFit.mH120.root:"stat. only":64:3 --main-label "Obs. Syst.+stat." --main-color 1 --logo-sub "#splitline{#color[4]{$(<Exp_1l_Signif.txt)}}{#splitline{$(<Obs_1l_Signif.txt)}{#splitline{#color[4]{$(grep 'Expected' Limits_1l_asympt.txt)}}{$(grep 'Observed Limit' Limits_1l_asympt.txt)}}}" -o NLL_1l_Combined --logo "CMS (1l)"
+================================= Impact & NPs =========================================
+combineTool.py -M Impacts -d WS_1l.root -n _impacts_obs --doInitialFit --robustFit 1 --rMin -15 --rMax 15 --cminDefaultMinimizerStrategy 1 --cminDefaultMinimizerTolerance 0.01 | tee impacts_1l_obs_init.txt
+combineTool.py -M Impacts -d WS_1l.root -n _impacts_obs --doFits       --robustFit 1 --rMin -15 --rMax 15 --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.01 | tee impacts_1l_obs_fits.txt
+combineTool.py -M Impacts -d WS_1l.root -n _impacts_obs -o impacts_1l_obs.json
+plotImpacts.py -i impacts_1l_obs.json -o impacts_1l_obs_plot
+==================================================================
+
