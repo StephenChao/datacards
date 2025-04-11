@@ -1,0 +1,27 @@
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is MultiDimFit
+>>> 0 out of 6 channels masked
+
+SimNLL created with 6 channels, 0 generic constraints, 267 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+  [WARNING] Found [CMS_HWW_boosted_tf_dataResidual_CR1_Bin5] at boundary. 
+
+ 
+
+ ---------------------------
+
+ WARNING: MultiDimFit failed
+
+ ---------------------------
+
+ 
+ POI: r= -11.6402 -> [-15,15]
+Point 0/100 r = -14.85
+Point 1/100 r = -14.55
+Point 2/100 r = -14.25
+Point 3/100 r = -13.95
+Point 4/100 r = -13.65
+Point 5/100 r = -13.35
+Point 6/100 r = -13.05
+Point 7/100 r = -12.75
+Point 8/100 r = -12.45

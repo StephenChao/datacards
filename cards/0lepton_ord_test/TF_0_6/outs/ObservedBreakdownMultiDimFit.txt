@@ -1,0 +1,12 @@
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is MultiDimFit
+Warning in <TFile::Init>: file /data/pku/home/zhaoyz/Higgs/datacards/cards/0lepton_ord_test/TF_0_6/higgsCombineBestfitSnapshotObserved.MultiDimFit.mH125.root probably not closed, trying to recover
+Info in <TFile::Recover>: /data/pku/home/zhaoyz/Higgs/datacards/cards/0lepton_ord_test/TF_0_6/higgsCombineBestfitSnapshotObserved.MultiDimFit.mH125.root, recovered key TDirectoryFile:toys at address 312
+Warning in <TFile::Init>: successfully recovered 1 keys
+Could not find workspace 'w' in file /data/pku/home/zhaoyz/Higgs/datacards/cards/0lepton_ord_test/TF_0_6/higgsCombineBestfitSnapshotObserved.MultiDimFit.mH125.root
+TFile**		/data/pku/home/zhaoyz/Higgs/datacards/cards/0lepton_ord_test/TF_0_6/higgsCombineBestfitSnapshotObserved.MultiDimFit.mH125.root	
+ TFile*		/data/pku/home/zhaoyz/Higgs/datacards/cards/0lepton_ord_test/TF_0_6/higgsCombineBestfitSnapshotObserved.MultiDimFit.mH125.root	
+  KEY: TDirectoryFile	toys;1	toys
+Error when running the combination:
+	Missing Workspace

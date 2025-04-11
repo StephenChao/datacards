@@ -1,0 +1,20 @@
+Have POIs: ['r']
+pass_str --expectSignal 1 --rMin -15 --rMax 15 --robustFit 1 --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.03 -m 125 -d ./combined_withmasks.root
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+   Options for Robust Minimizer :: 
+        Tolerance  0.03
+        Strategy   0
+        Type,Algo  Minuit2,Migrad
+>>> method used is MultiDimFit
+>>> 0 out of 6 channels masked
+
+SimNLL created with 6 channels, 0 generic constraints, 267 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+Error: closed range without finding crossing.
+
+ --- MultiDimFit ---
+best fit parameter values and profile-likelihood uncertainties: 
+ Warning - No valid low-error found, will report difference to minimum of range for : r
+   r :   -14.336   -0.664/+3.586 (68%)
+Done in 0.55 min (cpu), 0.55 min (real)
+>> combine -M MultiDimFit -n _initialFit_impacts --algo singles --redefineSignalPOIs r --expectSignal 1 --rMin -15 --rMax 15 --robustFit 1 --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.03 -m 125 -d ./combined_withmasks.root

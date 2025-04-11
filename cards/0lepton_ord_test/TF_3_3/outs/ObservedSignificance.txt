@@ -1,0 +1,9 @@
+ <<< Combine >>> 
+>>> random number generator seed is 44
+>>> method used is Significance
+>>> 0 out of 6 channels masked
+
+
+ -- Significance -- 
+Significance: 0
+Done in 0.40 min (cpu), 0.40 min (real)
