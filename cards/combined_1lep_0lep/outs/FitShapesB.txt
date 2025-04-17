@@ -1,0 +1,502 @@
+[SetFlag] Changing value of flag "workspaces-use-clone" from 0 to 1
+[#1] INFO:ObjectHandling -- RooWorkspace::import(w) importing dataset CR1
+[#1] INFO:ObjectHandling -- RooWorkspace::import(w) importing dataset CR2
+[#1] INFO:ObjectHandling -- RooWorkspace::import(w) importing dataset SR1a
+[#1] INFO:ObjectHandling -- RooWorkspace::import(w) importing dataset SR1b
+[#1] INFO:ObjectHandling -- RooWorkspace::import(w) importing dataset SR2a
+[#1] INFO:ObjectHandling -- RooWorkspace::import(w) importing dataset SR2b
+[#1] INFO:ObjectHandling -- RooWorkspace::import(w) importing dataset TopCR
+[#1] INFO:ObjectHandling -- RooWorkspace::import(w) importing dataset VBF
+[#1] INFO:ObjectHandling -- RooWorkspace::import(w) importing dataset WJetsCR
+[#1] INFO:ObjectHandling -- RooWorkspace::import(w) importing dataset ggFpt250to350
+[#1] INFO:ObjectHandling -- RooWorkspace::import(w) importing dataset ggFpt350to500
+[#1] INFO:ObjectHandling -- RooWorkspace::import(w) importing dataset ggFpt500toInf
+[SetFlag] Changing value of flag "workspaces-use-clone" from 0 to 1
+>> Doing prefit: CR1,CMS_HWW_boosted_qcd_datadriven
+>> Doing prefit: CR1,hzz
+>> Doing prefit: CR1,rest_bkg
+>> Doing prefit: CR1,single_top
+>> Doing prefit: CR1,ttbar
+>> Doing prefit: CR1,wjets
+>> Doing prefit: CR1,TotalBkg
+>> Doing prefit: CR1,TotalSig
+>> Doing prefit: CR1,TotalProcs
+>> Doing prefit: CR2,CMS_HWW_boosted_qcd_datadriven
+>> Doing prefit: CR2,hzz
+>> Doing prefit: CR2,rest_bkg
+>> Doing prefit: CR2,single_top
+>> Doing prefit: CR2,ttbar
+>> Doing prefit: CR2,wjets
+>> Doing prefit: CR2,TotalBkg
+>> Doing prefit: CR2,TotalSig
+>> Doing prefit: CR2,TotalProcs
+>> Doing prefit: SR1a,CMS_HWW_boosted_qcd_datadriven
+>> Doing prefit: SR1a,WH_hww
+>> Doing prefit: SR1a,ZH_hww
+>> Doing prefit: SR1a,ggH_hww
+>> Doing prefit: SR1a,hzz
+>> Doing prefit: SR1a,qqH_hww
+>> Doing prefit: SR1a,rest_bkg
+>> Doing prefit: SR1a,single_top
+>> Doing prefit: SR1a,ttH_hww
+>> Doing prefit: SR1a,ttbar
+>> Doing prefit: SR1a,wjets
+>> Doing prefit: SR1a,TotalBkg
+>> Doing prefit: SR1a,TotalSig
+>> Doing prefit: SR1a,TotalProcs
+>> Doing prefit: SR1b,CMS_HWW_boosted_qcd_datadriven
+>> Doing prefit: SR1b,WH_hww
+>> Doing prefit: SR1b,ZH_hww
+>> Doing prefit: SR1b,ggH_hww
+>> Doing prefit: SR1b,hzz
+>> Doing prefit: SR1b,qqH_hww
+>> Doing prefit: SR1b,rest_bkg
+>> Doing prefit: SR1b,single_top
+>> Doing prefit: SR1b,ttH_hww
+>> Doing prefit: SR1b,ttbar
+>> Doing prefit: SR1b,wjets
+>> Doing prefit: SR1b,TotalBkg
+>> Doing prefit: SR1b,TotalSig
+>> Doing prefit: SR1b,TotalProcs
+>> Doing prefit: SR2a,CMS_HWW_boosted_qcd_datadriven
+>> Doing prefit: SR2a,WH_hww
+>> Doing prefit: SR2a,ZH_hww
+>> Doing prefit: SR2a,ggH_hww
+>> Doing prefit: SR2a,hzz
+>> Doing prefit: SR2a,qqH_hww
+>> Doing prefit: SR2a,rest_bkg
+>> Doing prefit: SR2a,single_top
+>> Doing prefit: SR2a,ttH_hww
+>> Doing prefit: SR2a,ttbar
+>> Doing prefit: SR2a,wjets
+>> Doing prefit: SR2a,TotalBkg
+>> Doing prefit: SR2a,TotalSig
+>> Doing prefit: SR2a,TotalProcs
+>> Doing prefit: SR2b,CMS_HWW_boosted_qcd_datadriven
+>> Doing prefit: SR2b,WH_hww
+>> Doing prefit: SR2b,ZH_hww
+>> Doing prefit: SR2b,ggH_hww
+>> Doing prefit: SR2b,hzz
+>> Doing prefit: SR2b,qqH_hww
+>> Doing prefit: SR2b,rest_bkg
+>> Doing prefit: SR2b,single_top
+>> Doing prefit: SR2b,ttH_hww
+>> Doing prefit: SR2b,ttbar
+>> Doing prefit: SR2b,wjets
+>> Doing prefit: SR2b,TotalBkg
+>> Doing prefit: SR2b,TotalSig
+>> Doing prefit: SR2b,TotalProcs
+>> Doing prefit: TopCR,WH_hww
+>> Doing prefit: TopCR,ZH_hww
+>> Doing prefit: TopCR,diboson
+>> Doing prefit: TopCR,ewkvjets
+>> Doing prefit: TopCR,fake
+>> Doing prefit: TopCR,ggH_hww
+>> Doing prefit: TopCR,qqH_hww
+>> Doing prefit: TopCR,singletop
+>> Doing prefit: TopCR,ttH_hww
+>> Doing prefit: TopCR,ttbar
+>> Doing prefit: TopCR,wjets
+>> Doing prefit: TopCR,zjets
+>> Doing prefit: TopCR,TotalBkg
+>> Doing prefit: TopCR,TotalSig
+>> Doing prefit: TopCR,TotalProcs
+>> Doing prefit: VBF,WH_hww
+>> Doing prefit: VBF,ZH_hww
+>> Doing prefit: VBF,diboson
+>> Doing prefit: VBF,ewkvjets
+>> Doing prefit: VBF,fake
+>> Doing prefit: VBF,ggH_hww
+>> Doing prefit: VBF,qqH_hww
+>> Doing prefit: VBF,singletop
+>> Doing prefit: VBF,ttH_hww
+>> Doing prefit: VBF,ttbar
+>> Doing prefit: VBF,wjets
+>> Doing prefit: VBF,zjets
+>> Doing prefit: VBF,TotalBkg
+>> Doing prefit: VBF,TotalSig
+>> Doing prefit: VBF,TotalProcs
+>> Doing prefit: WJetsCR,WH_hww
+>> Doing prefit: WJetsCR,ZH_hww
+>> Doing prefit: WJetsCR,diboson
+>> Doing prefit: WJetsCR,ewkvjets
+>> Doing prefit: WJetsCR,fake
+>> Doing prefit: WJetsCR,ggH_hww
+>> Doing prefit: WJetsCR,qqH_hww
+>> Doing prefit: WJetsCR,singletop
+>> Doing prefit: WJetsCR,ttH_hww
+>> Doing prefit: WJetsCR,ttbar
+>> Doing prefit: WJetsCR,wjets
+>> Doing prefit: WJetsCR,zjets
+>> Doing prefit: WJetsCR,TotalBkg
+>> Doing prefit: WJetsCR,TotalSig
+>> Doing prefit: WJetsCR,TotalProcs
+>> Doing prefit: ggFpt250to350,WH_hww
+>> Doing prefit: ggFpt250to350,ZH_hww
+>> Doing prefit: ggFpt250to350,diboson
+>> Doing prefit: ggFpt250to350,ewkvjets
+>> Doing prefit: ggFpt250to350,fake
+>> Doing prefit: ggFpt250to350,ggH_hww
+>> Doing prefit: ggFpt250to350,qqH_hww
+>> Doing prefit: ggFpt250to350,singletop
+>> Doing prefit: ggFpt250to350,ttH_hww
+>> Doing prefit: ggFpt250to350,ttbar
+>> Doing prefit: ggFpt250to350,wjets
+>> Doing prefit: ggFpt250to350,zjets
+>> Doing prefit: ggFpt250to350,TotalBkg
+>> Doing prefit: ggFpt250to350,TotalSig
+>> Doing prefit: ggFpt250to350,TotalProcs
+>> Doing prefit: ggFpt350to500,WH_hww
+>> Doing prefit: ggFpt350to500,ZH_hww
+>> Doing prefit: ggFpt350to500,diboson
+>> Doing prefit: ggFpt350to500,ewkvjets
+>> Doing prefit: ggFpt350to500,fake
+>> Doing prefit: ggFpt350to500,ggH_hww
+>> Doing prefit: ggFpt350to500,qqH_hww
+>> Doing prefit: ggFpt350to500,singletop
+>> Doing prefit: ggFpt350to500,ttH_hww
+>> Doing prefit: ggFpt350to500,ttbar
+>> Doing prefit: ggFpt350to500,wjets
+>> Doing prefit: ggFpt350to500,zjets
+>> Doing prefit: ggFpt350to500,TotalBkg
+>> Doing prefit: ggFpt350to500,TotalSig
+>> Doing prefit: ggFpt350to500,TotalProcs
+>> Doing prefit: ggFpt500toInf,WH_hww
+>> Doing prefit: ggFpt500toInf,ZH_hww
+>> Doing prefit: ggFpt500toInf,diboson
+>> Doing prefit: ggFpt500toInf,ewkvjets
+>> Doing prefit: ggFpt500toInf,fake
+>> Doing prefit: ggFpt500toInf,ggH_hww
+>> Doing prefit: ggFpt500toInf,qqH_hww
+>> Doing prefit: ggFpt500toInf,singletop
+>> Doing prefit: ggFpt500toInf,ttH_hww
+>> Doing prefit: ggFpt500toInf,ttbar
+>> Doing prefit: ggFpt500toInf,wjets
+>> Doing prefit: ggFpt500toInf,zjets
+>> Doing prefit: ggFpt500toInf,TotalBkg
+>> Doing prefit: ggFpt500toInf,TotalSig
+>> Doing prefit: ggFpt500toInf,TotalProcs
+Bin                       Total relative bkg uncert. (prefit)
+----------------------------------------------------------
+CR1                       0.00346   
+CR2                       0.00553   
+SR1a                      0.03046   
+SR1b                      0.01135   
+SR2a                      0.14522   
+SR2b                      0.04191   
+TopCR                     0.13340   
+VBF                       0.15976   
+WJetsCR                   0.11506   
+ggFpt250to350             0.14177   
+ggFpt350to500             0.12025   
+ggFpt500toInf             0.11368   
+>> Doing postfit: CR1,CMS_HWW_boosted_qcd_datadriven
+>> Doing postfit: CR1,hzz
+>> Doing postfit: CR1,rest_bkg
+>> Doing postfit: CR1,single_top
+>> Doing postfit: CR1,ttbar
+>> Doing postfit: CR1,wjets
+>> Doing postfit: CR1,TotalBkg
+>> Doing postfit: CR1,TotalSig
+>> Doing postfit: CR1,TotalProcs
+>> Doing postfit: CR2,CMS_HWW_boosted_qcd_datadriven
+>> Doing postfit: CR2,hzz
+>> Doing postfit: CR2,rest_bkg
+>> Doing postfit: CR2,single_top
+>> Doing postfit: CR2,ttbar
+>> Doing postfit: CR2,wjets
+>> Doing postfit: CR2,TotalBkg
+>> Doing postfit: CR2,TotalSig
+>> Doing postfit: CR2,TotalProcs
+>> Doing postfit: SR1a,CMS_HWW_boosted_qcd_datadriven
+>> Doing postfit: SR1a,WH_hww
+>> Doing postfit: SR1a,ZH_hww
+>> Doing postfit: SR1a,ggH_hww
+>> Doing postfit: SR1a,hzz
+>> Doing postfit: SR1a,qqH_hww
+>> Doing postfit: SR1a,rest_bkg
+>> Doing postfit: SR1a,single_top
+>> Doing postfit: SR1a,ttH_hww
+>> Doing postfit: SR1a,ttbar
+>> Doing postfit: SR1a,wjets
+>> Doing postfit: SR1a,TotalBkg
+>> Doing postfit: SR1a,TotalSig
+>> Doing postfit: SR1a,TotalProcs
+>> Doing postfit: SR1b,CMS_HWW_boosted_qcd_datadriven
+>> Doing postfit: SR1b,WH_hww
+>> Doing postfit: SR1b,ZH_hww
+>> Doing postfit: SR1b,ggH_hww
+>> Doing postfit: SR1b,hzz
+>> Doing postfit: SR1b,qqH_hww
+>> Doing postfit: SR1b,rest_bkg
+>> Doing postfit: SR1b,single_top
+>> Doing postfit: SR1b,ttH_hww
+>> Doing postfit: SR1b,ttbar
+>> Doing postfit: SR1b,wjets
+>> Doing postfit: SR1b,TotalBkg
+>> Doing postfit: SR1b,TotalSig
+>> Doing postfit: SR1b,TotalProcs
+>> Doing postfit: SR2a,CMS_HWW_boosted_qcd_datadriven
+>> Doing postfit: SR2a,WH_hww
+>> Doing postfit: SR2a,ZH_hww
+>> Doing postfit: SR2a,ggH_hww
+>> Doing postfit: SR2a,hzz
+>> Doing postfit: SR2a,qqH_hww
+>> Doing postfit: SR2a,rest_bkg
+>> Doing postfit: SR2a,single_top
+>> Doing postfit: SR2a,ttH_hww
+>> Doing postfit: SR2a,ttbar
+>> Doing postfit: SR2a,wjets
+>> Doing postfit: SR2a,TotalBkg
+>> Doing postfit: SR2a,TotalSig
+>> Doing postfit: SR2a,TotalProcs
+>> Doing postfit: SR2b,CMS_HWW_boosted_qcd_datadriven
+>> Doing postfit: SR2b,WH_hww
+>> Doing postfit: SR2b,ZH_hww
+>> Doing postfit: SR2b,ggH_hww
+>> Doing postfit: SR2b,hzz
+>> Doing postfit: SR2b,qqH_hww
+>> Doing postfit: SR2b,rest_bkg
+>> Doing postfit: SR2b,single_top
+>> Doing postfit: SR2b,ttH_hww
+>> Doing postfit: SR2b,ttbar
+>> Doing postfit: SR2b,wjets
+>> Doing postfit: SR2b,TotalBkg
+>> Doing postfit: SR2b,TotalSig
+>> Doing postfit: SR2b,TotalProcs
+>> Doing postfit: TopCR,WH_hww
+>> Doing postfit: TopCR,ZH_hww
+>> Doing postfit: TopCR,diboson
+>> Doing postfit: TopCR,ewkvjets
+>> Doing postfit: TopCR,fake
+>> Doing postfit: TopCR,ggH_hww
+>> Doing postfit: TopCR,qqH_hww
+>> Doing postfit: TopCR,singletop
+>> Doing postfit: TopCR,ttH_hww
+>> Doing postfit: TopCR,ttbar
+>> Doing postfit: TopCR,wjets
+>> Doing postfit: TopCR,zjets
+>> Doing postfit: TopCR,TotalBkg
+>> Doing postfit: TopCR,TotalSig
+>> Doing postfit: TopCR,TotalProcs
+>> Doing postfit: VBF,WH_hww
+>> Doing postfit: VBF,ZH_hww
+>> Doing postfit: VBF,diboson
+>> Doing postfit: VBF,ewkvjets
+>> Doing postfit: VBF,fake
+>> Doing postfit: VBF,ggH_hww
+>> Doing postfit: VBF,qqH_hww
+>> Doing postfit: VBF,singletop
+>> Doing postfit: VBF,ttH_hww
+>> Doing postfit: VBF,ttbar
+>> Doing postfit: VBF,wjets
+>> Doing postfit: VBF,zjets
+>> Doing postfit: VBF,TotalBkg
+>> Doing postfit: VBF,TotalSig
+>> Doing postfit: VBF,TotalProcs
+>> Doing postfit: WJetsCR,WH_hww
+>> Doing postfit: WJetsCR,ZH_hww
+>> Doing postfit: WJetsCR,diboson
+>> Doing postfit: WJetsCR,ewkvjets
+>> Doing postfit: WJetsCR,fake
+>> Doing postfit: WJetsCR,ggH_hww
+>> Doing postfit: WJetsCR,qqH_hww
+>> Doing postfit: WJetsCR,singletop
+>> Doing postfit: WJetsCR,ttH_hww
+>> Doing postfit: WJetsCR,ttbar
+>> Doing postfit: WJetsCR,wjets
+>> Doing postfit: WJetsCR,zjets
+>> Doing postfit: WJetsCR,TotalBkg
+>> Doing postfit: WJetsCR,TotalSig
+>> Doing postfit: WJetsCR,TotalProcs
+>> Doing postfit: ggFpt250to350,WH_hww
+>> Doing postfit: ggFpt250to350,ZH_hww
+>> Doing postfit: ggFpt250to350,diboson
+>> Doing postfit: ggFpt250to350,ewkvjets
+>> Doing postfit: ggFpt250to350,fake
+>> Doing postfit: ggFpt250to350,ggH_hww
+>> Doing postfit: ggFpt250to350,qqH_hww
+>> Doing postfit: ggFpt250to350,singletop
+>> Doing postfit: ggFpt250to350,ttH_hww
+>> Doing postfit: ggFpt250to350,ttbar
+>> Doing postfit: ggFpt250to350,wjets
+>> Doing postfit: ggFpt250to350,zjets
+>> Doing postfit: ggFpt250to350,TotalBkg
+>> Doing postfit: ggFpt250to350,TotalSig
+>> Doing postfit: ggFpt250to350,TotalProcs
+>> Doing postfit: ggFpt350to500,WH_hww
+>> Doing postfit: ggFpt350to500,ZH_hww
+>> Doing postfit: ggFpt350to500,diboson
+>> Doing postfit: ggFpt350to500,ewkvjets
+>> Doing postfit: ggFpt350to500,fake
+>> Doing postfit: ggFpt350to500,ggH_hww
+>> Doing postfit: ggFpt350to500,qqH_hww
+>> Doing postfit: ggFpt350to500,singletop
+>> Doing postfit: ggFpt350to500,ttH_hww
+>> Doing postfit: ggFpt350to500,ttbar
+>> Doing postfit: ggFpt350to500,wjets
+>> Doing postfit: ggFpt350to500,zjets
+>> Doing postfit: ggFpt350to500,TotalBkg
+>> Doing postfit: ggFpt350to500,TotalSig
+>> Doing postfit: ggFpt350to500,TotalProcs
+>> Doing postfit: ggFpt500toInf,WH_hww
+>> Doing postfit: ggFpt500toInf,ZH_hww
+>> Doing postfit: ggFpt500toInf,diboson
+>> Doing postfit: ggFpt500toInf,ewkvjets
+>> Doing postfit: ggFpt500toInf,fake
+>> Doing postfit: ggFpt500toInf,ggH_hww
+>> Doing postfit: ggFpt500toInf,qqH_hww
+>> Doing postfit: ggFpt500toInf,singletop
+>> Doing postfit: ggFpt500toInf,ttH_hww
+>> Doing postfit: ggFpt500toInf,ttbar
+>> Doing postfit: ggFpt500toInf,wjets
+>> Doing postfit: ggFpt500toInf,zjets
+>> Doing postfit: ggFpt500toInf,TotalBkg
+>> Doing postfit: ggFpt500toInf,TotalSig
+>> Doing postfit: ggFpt500toInf,TotalProcs
+
+Bin                       Total relative bkg uncert. (postfit)
+----------------------------------------------------------
+CR1                       0.00018   
+CR2                       0.00009   
+SR1a                      0.00240   
+SR1b                      0.00055   
+SR2a                      0.00357   
+SR2b                      0.00199   
+TopCR                     0.02108   
+VBF                       0.02945   
+WJetsCR                   0.01903   
+ggFpt250to350             0.03117   
+ggFpt350to500             0.02611   
+ggFpt500toInf             0.00381   
+
+Bin                       Process              Scale factor
+----------------------------------------------------------
+CR1                       CMS_HWW_boosted_qcd_datadriven 0.99923   
+CR1                       hzz                  0.99113   
+CR1                       rest_bkg             0.98125   
+CR1                       single_top           1.02977   
+CR1                       ttbar                0.84044   
+CR1                       wjets                1.13536   
+CR2                       CMS_HWW_boosted_qcd_datadriven 1.00020   
+CR2                       hzz                  0.99574   
+CR2                       rest_bkg             0.97134   
+CR2                       single_top           1.02216   
+CR2                       ttbar                0.82302   
+CR2                       wjets                1.12655   
+SR1a                      CMS_HWW_boosted_qcd_datadriven 0.91099   
+SR1a                      WH_hww               0.99114   
+SR1a                      ZH_hww               0.99257   
+SR1a                      ggH_hww              0.98741   
+SR1a                      hzz                  0.48123   
+SR1a                      qqH_hww              0.97816   
+SR1a                      rest_bkg             0.84598   
+SR1a                      single_top           1.04674   
+SR1a                      ttH_hww              0.98707   
+SR1a                      ttbar                0.78489   
+SR1a                      wjets                1.08374   
+SR1b                      CMS_HWW_boosted_qcd_datadriven 1.42205   
+SR1b                      WH_hww               0.99062   
+SR1b                      ZH_hww               0.98850   
+SR1b                      ggH_hww              0.99200   
+SR1b                      hzz                  0.46632   
+SR1b                      qqH_hww              0.98887   
+SR1b                      rest_bkg             0.98334   
+SR1b                      single_top           1.04339   
+SR1b                      ttH_hww              0.98777   
+SR1b                      ttbar                0.81376   
+SR1b                      wjets                1.12115   
+SR2a                      CMS_HWW_boosted_qcd_datadriven 0.92411   
+SR2a                      WH_hww               0.99836   
+SR2a                      ZH_hww               1.00232   
+SR2a                      ggH_hww              1.00773   
+SR2a                      hzz                  0.44715   
+SR2a                      qqH_hww              1.00163   
+SR2a                      rest_bkg             0.81853   
+SR2a                      single_top           1.05483   
+SR2a                      ttH_hww              0.99546   
+SR2a                      ttbar                0.77488   
+SR2a                      wjets                1.09534   
+SR2b                      CMS_HWW_boosted_qcd_datadriven 1.40762   
+SR2b                      WH_hww               0.98670   
+SR2b                      ZH_hww               0.99197   
+SR2b                      ggH_hww              0.99897   
+SR2b                      hzz                  0.41683   
+SR2b                      qqH_hww              0.98350   
+SR2b                      rest_bkg             0.91052   
+SR2b                      single_top           1.04331   
+SR2b                      ttH_hww              0.99109   
+SR2b                      ttbar                0.79511   
+SR2b                      wjets                1.12822   
+TopCR                     WH_hww               0.98571   
+TopCR                     ZH_hww               0.98630   
+TopCR                     diboson              1.03423   
+TopCR                     ewkvjets             0.92577   
+TopCR                     fake                 1.15056   
+TopCR                     ggH_hww              0.98785   
+TopCR                     qqH_hww              0.99887   
+TopCR                     singletop            1.00509   
+TopCR                     ttH_hww              0.98264   
+TopCR                     ttbar                0.94321   
+TopCR                     wjets                1.05210   
+TopCR                     zjets                1.42703   
+VBF                       WH_hww               0.92763   
+VBF                       ZH_hww               0.91008   
+VBF                       diboson              0.97476   
+VBF                       ewkvjets             0.87844   
+VBF                       fake                 1.12039   
+VBF                       ggH_hww              0.92383   
+VBF                       qqH_hww              0.95946   
+VBF                       singletop            0.83687   
+VBF                       ttH_hww              0.80040   
+VBF                       ttbar                0.81563   
+VBF                       wjets                0.85262   
+VBF                       zjets                0.97086   
+WJetsCR                   WH_hww               0.98433   
+WJetsCR                   ZH_hww               0.98111   
+WJetsCR                   diboson              1.00296   
+WJetsCR                   ewkvjets             0.99477   
+WJetsCR                   fake                 1.13345   
+WJetsCR                   ggH_hww              0.98220   
+WJetsCR                   qqH_hww              0.98397   
+WJetsCR                   singletop            1.01645   
+WJetsCR                   ttH_hww              0.98277   
+WJetsCR                   ttbar                1.01658   
+WJetsCR                   wjets                0.94326   
+WJetsCR                   zjets                0.99950   
+ggFpt250to350             WH_hww               0.91696   
+ggFpt250to350             ZH_hww               0.90898   
+ggFpt250to350             diboson              0.91761   
+ggFpt250to350             ewkvjets             0.95563   
+ggFpt250to350             fake                 1.13629   
+ggFpt250to350             ggH_hww              0.92608   
+ggFpt250to350             qqH_hww              0.92539   
+ggFpt250to350             singletop            0.89566   
+ggFpt250to350             ttH_hww              0.90235   
+ggFpt250to350             ttbar                0.92589   
+ggFpt250to350             wjets                0.89627   
+ggFpt250to350             zjets                0.87320   
+ggFpt350to500             WH_hww               0.90325   
+ggFpt350to500             ZH_hww               0.90449   
+ggFpt350to500             diboson              0.94219   
+ggFpt350to500             ewkvjets             0.98004   
+ggFpt350to500             fake                 1.13361   
+ggFpt350to500             ggH_hww              0.92656   
+ggFpt350to500             qqH_hww              0.94598   
+ggFpt350to500             singletop            0.96788   
+ggFpt350to500             ttH_hww              0.93617   
+ggFpt350to500             ttbar                0.93203   
+ggFpt350to500             wjets                0.91180   
+ggFpt350to500             zjets                0.95797   
+ggFpt500toInf             WH_hww               0.93071   
+ggFpt500toInf             ZH_hww               0.93764   
+ggFpt500toInf             diboson              0.94277   
+ggFpt500toInf             ewkvjets             0.96442   
+ggFpt500toInf             fake                 1.14288   
+ggFpt500toInf             ggH_hww              0.92899   
+ggFpt500toInf             qqH_hww              0.93963   
+ggFpt500toInf             singletop            0.98366   
+ggFpt500toInf             ttH_hww              1.01194   
+ggFpt500toInf             ttbar                0.93471   
+ggFpt500toInf             wjets                0.94347   
+ggFpt500toInf             zjets                0.93699   
