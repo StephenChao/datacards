@@ -353,7 +353,7 @@ if [ $impactsf != 0 ]; then
     combine -M MultiDimFit -n "_paramFit_impacts_$impactsf" --algo impact --redefineSignalPOIs r -P "$impactsf" \
     --floatOtherPOIs 1 --saveInactivePOI 1 -d $wsm.root \
     --expectSignal 1 --robustFit 1 \
-    --rMin -40 --rMax 40 --cminDefaultMinimizerStrategy 0  --cminDefaultMinimizerTolerance 5 -m 125 | tee "$outsdir/Impacts_$impactsf.txt"
+    --rMin -5 --rMax 5 --cminDefaultMinimizerStrategy 0  --cminDefaultMinimizerTolerance 3 -m 125 | tee "$outsdir/Impacts_$impactsf.txt"
 fi
 
 
@@ -363,7 +363,7 @@ if [ $impactsc != 0 ]; then
     combineTool.py -M Impacts \
     -m 125 -n "impacts" -d $wsm.root \
     --expectSignal 1 --named "$impactsc" \
-    --rMin -40 --rMax 40 -v 1 -o impacts.json 2>&1 | tee $outsdir/Impacts_collect.txt
+    --rMin -5 --rMax 5 --cminDefaultMinimizerStrategy 0  --cminDefaultMinimizerTolerance 3 -v 1 -o impacts.json 2>&1 | tee $outsdir/Impacts_collect.txt
 
     plotImpacts.py -i impacts.json -o impacts 
 fi
