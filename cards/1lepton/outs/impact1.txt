@@ -1,0 +1,14 @@
+Have POIs: ['r']
+ <<< Combine >>> 
+ <<< v10.0.1 >>>
+>>> Random number generator seed is 123456
+>>> Method used is MultiDimFit
+>>> 0 out of 6 channels masked
+
+Doing initial fit: 
+
+ --- MultiDimFit ---
+best fit parameter values and profile-likelihood uncertainties: 
+   r :    +1.000   -0.607/+0.840 (68%)
+Done in 0.52 min (cpu), 0.52 min (real)
+>> combine -M MultiDimFit -n _initialFit_Test --algo singles --redefineSignalPOIs r -t -1 --rMin -10 --rMax 10 --robustFit 1 --expectSignal 1 -m 125 -d ./combined_withmasks.root
