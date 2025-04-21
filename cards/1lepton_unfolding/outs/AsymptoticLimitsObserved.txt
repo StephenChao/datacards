@@ -9,13 +9,3 @@ Set Default Value of Parameter r_ggH_pt450_inf To : 1
 Set Default Value of Parameter r_qqH_mjj_1000_inf To : 1
 >>> 0 out of 6 channels masked
 
-
- -- AsymptoticLimits ( CLs ) --
-Observed Limit: r_ggH_pt200_300 < 10.3770
-Expected  2.5%: r_ggH_pt200_300 < 5.8960
-Expected 16.0%: r_ggH_pt200_300 < 8.7444
-Expected 50.0%: r_ggH_pt200_300 < 14.3750
-Expected 84.0%: r_ggH_pt200_300 < 25.9495
-Expected 97.5%: r_ggH_pt200_300 < 43.5735
-
-Done in 1.87 min (cpu), 1.87 min (real)
