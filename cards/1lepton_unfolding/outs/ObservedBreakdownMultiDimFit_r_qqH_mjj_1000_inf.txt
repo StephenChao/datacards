@@ -11,152 +11,168 @@ Set Default Value of Parameter r_qqH_mjj_1000_inf To : 1
 >>> 0 out of 6 channels masked
 
 Doing initial fit: 
- POI: r_qqH_mjj_1000_inf= 0.253585 -> [-50,50]
+ POI: r_qqH_mjj_1000_inf= 0.311251 -> [-50,50]
 Point 0/100 r_qqH_mjj_1000_inf = -49.5
-WARNING: underflow to -1.15435 in pdf_binVBF_obsOnly for bin 0, weight 1
+WARNING: underflow to -1.14845 in pdf_binVBF_obsOnly for bin 0, weight 1
 FASTEXIT from pdf_binVBF_obsOnly
 Point 1/100 r_qqH_mjj_1000_inf = -48.5
-WARNING: underflow to -1.12914 in pdf_binVBF_obsOnly for bin 0, weight 1
+WARNING: underflow to -1.12337 in pdf_binVBF_obsOnly for bin 0, weight 1
 FASTEXIT from pdf_binVBF_obsOnly
 Point 2/100 r_qqH_mjj_1000_inf = -47.5
-WARNING: underflow to -1.10393 in pdf_binVBF_obsOnly for bin 0, weight 1
+WARNING: underflow to -1.09829 in pdf_binVBF_obsOnly for bin 0, weight 1
 FASTEXIT from pdf_binVBF_obsOnly
 Point 3/100 r_qqH_mjj_1000_inf = -46.5
-WARNING: underflow to -1.07872 in pdf_binVBF_obsOnly for bin 0, weight 1
+WARNING: underflow to -1.07321 in pdf_binVBF_obsOnly for bin 0, weight 1
 FASTEXIT from pdf_binVBF_obsOnly
 Point 4/100 r_qqH_mjj_1000_inf = -45.5
-WARNING: underflow to -1.05352 in pdf_binVBF_obsOnly for bin 0, weight 1
+WARNING: underflow to -1.04813 in pdf_binVBF_obsOnly for bin 0, weight 1
 FASTEXIT from pdf_binVBF_obsOnly
 Point 5/100 r_qqH_mjj_1000_inf = -44.5
-WARNING: underflow to -1.02831 in pdf_binVBF_obsOnly for bin 0, weight 1
+WARNING: underflow to -1.02306 in pdf_binVBF_obsOnly for bin 0, weight 1
 FASTEXIT from pdf_binVBF_obsOnly
 Point 6/100 r_qqH_mjj_1000_inf = -43.5
-WARNING: underflow to -1.0031 in pdf_binVBF_obsOnly for bin 0, weight 1
+WARNING: underflow to -0.997979 in pdf_binVBF_obsOnly for bin 0, weight 1
 FASTEXIT from pdf_binVBF_obsOnly
 Point 7/100 r_qqH_mjj_1000_inf = -42.5
-WARNING: underflow to -0.977888 in pdf_binVBF_obsOnly for bin 0, weight 1
+WARNING: underflow to -0.972902 in pdf_binVBF_obsOnly for bin 0, weight 1
 FASTEXIT from pdf_binVBF_obsOnly
 Point 8/100 r_qqH_mjj_1000_inf = -41.5
-WARNING: underflow to -0.952679 in pdf_binVBF_obsOnly for bin 0, weight 1
+WARNING: underflow to -0.947824 in pdf_binVBF_obsOnly for bin 0, weight 1
 FASTEXIT from pdf_binVBF_obsOnly
 Point 9/100 r_qqH_mjj_1000_inf = -40.5
-WARNING: underflow to -0.92747 in pdf_binVBF_obsOnly for bin 0, weight 1
+WARNING: underflow to -0.922746 in pdf_binVBF_obsOnly for bin 0, weight 1
 FASTEXIT from pdf_binVBF_obsOnly
 Point 10/100 r_qqH_mjj_1000_inf = -39.5
-WARNING: underflow to -0.902261 in pdf_binVBF_obsOnly for bin 0, weight 1
+WARNING: underflow to -0.897669 in pdf_binVBF_obsOnly for bin 0, weight 1
 FASTEXIT from pdf_binVBF_obsOnly
 Point 11/100 r_qqH_mjj_1000_inf = -38.5
-WARNING: underflow to -0.877052 in pdf_binVBF_obsOnly for bin 0, weight 1
+WARNING: underflow to -0.872591 in pdf_binVBF_obsOnly for bin 0, weight 1
 FASTEXIT from pdf_binVBF_obsOnly
 Point 12/100 r_qqH_mjj_1000_inf = -37.5
-WARNING: underflow to -0.851843 in pdf_binVBF_obsOnly for bin 0, weight 1
+WARNING: underflow to -0.847513 in pdf_binVBF_obsOnly for bin 0, weight 1
 FASTEXIT from pdf_binVBF_obsOnly
 Point 13/100 r_qqH_mjj_1000_inf = -36.5
-WARNING: underflow to -0.826634 in pdf_binVBF_obsOnly for bin 0, weight 1
+WARNING: underflow to -0.822436 in pdf_binVBF_obsOnly for bin 0, weight 1
 FASTEXIT from pdf_binVBF_obsOnly
 Point 14/100 r_qqH_mjj_1000_inf = -35.5
-WARNING: underflow to -0.801425 in pdf_binVBF_obsOnly for bin 0, weight 1
+WARNING: underflow to -0.797358 in pdf_binVBF_obsOnly for bin 0, weight 1
 FASTEXIT from pdf_binVBF_obsOnly
 Point 15/100 r_qqH_mjj_1000_inf = -34.5
-WARNING: underflow to -0.776216 in pdf_binVBF_obsOnly for bin 0, weight 1
+WARNING: underflow to -0.77228 in pdf_binVBF_obsOnly for bin 0, weight 1
 FASTEXIT from pdf_binVBF_obsOnly
 Point 16/100 r_qqH_mjj_1000_inf = -33.5
-WARNING: underflow to -0.751007 in pdf_binVBF_obsOnly for bin 0, weight 1
+WARNING: underflow to -0.747203 in pdf_binVBF_obsOnly for bin 0, weight 1
 FASTEXIT from pdf_binVBF_obsOnly
 Point 17/100 r_qqH_mjj_1000_inf = -32.5
-WARNING: underflow to -0.725798 in pdf_binVBF_obsOnly for bin 0, weight 1
+WARNING: underflow to -0.722125 in pdf_binVBF_obsOnly for bin 0, weight 1
 FASTEXIT from pdf_binVBF_obsOnly
 Point 18/100 r_qqH_mjj_1000_inf = -31.5
-WARNING: underflow to -0.700589 in pdf_binVBF_obsOnly for bin 0, weight 1
+WARNING: underflow to -0.697047 in pdf_binVBF_obsOnly for bin 0, weight 1
 FASTEXIT from pdf_binVBF_obsOnly
 Point 19/100 r_qqH_mjj_1000_inf = -30.5
-WARNING: underflow to -0.67538 in pdf_binVBF_obsOnly for bin 0, weight 1
+WARNING: underflow to -0.67197 in pdf_binVBF_obsOnly for bin 0, weight 1
 FASTEXIT from pdf_binVBF_obsOnly
 Point 20/100 r_qqH_mjj_1000_inf = -29.5
-WARNING: underflow to -0.650171 in pdf_binVBF_obsOnly for bin 0, weight 1
+WARNING: underflow to -0.646892 in pdf_binVBF_obsOnly for bin 0, weight 1
 FASTEXIT from pdf_binVBF_obsOnly
 Point 21/100 r_qqH_mjj_1000_inf = -28.5
-WARNING: underflow to -0.624962 in pdf_binVBF_obsOnly for bin 0, weight 1
+WARNING: underflow to -0.621814 in pdf_binVBF_obsOnly for bin 0, weight 1
 FASTEXIT from pdf_binVBF_obsOnly
 Point 22/100 r_qqH_mjj_1000_inf = -27.5
-WARNING: underflow to -0.599753 in pdf_binVBF_obsOnly for bin 0, weight 1
+WARNING: underflow to -0.596737 in pdf_binVBF_obsOnly for bin 0, weight 1
 FASTEXIT from pdf_binVBF_obsOnly
 Point 23/100 r_qqH_mjj_1000_inf = -26.5
-WARNING: underflow to -0.574544 in pdf_binVBF_obsOnly for bin 0, weight 1
+WARNING: underflow to -0.571659 in pdf_binVBF_obsOnly for bin 0, weight 1
 FASTEXIT from pdf_binVBF_obsOnly
 Point 24/100 r_qqH_mjj_1000_inf = -25.5
-WARNING: underflow to -0.549335 in pdf_binVBF_obsOnly for bin 0, weight 1
+WARNING: underflow to -0.546581 in pdf_binVBF_obsOnly for bin 0, weight 1
 FASTEXIT from pdf_binVBF_obsOnly
 Point 25/100 r_qqH_mjj_1000_inf = -24.5
-WARNING: underflow to -0.524126 in pdf_binVBF_obsOnly for bin 0, weight 1
+WARNING: underflow to -0.521504 in pdf_binVBF_obsOnly for bin 0, weight 1
 FASTEXIT from pdf_binVBF_obsOnly
 Point 26/100 r_qqH_mjj_1000_inf = -23.5
-WARNING: underflow to -0.498917 in pdf_binVBF_obsOnly for bin 0, weight 1
+WARNING: underflow to -0.496426 in pdf_binVBF_obsOnly for bin 0, weight 1
 FASTEXIT from pdf_binVBF_obsOnly
 Point 27/100 r_qqH_mjj_1000_inf = -22.5
-WARNING: underflow to -0.473708 in pdf_binVBF_obsOnly for bin 0, weight 1
+WARNING: underflow to -0.471348 in pdf_binVBF_obsOnly for bin 0, weight 1
 FASTEXIT from pdf_binVBF_obsOnly
 Point 28/100 r_qqH_mjj_1000_inf = -21.5
-WARNING: underflow to -0.448499 in pdf_binVBF_obsOnly for bin 0, weight 1
+WARNING: underflow to -0.446271 in pdf_binVBF_obsOnly for bin 0, weight 1
 FASTEXIT from pdf_binVBF_obsOnly
 Point 29/100 r_qqH_mjj_1000_inf = -20.5
-WARNING: underflow to -0.42329 in pdf_binVBF_obsOnly for bin 0, weight 1
+WARNING: underflow to -0.421193 in pdf_binVBF_obsOnly for bin 0, weight 1
 FASTEXIT from pdf_binVBF_obsOnly
 Point 30/100 r_qqH_mjj_1000_inf = -19.5
-WARNING: underflow to -0.398081 in pdf_binVBF_obsOnly for bin 0, weight 1
+WARNING: underflow to -0.396115 in pdf_binVBF_obsOnly for bin 0, weight 1
 FASTEXIT from pdf_binVBF_obsOnly
 Point 31/100 r_qqH_mjj_1000_inf = -18.5
-WARNING: underflow to -0.372872 in pdf_binVBF_obsOnly for bin 0, weight 1
+WARNING: underflow to -0.371038 in pdf_binVBF_obsOnly for bin 0, weight 1
 FASTEXIT from pdf_binVBF_obsOnly
 Point 32/100 r_qqH_mjj_1000_inf = -17.5
-WARNING: underflow to -0.347663 in pdf_binVBF_obsOnly for bin 0, weight 1
+WARNING: underflow to -0.34596 in pdf_binVBF_obsOnly for bin 0, weight 1
 FASTEXIT from pdf_binVBF_obsOnly
 Point 33/100 r_qqH_mjj_1000_inf = -16.5
-WARNING: underflow to -0.322454 in pdf_binVBF_obsOnly for bin 0, weight 1
+WARNING: underflow to -0.320882 in pdf_binVBF_obsOnly for bin 0, weight 1
 FASTEXIT from pdf_binVBF_obsOnly
 Point 34/100 r_qqH_mjj_1000_inf = -15.5
-WARNING: underflow to -0.297245 in pdf_binVBF_obsOnly for bin 0, weight 1
+WARNING: underflow to -0.295805 in pdf_binVBF_obsOnly for bin 0, weight 1
 FASTEXIT from pdf_binVBF_obsOnly
 Point 35/100 r_qqH_mjj_1000_inf = -14.5
-WARNING: underflow to -0.272036 in pdf_binVBF_obsOnly for bin 0, weight 1
+WARNING: underflow to -0.270727 in pdf_binVBF_obsOnly for bin 0, weight 1
 FASTEXIT from pdf_binVBF_obsOnly
 Point 36/100 r_qqH_mjj_1000_inf = -13.5
-WARNING: underflow to -0.246827 in pdf_binVBF_obsOnly for bin 0, weight 1
+WARNING: underflow to -0.245649 in pdf_binVBF_obsOnly for bin 0, weight 1
 FASTEXIT from pdf_binVBF_obsOnly
 Point 37/100 r_qqH_mjj_1000_inf = -12.5
-WARNING: underflow to -0.221618 in pdf_binVBF_obsOnly for bin 0, weight 1
+WARNING: underflow to -0.220572 in pdf_binVBF_obsOnly for bin 0, weight 1
 FASTEXIT from pdf_binVBF_obsOnly
 Point 38/100 r_qqH_mjj_1000_inf = -11.5
-WARNING: underflow to -0.196409 in pdf_binVBF_obsOnly for bin 0, weight 1
+WARNING: underflow to -0.195494 in pdf_binVBF_obsOnly for bin 0, weight 1
 FASTEXIT from pdf_binVBF_obsOnly
 Point 39/100 r_qqH_mjj_1000_inf = -10.5
-WARNING: underflow to -0.1712 in pdf_binVBF_obsOnly for bin 0, weight 1
+WARNING: underflow to -0.170416 in pdf_binVBF_obsOnly for bin 0, weight 1
 FASTEXIT from pdf_binVBF_obsOnly
 Point 40/100 r_qqH_mjj_1000_inf = -9.5
-WARNING: underflow to -0.145991 in pdf_binVBF_obsOnly for bin 0, weight 1
+WARNING: underflow to -0.145339 in pdf_binVBF_obsOnly for bin 0, weight 1
 FASTEXIT from pdf_binVBF_obsOnly
 Point 41/100 r_qqH_mjj_1000_inf = -8.5
-WARNING: underflow to -0.120782 in pdf_binVBF_obsOnly for bin 0, weight 1
+WARNING: underflow to -0.120261 in pdf_binVBF_obsOnly for bin 0, weight 1
 FASTEXIT from pdf_binVBF_obsOnly
 Point 42/100 r_qqH_mjj_1000_inf = -7.5
-WARNING: underflow to -0.0955733 in pdf_binVBF_obsOnly for bin 0, weight 1
+WARNING: underflow to -0.0951832 in pdf_binVBF_obsOnly for bin 0, weight 1
 FASTEXIT from pdf_binVBF_obsOnly
 Point 43/100 r_qqH_mjj_1000_inf = -6.5
-WARNING: underflow to -0.0703643 in pdf_binVBF_obsOnly for bin 0, weight 1
+WARNING: underflow to -0.0701055 in pdf_binVBF_obsOnly for bin 0, weight 1
 FASTEXIT from pdf_binVBF_obsOnly
 Point 44/100 r_qqH_mjj_1000_inf = -5.5
-WARNING: underflow to -0.0451553 in pdf_binVBF_obsOnly for bin 0, weight 1
+WARNING: underflow to -0.0450278 in pdf_binVBF_obsOnly for bin 0, weight 1
 FASTEXIT from pdf_binVBF_obsOnly
 Point 45/100 r_qqH_mjj_1000_inf = -4.5
-WARNING: underflow to -0.0199463 in pdf_binVBF_obsOnly for bin 0, weight 1
+WARNING: underflow to -0.0199502 in pdf_binVBF_obsOnly for bin 0, weight 1
 FASTEXIT from pdf_binVBF_obsOnly
 Point 46/100 r_qqH_mjj_1000_inf = -3.5
-WARNING: underflow to -0.0920697 in pdf_binVBF_obsOnly for bin 1, weight 7
+WARNING: underflow to -0.0947804 in pdf_binVBF_obsOnly for bin 1, weight 7
 FASTEXIT from pdf_binVBF_obsOnly
 Point 47/100 r_qqH_mjj_1000_inf = -2.5
-WARNING: underflow to -0.0204656 in pdf_binVBF_obsOnly for bin 1, weight 7
+WARNING: underflow to -0.0232276 in pdf_binVBF_obsOnly for bin 1, weight 7
 FASTEXIT from pdf_binVBF_obsOnly
 Point 48/100 r_qqH_mjj_1000_inf = -1.5
+WARNING: underflow to -8.91909e-05 in pdf_binVBF_obsOnly for bin 2, weight 3
+FASTEXIT from pdf_binVBF_obsOnly
+RooAbsMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (2.29415) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	r_ggH_pt200_300=-4.48739	r_ggH_pt300_450=-0.818335	r_ggH_pt450_inf=-0.0776804	ttbarnormSF=0.963676	wjetsnormSF=0.951615
+RooAbsReal::VBF[ params=(BR_hww,CMS_HWW_boosted_EW_unc,CMS_HWW_boosted_FakeRate_EWK_SF_statistical_uncertainty,CMS_HWW_boosted_FakeRate_statistical_uncertainty,CMS_HWW_boosted_Fake_SF_uncertainty,CMS_HWW_boosted_TopPtReweight,CMS_HWW_boosted_VBF_mcstat_bin0,CMS_HWW_boosted_VBF_mcstat_bin1,CMS_HWW_boosted_VBF_mcstat_bin2,CMS_HWW_boosted_VBF_mcstat_bin3,CMS_HWW_boosted_VBF_mcstat_bin4,CMS_HWW_boosted_VBF_mcstat_bin5,CMS_HWW_boosted_VBF_mcstat_bin6,CMS_HWW_boosted_VBF_mcstat_bin7,CMS_HWW_boosted_W_d1kappa_EW,CMS_HWW_boosted_Z_d2kappa_EW,CMS_HWW_boosted_Z_d3kappa_EW,CMS_HWW_boosted_btagSFbcCorrelated,CMS_HWW_boosted_btagSFbc_2016,CMS_HWW_boosted_btagSFbc_2016APV,CMS_HWW_boosted_btagSFbc_2017,CMS_HWW_boosted_btagSFbc_2018,CMS_HWW_boosted_btagSFlightCorrelated,CMS_HWW_boosted_btagSFlight_2016,CMS_HWW_boosted_btagSFlight_2016APV,CMS_HWW_boosted_btagSFlight_2017,CMS_HWW_boosted_btagSFlight_2018,CMS_HWW_boosted_ele_identification_2016,CMS_HWW_boosted_ele_identification_2016APV,CMS_HWW_boosted_ele_identification_2017,CMS_HWW_boosted_ele_identification_2018,CMS_HWW_boosted_ele_reconstruction_2016,CMS_HWW_boosted_ele_reconstruction_2016APV,CMS_HWW_boosted_ele_reconstruction_2017,CMS_HWW_boosted_ele_reconstruction_2018,CMS_HWW_boosted_ele_trigger_stat_unc_2016,CMS_HWW_boosted_ele_trigger_stat_unc_2016APV,CMS_HWW_boosted_ele_trigger_stat_unc_2017,CMS_HWW_boosted_ele_trigger_stat_unc_2018,CMS_HWW_boosted_ele_trigger_syst_unc,CMS_HWW_boosted_jmr_2016,CMS_HWW_boosted_jmr_2016APV,CMS_HWW_boosted_jmr_2017,CMS_HWW_boosted_jmr_2018,CMS_HWW_boosted_jms_2016,CMS_HWW_boosted_jms_2016APV,CMS_HWW_boosted_jms_2017,CMS_HWW_boosted_jms_2018,CMS_HWW_boosted_miniisolation_SF_unc,CMS_HWW_boosted_mu_identification_stat_2016,CMS_HWW_boosted_mu_identification_stat_2016APV,CMS_HWW_boosted_mu_identification_stat_2017,CMS_HWW_boosted_mu_identification_stat_2018,CMS_HWW_boosted_mu_identification_syst,CMS_HWW_boosted_mu_isolation,CMS_HWW_boosted_mu_trigger,CMS_HWW_boosted_mu_trigger_iso,CMS_HWW_boosted_taggereff_VBF,CMS_HWW_boosted_ttbar_extrapolation_unc,CMS_l1_ecal_prefiring_2016,CMS_l1_ecal_prefiring_2016APV,CMS_l1_ecal_prefiring_2017,CMS_pileup_2016,CMS_pileup_2016APV,CMS_pileup_2017,CMS_pileup_2018,CMS_pileup_id,CMS_res_j_2016,CMS_res_j_2016APV,CMS_res_j_2017,CMS_res_j_2018,CMS_scale_j_Abs,CMS_scale_j_Abs_2016,CMS_scale_j_Abs_2016APV,CMS_scale_j_Abs_2017,CMS_scale_j_Abs_2018,CMS_scale_j_BBEC1,CMS_scale_j_BBEC1_2016,CMS_scale_j_BBEC1_2016APV,CMS_scale_j_BBEC1_2017,CMS_scale_j_BBEC1_2018,CMS_scale_j_EC2,CMS_scale_j_EC2_2016,CMS_scale_j_EC2_2016APV,CMS_scale_j_EC2_2017,CMS_scale_j_EC2_2018,CMS_scale_j_FlavQCD,CMS_scale_j_HF,CMS_scale_j_HF_2016,CMS_scale_j_HF_2016APV,CMS_scale_j_HF_2017,CMS_scale_j_HF_2018,CMS_scale_j_RelBal,CMS_scale_j_RelSample_2016,CMS_scale_j_RelSample_2016APV,CMS_scale_j_RelSample_2017,CMS_scale_j_RelSample_2018,PDF_WH_ACCEPT_CMS_HWW_boosted,PDF_ZH_ACCEPT_CMS_HWW_boosted,PDF_ggH_ACCEPT_CMS_HWW_boosted,PDF_qqH_ACCEPT_CMS_HWW_boosted,PDF_ttH_ACCEPT_CMS_HWW_boosted,PDF_ttbar_ACCEPT_CMS_HWW_boosted,PDF_wjets_ACCEPT_CMS_HWW_boosted,QCDscale_WH,QCDscale_WH_ACCEPT_CMS_HWW_boosted,QCDscale_ZH,QCDscale_ZH_ACCEPT_CMS_HWW_boosted,QCDscale_ggH,QCDscale_ggH_ACCEPT_CMS_HWW_boosted,QCDscale_qqH,QCDscale_qqH_ACCEPT_CMS_HWW_boosted,QCDscale_singletop_ACCEPT_CMS_HWW_boosted,QCDscale_ttH,QCDscale_ttH_ACCEPT_CMS_HWW_boosted,QCDscale_wjets_ACCEPT_CMS_HWW_boosted,alpha_s,lumi_13TeV_1718,lumi_13TeV_2016,lumi_13TeV_2017,lumi_13TeV_2018,lumi_13TeV_correlated,pdf_Higgs_WH,pdf_Higgs_ZH,pdf_Higgs_ggH,pdf_Higgs_qqH,pdf_Higgs_ttH,ps_fsr_WH,ps_fsr_ZH,ps_fsr_ggH,ps_fsr_qqH,ps_fsr_singletop,ps_fsr_ttH,ps_fsr_ttbar,ps_fsr_wjets,ps_isr_WH,ps_isr_ZH,ps_isr_ggH,ps_isr_qqH,ps_isr_singletop,ps_isr_ttH,ps_isr_ttbar,ps_isr_wjets,r_ggH_pt200_300,r_ggH_pt300_450,r_ggH_pt450_inf,r_qqH_mjj_1000_inf,ttbarnormSF,unclustered_Energy,wjetsnormSF) catParams=() ]
+     Number of events is negative or error @ params=(BR_hww = 0.00378735 +/- 1.00006,CMS_HWW_boosted_EW_unc = 0.0184314 +/- 0.986699,CMS_HWW_boosted_FakeRate_EWK_SF_statistical_uncertainty = -0.15663 +/- 0.984553,CMS_HWW_boosted_FakeRate_statistical_uncertainty = 0.189796 +/- 0.997248,CMS_HWW_boosted_Fake_SF_uncertainty = 0.425502 +/- 0.857433,CMS_HWW_boosted_TopPtReweight = -0.0420543 +/- 0.804113,CMS_HWW_boosted_VBF_mcstat_bin0 = -0.340195 +/- 0.961863,CMS_HWW_boosted_VBF_mcstat_bin1 = 0.59277 +/- 0.8751,CMS_HWW_boosted_VBF_mcstat_bin2 = -0.0172287 +/- 0.83666,CMS_HWW_boosted_VBF_mcstat_bin3 = -0.744395 +/- 0.981,CMS_HWW_boosted_VBF_mcstat_bin4 = -0.0163553 +/- 0.928406,CMS_HWW_boosted_VBF_mcstat_bin5 = -0.820526 +/- 1.00373,CMS_HWW_boosted_VBF_mcstat_bin6 = -0.199832 +/- 0.952887,CMS_HWW_boosted_VBF_mcstat_bin7 = 0.0661507 +/- 0.829366,CMS_HWW_boosted_W_d1kappa_EW = 0.0107393 +/- 0.998388,CMS_HWW_boosted_Z_d2kappa_EW = 0.0130381 +/- 0.998101,CMS_HWW_boosted_Z_d3kappa_EW = 0.0108926 +/- 0.99837,CMS_HWW_boosted_btagSFbcCorrelated = -0.0278368 +/- 0.144195,CMS_HWW_boosted_btagSFbc_2016 = -0.0445021 +/- 0.49565,CMS_HWW_boosted_btagSFbc_2016APV = -0.0182636 +/- 0.259867,CMS_HWW_boosted_btagSFbc_2017 = -0.109644 +/- 0.257982,CMS_HWW_boosted_btagSFbc_2018 = -0.00434737 +/- 0.170978,CMS_HWW_boosted_btagSFlightCorrelated = 0.0258725 +/- 0.992638,CMS_HWW_boosted_btagSFlight_2016 = 0.0128224 +/- 0.992285,CMS_HWW_boosted_btagSFlight_2016APV = 0.0211534 +/- 0.991183,CMS_HWW_boosted_btagSFlight_2017 = -0.00431442 +/- 1.00389,CMS_HWW_boosted_btagSFlight_2018 = 0.00716748 +/- 0.999633,CMS_HWW_boosted_ele_identification_2016 = 0.0122299 +/- 0.797016,CMS_HWW_boosted_ele_identification_2016APV = 0.0122299 +/- 0.797016,CMS_HWW_boosted_ele_identification_2017 = 0.0122299 +/- 0.797016,CMS_HWW_boosted_ele_identification_2018 = 0.0122299 +/- 0.797016,CMS_HWW_boosted_ele_reconstruction_2016 = 0.0209685 +/- 0.705451,CMS_HWW_boosted_ele_reconstruction_2016APV = 0.0209685 +/- 0.705451,CMS_HWW_boosted_ele_reconstruction_2017 = 0.0209685 +/- 0.705451,CMS_HWW_boosted_ele_reconstruction_2018 = 0.0209685 +/- 0.705451,CMS_HWW_boosted_ele_trigger_stat_unc_2016 = 0.131046 +/- 0.452363,CMS_HWW_boosted_ele_trigger_stat_unc_2016APV = 0.131046 +/- 0.452363,CMS_HWW_boosted_ele_trigger_stat_unc_2017 = 0.131046 +/- 0.452363,CMS_HWW_boosted_ele_trigger_stat_unc_2018 = 0.131046 +/- 0.452363,CMS_HWW_boosted_ele_trigger_syst_unc = -0.113508 +/- 0.580354,CMS_HWW_boosted_jmr_2016 = 0.0174037 +/- 0.783667,CMS_HWW_boosted_jmr_2016APV = -0.0612981 +/- 1.13583,CMS_HWW_boosted_jmr_2017 = -0.0123003 +/- 0.498708,CMS_HWW_boosted_jmr_2018 = 0.00358146 +/- 1.30636,CMS_HWW_boosted_jms_2016 = 0.0258665 +/- 0.777636,CMS_HWW_boosted_jms_2016APV = 0.00238829 +/- 0.76786,CMS_HWW_boosted_jms_2017 = -0.458042 +/- 0.843557,CMS_HWW_boosted_jms_2018 = -0.0330375 +/- 0.804634,CMS_HWW_boosted_miniisolation_SF_unc = -0.045235 +/- 0.771195,CMS_HWW_boosted_mu_identification_stat_2016 = 0.0147001 +/- 0.995749,CMS_HWW_boosted_mu_identification_stat_2016APV = 0.0147001 +/- 0.995749,CMS_HWW_boosted_mu_identification_stat_2017 = 0.0147001 +/- 0.995749,CMS_HWW_boosted_mu_identification_stat_2018 = 0.0147001 +/- 0.995749,CMS_HWW_boosted_mu_identification_syst = 0.0154182 +/- 0.991507,CMS_HWW_boosted_mu_isolation = 0.0143851 +/- 0.996141,CMS_HWW_boosted_mu_trigger = 0.0101356 +/- 0.990172,CMS_HWW_boosted_mu_trigger_iso = 0.014402 +/- 0.996141,CMS_HWW_boosted_taggereff_VBF = -0.00577448 +/- 0.950507,CMS_HWW_boosted_ttbar_extrapolation_unc = -0.416129 +/- 0.899863,CMS_l1_ecal_prefiring_2016 = 0.0104929 +/- 0.385336,CMS_l1_ecal_prefiring_2016APV = -1.3885e-05 +/- 0.3855,CMS_l1_ecal_prefiring_2017 = 0.086447 +/- 0.176685,CMS_pileup_2016 = -0.0831787 +/- 0.957249,CMS_pileup_2016APV = 0.017318 +/- 0.660861,CMS_pileup_2017 = 0.425044 +/- 0.830841,CMS_pileup_2018 = -0.692353 +/- 0.71031,CMS_pileup_id = 0 +/- 0.213592,CMS_res_j_2016 = 0.0142715 +/- 0.79949,CMS_res_j_2016APV = 0.00780992 +/- 0.696144,CMS_res_j_2017 = 0.06429 +/- 0.56633,CMS_res_j_2018 = -0.0236475 +/- 0.911334,CMS_scale_j_Abs = -0.15245 +/- 0.909013,CMS_scale_j_Abs_2016 = 0.000902715 +/- 0.859629,CMS_scale_j_Abs_2016APV = -0.0110893 +/- 0.702061,CMS_scale_j_Abs_2017 = 0.00763313 +/- 0.870488,CMS_scale_j_Abs_2018 = 0.0306184 +/- 0.78104,CMS_scale_j_BBEC1 = -0.0929468 +/- 0.783079,CMS_scale_j_BBEC1_2016 = 0.0229055 +/- 0.855831,CMS_scale_j_BBEC1_2016APV = 0.00557555 +/- 0.811691,CMS_scale_j_BBEC1_2017 = -0.00765142 +/- 0.850282,CMS_scale_j_BBEC1_2018 = 0.00241911 +/- 0.945518,CMS_scale_j_EC2 = 0.0536659 +/- 0.913853,CMS_scale_j_EC2_2016 = 0.0318003 +/- 0.85744,CMS_scale_j_EC2_2016APV = 0.0255139 +/- 0.856728,CMS_scale_j_EC2_2017 = 0.0187053 +/- 0.779851,CMS_scale_j_EC2_2018 = 0.0477544 +/- 0.939888,CMS_scale_j_FlavQCD = -0.11072 +/- 0.577452,CMS_scale_j_HF = 0.0506755 +/- 0.938823,CMS_scale_j_HF_2016 = 0.0335891 +/- 0.858141,CMS_scale_j_HF_2016APV = 0.0349045 +/- 0.857875,CMS_scale_j_HF_2017 = 0.0319135 +/- 0.857556,CMS_scale_j_HF_2018 = 0.0321425 +/- 0.852099,CMS_scale_j_RelBal = 0.00487043 +/- 0.588896,CMS_scale_j_RelSample_2016 = 0.00494421 +/- 0.831891,CMS_scale_j_RelSample_2016APV = 0.0179938 +/- 0.618905,CMS_scale_j_RelSample_2017 = 0.0103745 +/- 0.757291,CMS_scale_j_RelSample_2018 = 0.0363817 +/- 0.430273,PDF_WH_ACCEPT_CMS_HWW_boosted = 0.00167373 +/- 1.00396,PDF_ZH_ACCEPT_CMS_HWW_boosted = 0.00371669 +/- 1.00195,PDF_ggH_ACCEPT_CMS_HWW_boosted = -0.00885444 +/- 1.0036,PDF_qqH_ACCEPT_CMS_HWW_boosted = 0.00919929 +/- 1.03721,PDF_ttH_ACCEPT_CMS_HWW_boosted = 0.00529611 +/- 1.00008,PDF_ttbar_ACCEPT_CMS_HWW_boosted = -0.157474 +/- 0.917543,PDF_wjets_ACCEPT_CMS_HWW_boosted = 0.113183 +/- 0.581686,QCDscale_WH = 0.00016662 +/- 1.00262,QCDscale_WH_ACCEPT_CMS_HWW_boosted = 0.0063444 +/- 1.06234,QCDscale_ZH = 0.00195978 +/- 0.995744,QCDscale_ZH_ACCEPT_CMS_HWW_boosted = 0.0137557 +/- 1.02433,QCDscale_ggH = 0.000261547 +/- 0.991995,QCDscale_ggH_ACCEPT_CMS_HWW_boosted = 0.0134435 +/- 1.05034,QCDscale_qqH = -1.68091e-06 +/- 0.995904,QCDscale_qqH_ACCEPT_CMS_HWW_boosted = 0.000499737 +/- 1.03821,QCDscale_singletop_ACCEPT_CMS_HWW_boosted = 0.0257187 +/- 0.920757,QCDscale_ttH = 0.0117294 +/- 0.999511,QCDscale_ttH_ACCEPT_CMS_HWW_boosted = 0.0306082 +/- 0.984267,QCDscale_wjets_ACCEPT_CMS_HWW_boosted = 0.113183 +/- 0.581686,alpha_s = 0.00404232 +/- 0.996268,lumi_13TeV_1718 = -0.00597542 +/- 0.971669,lumi_13TeV_2016 = -0.00574905 +/- 0.97363,lumi_13TeV_2017 = -0.0130462 +/- 0.881747,lumi_13TeV_2018 = -0.0141601 +/- 0.865824,lumi_13TeV_correlated = -0.0280467 +/- 0.797971,pdf_Higgs_WH = 0.000467605 +/- 0.999903,pdf_Higgs_ZH = 0.000745815 +/- 0.999976,pdf_Higgs_ggH = 0.000118186 +/- 0.998005,pdf_Higgs_qqH = -5.7331e-06 +/- 0.999347,pdf_Higgs_ttH = 0.00464279 +/- 0.99997,ps_fsr_WH = -0.00171653 +/- 0.9277,ps_fsr_ZH = -0.00614626 +/- 0.951322,ps_fsr_ggH = 0.00650257 +/- 0.893483,ps_fsr_qqH = -0.0355866 +/- 1.11437,ps_fsr_singletop = -0.0193105 +/- 0.803212,ps_fsr_ttH = 0.0206039 +/- 0.990862,ps_fsr_ttbar = -0.0216683 +/- 0.798979,ps_fsr_wjets = 0.010023 +/- 0.927265,ps_isr_WH = 0.000685165 +/- 0.90602,ps_isr_ZH = -0.000771331 +/- 0.946829,ps_isr_ggH = -0.0272136 +/- 0.645642,ps_isr_qqH = -0.00268988 +/- 0.965085,ps_isr_singletop = 0.0474563 +/- 0.924126,ps_isr_ttH = 0.0038971 +/- 0.984328,ps_isr_ttbar = 0.253395 +/- 0.583103,ps_isr_wjets = 0 +/- 0.257545,r_ggH_pt200_300 = -4.48739 +/- 3.06072,r_ggH_pt300_450 = -0.818335 +/- 1.35225,r_ggH_pt450_inf = -0.0776804 +/- 2.00703,r_qqH_mjj_1000_inf = -1.5 +/- 0.69963,ttbarnormSF = 0.963676 +/- 0.0579711,unclustered_Energy = -0.0768079 +/- 0.469396,wjetsnormSF = 0.951615 +/- 0.0198294), catParams=()
+
+WARNING: underflow to -4.85472e-05 in pdf_binVBF_obsOnly for bin 2, weight 3
+FASTEXIT from pdf_binVBF_obsOnly
+RooAbsMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (2.29415) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	r_ggH_pt200_300=-4.48739	r_ggH_pt300_450=-0.80477	r_ggH_pt450_inf=-0.0978879	ttbarnormSF=0.963676	wjetsnormSF=0.951615
+RooAbsReal::VBF[ params=(BR_hww,CMS_HWW_boosted_EW_unc,CMS_HWW_boosted_FakeRate_EWK_SF_statistical_uncertainty,CMS_HWW_boosted_FakeRate_statistical_uncertainty,CMS_HWW_boosted_Fake_SF_uncertainty,CMS_HWW_boosted_TopPtReweight,CMS_HWW_boosted_VBF_mcstat_bin0,CMS_HWW_boosted_VBF_mcstat_bin1,CMS_HWW_boosted_VBF_mcstat_bin2,CMS_HWW_boosted_VBF_mcstat_bin3,CMS_HWW_boosted_VBF_mcstat_bin4,CMS_HWW_boosted_VBF_mcstat_bin5,CMS_HWW_boosted_VBF_mcstat_bin6,CMS_HWW_boosted_VBF_mcstat_bin7,CMS_HWW_boosted_W_d1kappa_EW,CMS_HWW_boosted_Z_d2kappa_EW,CMS_HWW_boosted_Z_d3kappa_EW,CMS_HWW_boosted_btagSFbcCorrelated,CMS_HWW_boosted_btagSFbc_2016,CMS_HWW_boosted_btagSFbc_2016APV,CMS_HWW_boosted_btagSFbc_2017,CMS_HWW_boosted_btagSFbc_2018,CMS_HWW_boosted_btagSFlightCorrelated,CMS_HWW_boosted_btagSFlight_2016,CMS_HWW_boosted_btagSFlight_2016APV,CMS_HWW_boosted_btagSFlight_2017,CMS_HWW_boosted_btagSFlight_2018,CMS_HWW_boosted_ele_identification_2016,CMS_HWW_boosted_ele_identification_2016APV,CMS_HWW_boosted_ele_identification_2017,CMS_HWW_boosted_ele_identification_2018,CMS_HWW_boosted_ele_reconstruction_2016,CMS_HWW_boosted_ele_reconstruction_2016APV,CMS_HWW_boosted_ele_reconstruction_2017,CMS_HWW_boosted_ele_reconstruction_2018,CMS_HWW_boosted_ele_trigger_stat_unc_2016,CMS_HWW_boosted_ele_trigger_stat_unc_2016APV,CMS_HWW_boosted_ele_trigger_stat_unc_2017,CMS_HWW_boosted_ele_trigger_stat_unc_2018,CMS_HWW_boosted_ele_trigger_syst_unc,CMS_HWW_boosted_jmr_2016,CMS_HWW_boosted_jmr_2016APV,CMS_HWW_boosted_jmr_2017,CMS_HWW_boosted_jmr_2018,CMS_HWW_boosted_jms_2016,CMS_HWW_boosted_jms_2016APV,CMS_HWW_boosted_jms_2017,CMS_HWW_boosted_jms_2018,CMS_HWW_boosted_miniisolation_SF_unc,CMS_HWW_boosted_mu_identification_stat_2016,CMS_HWW_boosted_mu_identification_stat_2016APV,CMS_HWW_boosted_mu_identification_stat_2017,CMS_HWW_boosted_mu_identification_stat_2018,CMS_HWW_boosted_mu_identification_syst,CMS_HWW_boosted_mu_isolation,CMS_HWW_boosted_mu_trigger,CMS_HWW_boosted_mu_trigger_iso,CMS_HWW_boosted_taggereff_VBF,CMS_HWW_boosted_ttbar_extrapolation_unc,CMS_l1_ecal_prefiring_2016,CMS_l1_ecal_prefiring_2016APV,CMS_l1_ecal_prefiring_2017,CMS_pileup_2016,CMS_pileup_2016APV,CMS_pileup_2017,CMS_pileup_2018,CMS_pileup_id,CMS_res_j_2016,CMS_res_j_2016APV,CMS_res_j_2017,CMS_res_j_2018,CMS_scale_j_Abs,CMS_scale_j_Abs_2016,CMS_scale_j_Abs_2016APV,CMS_scale_j_Abs_2017,CMS_scale_j_Abs_2018,CMS_scale_j_BBEC1,CMS_scale_j_BBEC1_2016,CMS_scale_j_BBEC1_2016APV,CMS_scale_j_BBEC1_2017,CMS_scale_j_BBEC1_2018,CMS_scale_j_EC2,CMS_scale_j_EC2_2016,CMS_scale_j_EC2_2016APV,CMS_scale_j_EC2_2017,CMS_scale_j_EC2_2018,CMS_scale_j_FlavQCD,CMS_scale_j_HF,CMS_scale_j_HF_2016,CMS_scale_j_HF_2016APV,CMS_scale_j_HF_2017,CMS_scale_j_HF_2018,CMS_scale_j_RelBal,CMS_scale_j_RelSample_2016,CMS_scale_j_RelSample_2016APV,CMS_scale_j_RelSample_2017,CMS_scale_j_RelSample_2018,PDF_WH_ACCEPT_CMS_HWW_boosted,PDF_ZH_ACCEPT_CMS_HWW_boosted,PDF_ggH_ACCEPT_CMS_HWW_boosted,PDF_qqH_ACCEPT_CMS_HWW_boosted,PDF_ttH_ACCEPT_CMS_HWW_boosted,PDF_ttbar_ACCEPT_CMS_HWW_boosted,PDF_wjets_ACCEPT_CMS_HWW_boosted,QCDscale_WH,QCDscale_WH_ACCEPT_CMS_HWW_boosted,QCDscale_ZH,QCDscale_ZH_ACCEPT_CMS_HWW_boosted,QCDscale_ggH,QCDscale_ggH_ACCEPT_CMS_HWW_boosted,QCDscale_qqH,QCDscale_qqH_ACCEPT_CMS_HWW_boosted,QCDscale_singletop_ACCEPT_CMS_HWW_boosted,QCDscale_ttH,QCDscale_ttH_ACCEPT_CMS_HWW_boosted,QCDscale_wjets_ACCEPT_CMS_HWW_boosted,alpha_s,lumi_13TeV_1718,lumi_13TeV_2016,lumi_13TeV_2017,lumi_13TeV_2018,lumi_13TeV_correlated,pdf_Higgs_WH,pdf_Higgs_ZH,pdf_Higgs_ggH,pdf_Higgs_qqH,pdf_Higgs_ttH,ps_fsr_WH,ps_fsr_ZH,ps_fsr_ggH,ps_fsr_qqH,ps_fsr_singletop,ps_fsr_ttH,ps_fsr_ttbar,ps_fsr_wjets,ps_isr_WH,ps_isr_ZH,ps_isr_ggH,ps_isr_qqH,ps_isr_singletop,ps_isr_ttH,ps_isr_ttbar,ps_isr_wjets,r_ggH_pt200_300,r_ggH_pt300_450,r_ggH_pt450_inf,r_qqH_mjj_1000_inf,ttbarnormSF,unclustered_Energy,wjetsnormSF) catParams=() ]
+     Number of events is negative or error @ params=(BR_hww = 0.00378735 +/- 1.00006,CMS_HWW_boosted_EW_unc = 0.0184314 +/- 0.986699,CMS_HWW_boosted_FakeRate_EWK_SF_statistical_uncertainty = -0.15663 +/- 0.984553,CMS_HWW_boosted_FakeRate_statistical_uncertainty = 0.189796 +/- 0.997248,CMS_HWW_boosted_Fake_SF_uncertainty = 0.425502 +/- 0.857433,CMS_HWW_boosted_TopPtReweight = -0.0420543 +/- 0.804113,CMS_HWW_boosted_VBF_mcstat_bin0 = -0.340195 +/- 0.961863,CMS_HWW_boosted_VBF_mcstat_bin1 = 0.59277 +/- 0.8751,CMS_HWW_boosted_VBF_mcstat_bin2 = -0.0172287 +/- 0.83666,CMS_HWW_boosted_VBF_mcstat_bin3 = -0.744395 +/- 0.981,CMS_HWW_boosted_VBF_mcstat_bin4 = -0.0163553 +/- 0.928406,CMS_HWW_boosted_VBF_mcstat_bin5 = -0.820526 +/- 1.00373,CMS_HWW_boosted_VBF_mcstat_bin6 = -0.199832 +/- 0.952887,CMS_HWW_boosted_VBF_mcstat_bin7 = 0.0661507 +/- 0.829366,CMS_HWW_boosted_W_d1kappa_EW = 0.0107393 +/- 0.998388,CMS_HWW_boosted_Z_d2kappa_EW = 0.0130381 +/- 0.998101,CMS_HWW_boosted_Z_d3kappa_EW = 0.0108926 +/- 0.99837,CMS_HWW_boosted_btagSFbcCorrelated = -0.0278368 +/- 0.144195,CMS_HWW_boosted_btagSFbc_2016 = -0.0445021 +/- 0.49565,CMS_HWW_boosted_btagSFbc_2016APV = -0.0182636 +/- 0.259867,CMS_HWW_boosted_btagSFbc_2017 = -0.109644 +/- 0.257982,CMS_HWW_boosted_btagSFbc_2018 = -0.00434737 +/- 0.170978,CMS_HWW_boosted_btagSFlightCorrelated = 0.0258725 +/- 0.992638,CMS_HWW_boosted_btagSFlight_2016 = 0.0128224 +/- 0.992285,CMS_HWW_boosted_btagSFlight_2016APV = 0.0211534 +/- 0.991183,CMS_HWW_boosted_btagSFlight_2017 = -0.00431442 +/- 1.00389,CMS_HWW_boosted_btagSFlight_2018 = 0.00716748 +/- 0.999633,CMS_HWW_boosted_ele_identification_2016 = 0.0122299 +/- 0.797016,CMS_HWW_boosted_ele_identification_2016APV = 0.0122299 +/- 0.797016,CMS_HWW_boosted_ele_identification_2017 = 0.0122299 +/- 0.797016,CMS_HWW_boosted_ele_identification_2018 = 0.0122299 +/- 0.797016,CMS_HWW_boosted_ele_reconstruction_2016 = 0.0209685 +/- 0.705451,CMS_HWW_boosted_ele_reconstruction_2016APV = 0.0209685 +/- 0.705451,CMS_HWW_boosted_ele_reconstruction_2017 = 0.0209685 +/- 0.705451,CMS_HWW_boosted_ele_reconstruction_2018 = 0.0209685 +/- 0.705451,CMS_HWW_boosted_ele_trigger_stat_unc_2016 = 0.131046 +/- 0.452363,CMS_HWW_boosted_ele_trigger_stat_unc_2016APV = 0.131046 +/- 0.452363,CMS_HWW_boosted_ele_trigger_stat_unc_2017 = 0.131046 +/- 0.452363,CMS_HWW_boosted_ele_trigger_stat_unc_2018 = 0.131046 +/- 0.452363,CMS_HWW_boosted_ele_trigger_syst_unc = -0.113508 +/- 0.580354,CMS_HWW_boosted_jmr_2016 = 0.0174037 +/- 0.783667,CMS_HWW_boosted_jmr_2016APV = -0.0612981 +/- 1.13583,CMS_HWW_boosted_jmr_2017 = -0.0123003 +/- 0.498708,CMS_HWW_boosted_jmr_2018 = 0.00358146 +/- 1.30636,CMS_HWW_boosted_jms_2016 = 0.0258665 +/- 0.777636,CMS_HWW_boosted_jms_2016APV = 0.00238829 +/- 0.76786,CMS_HWW_boosted_jms_2017 = -0.458042 +/- 0.843557,CMS_HWW_boosted_jms_2018 = -0.0330375 +/- 0.804634,CMS_HWW_boosted_miniisolation_SF_unc = -0.045235 +/- 0.771195,CMS_HWW_boosted_mu_identification_stat_2016 = 0.0147001 +/- 0.995749,CMS_HWW_boosted_mu_identification_stat_2016APV = 0.0147001 +/- 0.995749,CMS_HWW_boosted_mu_identification_stat_2017 = 0.0147001 +/- 0.995749,CMS_HWW_boosted_mu_identification_stat_2018 = 0.0147001 +/- 0.995749,CMS_HWW_boosted_mu_identification_syst = 0.0154182 +/- 0.991507,CMS_HWW_boosted_mu_isolation = 0.0143851 +/- 0.996141,CMS_HWW_boosted_mu_trigger = 0.0101356 +/- 0.990172,CMS_HWW_boosted_mu_trigger_iso = 0.014402 +/- 0.996141,CMS_HWW_boosted_taggereff_VBF = -0.00577448 +/- 0.950507,CMS_HWW_boosted_ttbar_extrapolation_unc = -0.416129 +/- 0.899863,CMS_l1_ecal_prefiring_2016 = 0.0104929 +/- 0.385336,CMS_l1_ecal_prefiring_2016APV = -1.3885e-05 +/- 0.3855,CMS_l1_ecal_prefiring_2017 = 0.086447 +/- 0.176685,CMS_pileup_2016 = -0.0831787 +/- 0.957249,CMS_pileup_2016APV = 0.017318 +/- 0.660861,CMS_pileup_2017 = 0.425044 +/- 0.830841,CMS_pileup_2018 = -0.692353 +/- 0.71031,CMS_pileup_id = 0 +/- 0.213592,CMS_res_j_2016 = 0.0142715 +/- 0.79949,CMS_res_j_2016APV = 0.00780992 +/- 0.696144,CMS_res_j_2017 = 0.06429 +/- 0.56633,CMS_res_j_2018 = -0.0236475 +/- 0.911334,CMS_scale_j_Abs = -0.15245 +/- 0.909013,CMS_scale_j_Abs_2016 = 0.000902715 +/- 0.859629,CMS_scale_j_Abs_2016APV = -0.0110893 +/- 0.702061,CMS_scale_j_Abs_2017 = 0.00763313 +/- 0.870488,CMS_scale_j_Abs_2018 = 0.0306184 +/- 0.78104,CMS_scale_j_BBEC1 = -0.0929468 +/- 0.783079,CMS_scale_j_BBEC1_2016 = 0.0229055 +/- 0.855831,CMS_scale_j_BBEC1_2016APV = 0.00557555 +/- 0.811691,CMS_scale_j_BBEC1_2017 = -0.00765142 +/- 0.850282,CMS_scale_j_BBEC1_2018 = 0.00241911 +/- 0.945518,CMS_scale_j_EC2 = 0.0536659 +/- 0.913853,CMS_scale_j_EC2_2016 = 0.0318003 +/- 0.85744,CMS_scale_j_EC2_2016APV = 0.0255139 +/- 0.856728,CMS_scale_j_EC2_2017 = 0.0187053 +/- 0.779851,CMS_scale_j_EC2_2018 = 0.0477544 +/- 0.939888,CMS_scale_j_FlavQCD = -0.11072 +/- 0.577452,CMS_scale_j_HF = 0.0506755 +/- 0.938823,CMS_scale_j_HF_2016 = 0.0335891 +/- 0.858141,CMS_scale_j_HF_2016APV = 0.0349045 +/- 0.857875,CMS_scale_j_HF_2017 = 0.0319135 +/- 0.857556,CMS_scale_j_HF_2018 = 0.0321425 +/- 0.852099,CMS_scale_j_RelBal = 0.00487043 +/- 0.588896,CMS_scale_j_RelSample_2016 = 0.00494421 +/- 0.831891,CMS_scale_j_RelSample_2016APV = 0.0179938 +/- 0.618905,CMS_scale_j_RelSample_2017 = 0.0103745 +/- 0.757291,CMS_scale_j_RelSample_2018 = 0.0363817 +/- 0.430273,PDF_WH_ACCEPT_CMS_HWW_boosted = 0.00167373 +/- 1.00396,PDF_ZH_ACCEPT_CMS_HWW_boosted = 0.00371669 +/- 1.00195,PDF_ggH_ACCEPT_CMS_HWW_boosted = -0.00885444 +/- 1.0036,PDF_qqH_ACCEPT_CMS_HWW_boosted = 0.00919929 +/- 1.03721,PDF_ttH_ACCEPT_CMS_HWW_boosted = 0.00529611 +/- 1.00008,PDF_ttbar_ACCEPT_CMS_HWW_boosted = -0.157474 +/- 0.917543,PDF_wjets_ACCEPT_CMS_HWW_boosted = 0.113183 +/- 0.581686,QCDscale_WH = 0.00016662 +/- 1.00262,QCDscale_WH_ACCEPT_CMS_HWW_boosted = 0.0063444 +/- 1.06234,QCDscale_ZH = 0.00195978 +/- 0.995744,QCDscale_ZH_ACCEPT_CMS_HWW_boosted = 0.0137557 +/- 1.02433,QCDscale_ggH = 0.000261547 +/- 0.991995,QCDscale_ggH_ACCEPT_CMS_HWW_boosted = 0.0134435 +/- 1.05034,QCDscale_qqH = -1.68091e-06 +/- 0.995904,QCDscale_qqH_ACCEPT_CMS_HWW_boosted = 0.000499737 +/- 1.03821,QCDscale_singletop_ACCEPT_CMS_HWW_boosted = 0.0257187 +/- 0.920757,QCDscale_ttH = 0.0117294 +/- 0.999511,QCDscale_ttH_ACCEPT_CMS_HWW_boosted = 0.0306082 +/- 0.984267,QCDscale_wjets_ACCEPT_CMS_HWW_boosted = 0.113183 +/- 0.581686,alpha_s = 0.00404232 +/- 0.996268,lumi_13TeV_1718 = -0.00597542 +/- 0.971669,lumi_13TeV_2016 = -0.00574905 +/- 0.97363,lumi_13TeV_2017 = -0.0130462 +/- 0.881747,lumi_13TeV_2018 = -0.0141601 +/- 0.865824,lumi_13TeV_correlated = -0.0280467 +/- 0.797971,pdf_Higgs_WH = 0.000467605 +/- 0.999903,pdf_Higgs_ZH = 0.000745815 +/- 0.999976,pdf_Higgs_ggH = 0.000118186 +/- 0.998005,pdf_Higgs_qqH = -5.7331e-06 +/- 0.999347,pdf_Higgs_ttH = 0.00464279 +/- 0.99997,ps_fsr_WH = -0.00171653 +/- 0.9277,ps_fsr_ZH = -0.00614626 +/- 0.951322,ps_fsr_ggH = 0.00650257 +/- 0.893483,ps_fsr_qqH = -0.0355866 +/- 1.11437,ps_fsr_singletop = -0.0193105 +/- 0.803212,ps_fsr_ttH = 0.0206039 +/- 0.990862,ps_fsr_ttbar = -0.0216683 +/- 0.798979,ps_fsr_wjets = 0.010023 +/- 0.927265,ps_isr_WH = 0.000685165 +/- 0.90602,ps_isr_ZH = -0.000771331 +/- 0.946829,ps_isr_ggH = -0.0272136 +/- 0.645642,ps_isr_qqH = -0.00268988 +/- 0.965085,ps_isr_singletop = 0.0474563 +/- 0.924126,ps_isr_ttH = 0.0038971 +/- 0.984328,ps_isr_ttbar = 0.253395 +/- 0.583103,ps_isr_wjets = 0 +/- 0.257545,r_ggH_pt200_300 = -4.48739 +/- 3.06072,r_ggH_pt300_450 = -0.80477 +/- 1.35225,r_ggH_pt450_inf = -0.0978879 +/- 2.00703,r_qqH_mjj_1000_inf = -1.5 +/- 0.69963,ttbarnormSF = 0.963676 +/- 0.0579711,unclustered_Energy = -0.0768079 +/- 0.469396,wjetsnormSF = 0.951615 +/- 0.0198294), catParams=()
+
 Point 49/100 r_qqH_mjj_1000_inf = -0.5
 Point 50/100 r_qqH_mjj_1000_inf = 0.5
 Point 51/100 r_qqH_mjj_1000_inf = 1.5
