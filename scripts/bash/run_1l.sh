@@ -302,7 +302,7 @@ if [ $limits = 1 ]; then
     else
         echo "Expected limits"
         combine -M AsymptoticLimits -d ${wsm}.root -t -1 --expectSignal 1 --run expected \
-        -m 125 --rMax 10 --rMin -10 \ 
+        -m 125 --rMax 10 --rMin -10 \
         -s "$seed" -n Expected 2>&1 | tee $outsdir/AsymptoticLimitsExpected.txt
     fi 
 

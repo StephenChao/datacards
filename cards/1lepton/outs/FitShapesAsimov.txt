@@ -1,2 +1,0 @@
-terminate called after throwing an instance of 'boost::wrapexcept<boost::program_options::unknown_option>'
-  what():  unrecognised option '--rMax'

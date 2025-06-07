@@ -13,119 +13,117 @@ Set Default Value of Parameter r_qqH_mjj_1000_inf To : 1
 Doing initial fit: 
  POI: r_qqH_mjj_1000_inf= 1 -> [-10,10]
 Point 0/100 r_qqH_mjj_1000_inf = -9.9
-WARNING: underflow to -0.159458 in pdf_binVBF_obsOnly for bin 0, weight 3.03952
+WARNING: underflow to -0.201384 in pdf_binVBF_obsOnly for bin 0, weight 3.06381
 FASTEXIT from pdf_binVBF_obsOnly
 Point 1/100 r_qqH_mjj_1000_inf = -9.7
-WARNING: underflow to -0.153744 in pdf_binVBF_obsOnly for bin 0, weight 3.03952
+WARNING: underflow to -0.194878 in pdf_binVBF_obsOnly for bin 0, weight 3.06381
 FASTEXIT from pdf_binVBF_obsOnly
 Point 2/100 r_qqH_mjj_1000_inf = -9.5
-WARNING: underflow to -0.148029 in pdf_binVBF_obsOnly for bin 0, weight 3.03952
+WARNING: underflow to -0.188372 in pdf_binVBF_obsOnly for bin 0, weight 3.06381
 FASTEXIT from pdf_binVBF_obsOnly
 Point 3/100 r_qqH_mjj_1000_inf = -9.3
-WARNING: underflow to -0.142315 in pdf_binVBF_obsOnly for bin 0, weight 3.03952
+WARNING: underflow to -0.181866 in pdf_binVBF_obsOnly for bin 0, weight 3.06381
 FASTEXIT from pdf_binVBF_obsOnly
 Point 4/100 r_qqH_mjj_1000_inf = -9.1
-WARNING: underflow to -0.136601 in pdf_binVBF_obsOnly for bin 0, weight 3.03952
+WARNING: underflow to -0.17536 in pdf_binVBF_obsOnly for bin 0, weight 3.06381
 FASTEXIT from pdf_binVBF_obsOnly
 Point 5/100 r_qqH_mjj_1000_inf = -8.9
-WARNING: underflow to -0.130886 in pdf_binVBF_obsOnly for bin 0, weight 3.03952
+WARNING: underflow to -0.168854 in pdf_binVBF_obsOnly for bin 0, weight 3.06381
 FASTEXIT from pdf_binVBF_obsOnly
 Point 6/100 r_qqH_mjj_1000_inf = -8.7
-WARNING: underflow to -0.125172 in pdf_binVBF_obsOnly for bin 0, weight 3.03952
+WARNING: underflow to -0.162348 in pdf_binVBF_obsOnly for bin 0, weight 3.06381
 FASTEXIT from pdf_binVBF_obsOnly
 Point 7/100 r_qqH_mjj_1000_inf = -8.5
-WARNING: underflow to -0.119457 in pdf_binVBF_obsOnly for bin 0, weight 3.03952
+WARNING: underflow to -0.155842 in pdf_binVBF_obsOnly for bin 0, weight 3.06381
 FASTEXIT from pdf_binVBF_obsOnly
 Point 8/100 r_qqH_mjj_1000_inf = -8.3
-WARNING: underflow to -0.113743 in pdf_binVBF_obsOnly for bin 0, weight 3.03952
+WARNING: underflow to -0.149336 in pdf_binVBF_obsOnly for bin 0, weight 3.06381
 FASTEXIT from pdf_binVBF_obsOnly
 Point 9/100 r_qqH_mjj_1000_inf = -8.1
-WARNING: underflow to -0.108029 in pdf_binVBF_obsOnly for bin 0, weight 3.03952
+WARNING: underflow to -0.14283 in pdf_binVBF_obsOnly for bin 0, weight 3.06381
 FASTEXIT from pdf_binVBF_obsOnly
 Point 10/100 r_qqH_mjj_1000_inf = -7.9
-WARNING: underflow to -0.102314 in pdf_binVBF_obsOnly for bin 0, weight 3.03952
+WARNING: underflow to -0.136324 in pdf_binVBF_obsOnly for bin 0, weight 3.06381
 FASTEXIT from pdf_binVBF_obsOnly
 Point 11/100 r_qqH_mjj_1000_inf = -7.7
-WARNING: underflow to -0.0965998 in pdf_binVBF_obsOnly for bin 0, weight 3.03952
+WARNING: underflow to -0.129818 in pdf_binVBF_obsOnly for bin 0, weight 3.06381
 FASTEXIT from pdf_binVBF_obsOnly
 Point 12/100 r_qqH_mjj_1000_inf = -7.5
-WARNING: underflow to -0.0908854 in pdf_binVBF_obsOnly for bin 0, weight 3.03952
+WARNING: underflow to -0.123312 in pdf_binVBF_obsOnly for bin 0, weight 3.06381
 FASTEXIT from pdf_binVBF_obsOnly
 Point 13/100 r_qqH_mjj_1000_inf = -7.3
-WARNING: underflow to -0.085171 in pdf_binVBF_obsOnly for bin 0, weight 3.03952
+WARNING: underflow to -0.116806 in pdf_binVBF_obsOnly for bin 0, weight 3.06381
 FASTEXIT from pdf_binVBF_obsOnly
 Point 14/100 r_qqH_mjj_1000_inf = -7.1
-WARNING: underflow to -0.0794566 in pdf_binVBF_obsOnly for bin 0, weight 3.03952
+WARNING: underflow to -0.1103 in pdf_binVBF_obsOnly for bin 0, weight 3.06381
 FASTEXIT from pdf_binVBF_obsOnly
 Point 15/100 r_qqH_mjj_1000_inf = -6.9
-WARNING: underflow to -0.0737423 in pdf_binVBF_obsOnly for bin 0, weight 3.03952
+WARNING: underflow to -0.103794 in pdf_binVBF_obsOnly for bin 0, weight 3.06381
 FASTEXIT from pdf_binVBF_obsOnly
 Point 16/100 r_qqH_mjj_1000_inf = -6.7
-WARNING: underflow to -0.0680279 in pdf_binVBF_obsOnly for bin 0, weight 3.03952
+WARNING: underflow to -0.0972884 in pdf_binVBF_obsOnly for bin 0, weight 3.06381
 FASTEXIT from pdf_binVBF_obsOnly
 Point 17/100 r_qqH_mjj_1000_inf = -6.5
-WARNING: underflow to -0.0623135 in pdf_binVBF_obsOnly for bin 0, weight 3.03952
+WARNING: underflow to -0.0907825 in pdf_binVBF_obsOnly for bin 0, weight 3.06381
 FASTEXIT from pdf_binVBF_obsOnly
 Point 18/100 r_qqH_mjj_1000_inf = -6.3
-WARNING: underflow to -0.0565991 in pdf_binVBF_obsOnly for bin 0, weight 3.03952
+WARNING: underflow to -0.0842765 in pdf_binVBF_obsOnly for bin 0, weight 3.06381
 FASTEXIT from pdf_binVBF_obsOnly
 Point 19/100 r_qqH_mjj_1000_inf = -6.1
-WARNING: underflow to -0.0508847 in pdf_binVBF_obsOnly for bin 0, weight 3.03952
+WARNING: underflow to -0.0777706 in pdf_binVBF_obsOnly for bin 0, weight 3.06381
 FASTEXIT from pdf_binVBF_obsOnly
 Point 20/100 r_qqH_mjj_1000_inf = -5.9
-WARNING: underflow to -0.0451703 in pdf_binVBF_obsOnly for bin 0, weight 3.03952
+WARNING: underflow to -0.0712646 in pdf_binVBF_obsOnly for bin 0, weight 3.06381
 FASTEXIT from pdf_binVBF_obsOnly
 Point 21/100 r_qqH_mjj_1000_inf = -5.7
-WARNING: underflow to -0.0394559 in pdf_binVBF_obsOnly for bin 0, weight 3.03952
+WARNING: underflow to -0.0647587 in pdf_binVBF_obsOnly for bin 0, weight 3.06381
 FASTEXIT from pdf_binVBF_obsOnly
 Point 22/100 r_qqH_mjj_1000_inf = -5.5
-WARNING: underflow to -0.0337416 in pdf_binVBF_obsOnly for bin 0, weight 3.03952
+WARNING: underflow to -0.0582527 in pdf_binVBF_obsOnly for bin 0, weight 3.06381
 FASTEXIT from pdf_binVBF_obsOnly
 Point 23/100 r_qqH_mjj_1000_inf = -5.3
-WARNING: underflow to -0.0280272 in pdf_binVBF_obsOnly for bin 0, weight 3.03952
+WARNING: underflow to -0.0517468 in pdf_binVBF_obsOnly for bin 0, weight 3.06381
 FASTEXIT from pdf_binVBF_obsOnly
 Point 24/100 r_qqH_mjj_1000_inf = -5.1
-WARNING: underflow to -0.0223128 in pdf_binVBF_obsOnly for bin 0, weight 3.03952
+WARNING: underflow to -0.0452408 in pdf_binVBF_obsOnly for bin 0, weight 3.06381
 FASTEXIT from pdf_binVBF_obsOnly
 Point 25/100 r_qqH_mjj_1000_inf = -4.9
-WARNING: underflow to -0.0165984 in pdf_binVBF_obsOnly for bin 0, weight 3.03952
+WARNING: underflow to -0.0387349 in pdf_binVBF_obsOnly for bin 0, weight 3.06381
 FASTEXIT from pdf_binVBF_obsOnly
 Point 26/100 r_qqH_mjj_1000_inf = -4.7
-WARNING: underflow to -0.010884 in pdf_binVBF_obsOnly for bin 0, weight 3.03952
+WARNING: underflow to -0.0322289 in pdf_binVBF_obsOnly for bin 0, weight 3.06381
 FASTEXIT from pdf_binVBF_obsOnly
 Point 27/100 r_qqH_mjj_1000_inf = -4.5
-WARNING: underflow to -0.00516962 in pdf_binVBF_obsOnly for bin 0, weight 3.03952
+WARNING: underflow to -0.025723 in pdf_binVBF_obsOnly for bin 0, weight 3.06381
 FASTEXIT from pdf_binVBF_obsOnly
 Point 28/100 r_qqH_mjj_1000_inf = -4.3
-WARNING: underflow to -0.113031 in pdf_binVBF_obsOnly for bin 1, weight 4.69056
+WARNING: underflow to -0.019217 in pdf_binVBF_obsOnly for bin 0, weight 3.06381
 FASTEXIT from pdf_binVBF_obsOnly
 Point 29/100 r_qqH_mjj_1000_inf = -4.1
-WARNING: underflow to -0.0999156 in pdf_binVBF_obsOnly for bin 1, weight 4.69056
+WARNING: underflow to -0.0127111 in pdf_binVBF_obsOnly for bin 0, weight 3.06381
 FASTEXIT from pdf_binVBF_obsOnly
 Point 30/100 r_qqH_mjj_1000_inf = -3.9
-WARNING: underflow to -0.0868002 in pdf_binVBF_obsOnly for bin 1, weight 4.69056
+WARNING: underflow to -0.00620512 in pdf_binVBF_obsOnly for bin 0, weight 3.06381
 FASTEXIT from pdf_binVBF_obsOnly
 Point 31/100 r_qqH_mjj_1000_inf = -3.7
-WARNING: underflow to -0.0736848 in pdf_binVBF_obsOnly for bin 1, weight 4.69056
+WARNING: underflow to -0.0701125 in pdf_binVBF_obsOnly for bin 1, weight 4.73834
 FASTEXIT from pdf_binVBF_obsOnly
 Point 32/100 r_qqH_mjj_1000_inf = -3.5
-WARNING: underflow to -0.0605693 in pdf_binVBF_obsOnly for bin 1, weight 4.69056
+WARNING: underflow to -0.0570474 in pdf_binVBF_obsOnly for bin 1, weight 4.73834
 FASTEXIT from pdf_binVBF_obsOnly
 Point 33/100 r_qqH_mjj_1000_inf = -3.3
-WARNING: underflow to -0.0474539 in pdf_binVBF_obsOnly for bin 1, weight 4.69056
+WARNING: underflow to -0.0439823 in pdf_binVBF_obsOnly for bin 1, weight 4.73834
 FASTEXIT from pdf_binVBF_obsOnly
 Point 34/100 r_qqH_mjj_1000_inf = -3.1
-WARNING: underflow to -0.0343385 in pdf_binVBF_obsOnly for bin 1, weight 4.69056
+WARNING: underflow to -0.0309172 in pdf_binVBF_obsOnly for bin 1, weight 4.73834
 FASTEXIT from pdf_binVBF_obsOnly
 Point 35/100 r_qqH_mjj_1000_inf = -2.9
-WARNING: underflow to -0.021223 in pdf_binVBF_obsOnly for bin 1, weight 4.69056
+WARNING: underflow to -0.0178521 in pdf_binVBF_obsOnly for bin 1, weight 4.73834
 FASTEXIT from pdf_binVBF_obsOnly
 Point 36/100 r_qqH_mjj_1000_inf = -2.7
-WARNING: underflow to -0.0081076 in pdf_binVBF_obsOnly for bin 1, weight 4.69056
+WARNING: underflow to -0.00478702 in pdf_binVBF_obsOnly for bin 1, weight 4.73834
 FASTEXIT from pdf_binVBF_obsOnly
 Point 37/100 r_qqH_mjj_1000_inf = -2.5
-WARNING: underflow to -0.012121 in pdf_binVBF_obsOnly for bin 2, weight 5.95427
-FASTEXIT from pdf_binVBF_obsOnly
 Point 38/100 r_qqH_mjj_1000_inf = -2.3
 Point 39/100 r_qqH_mjj_1000_inf = -2.1
 Point 40/100 r_qqH_mjj_1000_inf = -1.9
@@ -188,4 +186,4 @@ Point 96/100 r_qqH_mjj_1000_inf = 9.3
 Point 97/100 r_qqH_mjj_1000_inf = 9.5
 Point 98/100 r_qqH_mjj_1000_inf = 9.7
 Point 99/100 r_qqH_mjj_1000_inf = 9.9
-Done in 0.56 min (cpu), 0.56 min (real)
+Done in 0.42 min (cpu), 0.42 min (real)
