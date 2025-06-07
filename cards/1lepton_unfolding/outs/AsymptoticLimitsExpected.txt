@@ -11,10 +11,10 @@ Set Default Value of Parameter r_qqH_mjj_1000_inf To : 1
 
 
  -- AsymptoticLimits ( CLs ) --
-Expected  2.5%: r_ggH_pt200_300 < 5.8667
-Expected 16.0%: r_ggH_pt200_300 < 8.6303
-Expected 50.0%: r_ggH_pt200_300 < 13.9062
-Expected 84.0%: r_ggH_pt200_300 < 24.3273
-Expected 97.5%: r_ggH_pt200_300 < 42.1466
+Expected  2.5%: r_ggH_pt200_300 < 5.5889
+Expected 16.0%: r_ggH_pt200_300 < 7.8867
+Expected 50.0%: r_ggH_pt200_300 < 12.1250
+Expected 84.0%: r_ggH_pt200_300 < 19.6646
+Expected 97.5%: r_ggH_pt200_300 < 31.3591
 
-Done in 1.24 min (cpu), 1.24 min (real)
+Done in 0.99 min (cpu), 0.99 min (real)
