@@ -6,5 +6,5 @@
 
 
  -- Significance -- 
-Significance: 1.69056
+Significance: 1.68926
 Done in 0.04 min (cpu), 0.04 min (real)
