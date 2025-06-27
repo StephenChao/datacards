@@ -1,1 +1,15 @@
-bash: -s: command not found
+ <<< Combine >>> 
+ <<< v10.0.1 >>>
+>>> Random number generator seed is 444
+>>> Method used is AsymptoticLimits
+>>> 0 out of 6 channels masked
+
+
+ -- AsymptoticLimits ( CLs ) --
+Expected  2.5%: r < 0.6516
+Expected 16.0%: r < 0.9087
+Expected 50.0%: r < 1.3672
+Expected 84.0%: r < 2.1574
+Expected 97.5%: r < 3.3605
+
+Done in 0.73 min (cpu), 0.73 min (real)

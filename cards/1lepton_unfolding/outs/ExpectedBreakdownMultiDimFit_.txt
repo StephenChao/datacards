@@ -1,5 +1,0 @@
- <<< Combine >>> 
- <<< v10.0.1 >>>
-Missing datacard file
-Usage: combine [options]
-Use combine --help to get a list of all the allowed methods and options
