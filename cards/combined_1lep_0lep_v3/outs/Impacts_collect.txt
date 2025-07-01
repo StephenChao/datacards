@@ -1,0 +1,7 @@
+Have POIs: ['r']
+pass_str --expectSignal 1 --rMin -5 --rMax 5 --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 3 -v 1 -m 125 -d ./combined_withmasks.root
+Have parameters: 418
+File higgsCombine_paramFit_impacts_CMS_HWW_boosted_SR1b_mcstat_bin19.MultiDimFit.mH125.root did not contain a sufficient number of entries, skipping
+File higgsCombine_paramFit_impacts_CMS_HWW_boosted_jms_2016APV.MultiDimFit.mH125.root did not contain a sufficient number of entries, skipping
+File higgsCombine_paramFit_impacts_CMS_res_j_2016APV.MultiDimFit.mH125.root did not contain a sufficient number of entries, skipping
+Missing inputs: CMS_HWW_boosted_SR1b_mcstat_bin19,CMS_HWW_boosted_jms_2016APV,CMS_res_j_2016APV
