@@ -1,0 +1,15 @@
+Have POIs: ['r']
+pass_str --expectSignal 1 --rMin -6 --rMax 4 --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 3 -v 1 -m 125 -d ./combined_withmasks.root
+Have parameters: 418
+File higgsCombine_paramFit_impacts_CMS_HWW_boosted_CR1_mcstat_bin6.MultiDimFit.mH125.root did not contain a sufficient number of entries, skipping
+File higgsCombine_paramFit_impacts_CMS_HWW_boosted_SR1a_mcstat_bin2.MultiDimFit.mH125.root did not contain a sufficient number of entries, skipping
+File higgsCombine_paramFit_impacts_CMS_HWW_boosted_SR2a_wjets_mcstat_bin18.MultiDimFit.mH125.root did not contain a sufficient number of entries, skipping
+File higgsCombine_paramFit_impacts_CMS_HWW_boosted_SR2a_wjets_mcstat_bin5.MultiDimFit.mH125.root did not contain a sufficient number of entries, skipping
+File higgsCombine_paramFit_impacts_CMS_HWW_boosted_SR2b_mcstat_bin6.MultiDimFit.mH125.root did not contain a sufficient number of entries, skipping
+File higgsCombine_paramFit_impacts_CMS_HWW_boosted_SR2b_mcstat_bin8.MultiDimFit.mH125.root did not contain a sufficient number of entries, skipping
+File higgsCombine_paramFit_impacts_CMS_HWW_boosted_ggFpt250to350_mcstat_bin7.MultiDimFit.mH125.root did not contain a sufficient number of entries, skipping
+File higgsCombine_paramFit_impacts_CMS_HWW_boosted_ggFpt500toInf_mcstat_bin0.MultiDimFit.mH125.root did not contain a sufficient number of entries, skipping
+File higgsCombine_paramFit_impacts_CMS_res_j_2016APV.MultiDimFit.mH125.root did not contain a sufficient number of entries, skipping
+File higgsCombine_paramFit_impacts_QCDscale_rest_bkg.MultiDimFit.mH125.root did not contain a sufficient number of entries, skipping
+File higgsCombine_paramFit_impacts_lumi_13TeV_correlated.MultiDimFit.mH125.root did not contain a sufficient number of entries, skipping
+Missing inputs: CMS_HWW_boosted_CR1_mcstat_bin6,CMS_HWW_boosted_SR1a_mcstat_bin2,CMS_HWW_boosted_SR2a_wjets_mcstat_bin18,CMS_HWW_boosted_SR2a_wjets_mcstat_bin5,CMS_HWW_boosted_SR2b_mcstat_bin6,CMS_HWW_boosted_SR2b_mcstat_bin8,CMS_HWW_boosted_ggFpt250to350_mcstat_bin7,CMS_HWW_boosted_ggFpt500toInf_mcstat_bin0,CMS_res_j_2016APV,QCDscale_rest_bkg,lumi_13TeV_correlated

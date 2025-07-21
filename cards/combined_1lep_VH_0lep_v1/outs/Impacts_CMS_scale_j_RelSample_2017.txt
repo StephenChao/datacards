@@ -1,0 +1,16 @@
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+   Options for Robust Minimizer :: 
+        Tolerance  3
+        Strategy   0
+        Type,Algo  Minuit2,Migrad
+>>> method used is MultiDimFit
+>>> 0 out of 12 channels masked
+
+SimNLL created with 12 channels, 0 generic constraints, 358 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ --- MultiDimFit ---
+Parameter impacts: 
+  Parameter                  :   Best-fit               r            
+  CMS_scale_j_RelSample_2017 :   -0.092  -0.929/+0.972  +0.030/-0.004
+Done in 1.52 min (cpu), 4.54 min (real)

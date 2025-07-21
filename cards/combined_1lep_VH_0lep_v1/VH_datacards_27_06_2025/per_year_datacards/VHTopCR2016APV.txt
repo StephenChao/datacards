@@ -1,0 +1,55 @@
+# Datacard for <Channel (VHTopCR2016APV) instance at 0x7f74a82a3790> generated on 2025-06-25 05:30:54.696966
+imax 1 # number of categories ('bins' but here we are using shape templates)
+jmax 2 # number of samples minus 1
+kmax 44 # number of nuisance parameters
+shapes * VHTopCR2016APV shapes_VH_TopCR_2016APV.root shapes_VH_TopCR_2016APV:VHTopCR2016APV_$PROCESS shapes_VH_TopCR_2016APV:VHTopCR2016APV_$PROCESS_$SYSTEMATIC
+bin VHTopCR2016APV
+observation 26.000
+bin                                               VHTopCR2016APV  VHTopCR2016APV  VHTopCR2016APV
+process                                                    wjets           ttbar       singletop
+process                                                        1               2               3
+rate                                                       1.295          11.598           0.726
+CMS_HWW_VH_boosted_jmr_ttbar_2016APV lnN                       -          0.9575          0.8151
+CMS_HWW_VH_boosted_jmr_wjets_2016APV lnN           0.9786/1.0000               -               -
+CMS_HWW_VH_boosted_jms_ttbar_2016APV lnN                       -          0.9969               -
+CMS_HWW_boosted_TopPtReweight lnN                              -   0.9156/1.0946               -
+CMS_HWW_boosted_V_tag_eff lnN                                  -   0.9460/1.0556   0.9290/1.0800
+CMS_HWW_boosted_btagSFbcCorrelated lnN                    1.0452          0.9798          1.1040
+CMS_HWW_boosted_btagSFbc_2016APV lnN                      1.0535          0.9798          1.1367
+CMS_HWW_boosted_btagSFlightCorrelated lnN                 1.0427          0.9799          0.9241
+CMS_HWW_boosted_btagSFlight_2016APV lnN                   1.0473          0.9799          0.9241
+CMS_HWW_boosted_ele_identification_2016APV lnN            1.0137          1.0000          1.0000
+CMS_HWW_boosted_ele_reconstruction_2016APV lnN            1.0137          1.0000          1.0000
+CMS_HWW_boosted_ele_trigger_stat_unc_2016APV lnN   1.0012/1.0306          1.0039          0.9954
+CMS_HWW_boosted_ele_trigger_syst_unc lnN                  1.0500          1.0500          1.0500
+CMS_HWW_boosted_miniisolation_SF_unc lnN           0.9800/1.0200   0.9800/1.0200   0.9800/1.0200
+CMS_HWW_boosted_mu_identification_syst lnN                1.0000          1.0000          1.0000
+CMS_HWW_boosted_mu_isolation lnN                          1.0000          1.0000               -
+CMS_HWW_boosted_mu_trigger lnN                            1.0000          1.0000          1.0000
+CMS_HWW_boosted_mu_trigger_iso lnN                        1.0000          1.0000               -
+CMS_l1_ecal_prefiring_2016APV lnN                         1.0202          1.0148          1.0084
+CMS_pileup_2016APV lnN                             1.0002/1.0542   0.9925/1.0213   0.9522/1.0301
+CMS_pileup_id lnN                                         1.0137               -               -
+CMS_res_j_2016APV lnN                                     0.9431          1.0090               -
+CMS_scale_j_Abs lnN                                0.8726/1.0137   0.9885/1.0169               -
+CMS_scale_j_Abs_2016APV lnN                        0.8726/1.0137   0.9754/1.0372               -
+CMS_scale_j_BBEC1 lnN                                     1.0137          1.0007               -
+CMS_scale_j_BBEC1_2016APV lnN                      0.9381/1.0137          1.0074               -
+CMS_scale_j_EC2 lnN                                       1.0137               -               -
+CMS_scale_j_EC2_2016APV lnN                               1.0137          1.0017               -
+CMS_scale_j_FlavQCD lnN                            0.8726/1.0050   0.9931/1.0267               -
+CMS_scale_j_HF lnN                                        1.0137          1.0037               -
+CMS_scale_j_HF_2016APV lnN                                1.0137               -               -
+CMS_scale_j_RelBal lnN                                    1.0137          1.0015               -
+CMS_scale_j_RelSample_2016APV lnN                  0.8726/1.0050          1.0030               -
+PDF_ttbar_ACCEPT_CMS_HWW_boosted lnN                           -   0.9707/1.0294               -
+VHTopCR2016APV_singletop_mcstat lnN                            -               -          1.5589
+VHTopCR2016APV_ttbar_mcstat lnN                                -          1.0622               -
+VHTopCR2016APV_wjets_mcstat lnN                           1.3473               -               -
+lumi_13TeV_2016 lnN                                       1.0100          1.0100          1.0100
+lumi_13TeV_correlated lnN                                 1.0060          1.0060          1.0060
+ps_fsr_singletop lnN                                           -               -   0.8870/0.9244
+ps_fsr_ttbar lnN                                               -   0.9319/1.0488               -
+ps_isr_singletop lnN                                           -               -   0.8926/1.1397
+ps_isr_ttbar lnN                                               -          1.0013               -
+unclustered_Energy lnN                                    0.9997   1.0056/1.0415               -

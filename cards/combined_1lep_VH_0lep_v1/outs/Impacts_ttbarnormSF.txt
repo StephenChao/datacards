@@ -1,0 +1,17 @@
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+   Options for Robust Minimizer :: 
+        Tolerance  3
+        Strategy   0
+        Type,Algo  Minuit2,Migrad
+>>> method used is MultiDimFit
+>>> 0 out of 12 channels masked
+
+SimNLL created with 12 channels, 0 generic constraints, 358 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+Error: minimization failed at ttbarnormSF = 0.825987
+
+ --- MultiDimFit ---
+Parameter impacts: 
+  Parameter   :   Best-fit               r            
+  ttbarnormSF :   +0.987  +0.000/+0.191  +0.004/-0.186
+Done in 1.47 min (cpu), 2.46 min (real)
