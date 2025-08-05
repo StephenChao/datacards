@@ -217,19 +217,19 @@ fi
 
 if [ $bfit = 1 ]; then
     # echo "Expected NLL scan, split to stat. + syst."
-    # ### Expected breakdown
-    # combine -M MultiDimFit -t -1 --expectSignal 1 -m 125 -d ${wsm}.root --rMax 10 --rMin -5 \
-    # --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.1  \
-    # -n SnapshotExpected --algo grid --points 100  2>&1 | tee $outsdir/ExpectedScanMultiDimFit.txt
-    # combine -M MultiDimFit -t -1 --expectSignal 1 -m 125 -d ${wsm}.root --rMax 10 --rMin -5 \
-    # --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.1  \
-    # -n BestfitSnapshotExpected --saveWorkspace 2>&1 | tee $outsdir/ExpectedBestfitMultiDimFit.txt
-    # combine -M MultiDimFit -t -1 --expectSignal 1 higgsCombineBestfitSnapshotExpected.MultiDimFit.mH125.root -n ExpectedfreezeAll \
-    # -m 125 --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.1 \
-    # --rMin -5 --rMax 10 --algo grid --points 100 \
-    # --freezeParameters allConstrainedNuisances --snapshotName MultiDimFit 2>&1 | tee $outsdir/ExpectedBreakdownMultiDimFit.txt
+    ### Expected breakdown
+    combine -M MultiDimFit -t -1 --expectSignal 1 -m 125 -d ${wsm}.root --rMax 10 --rMin -5 \
+    --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.1  \
+    -n SnapshotExpected --algo grid --points 100  2>&1 | tee $outsdir/ExpectedScanMultiDimFit.txt
+    combine -M MultiDimFit -t -1 --expectSignal 1 -m 125 -d ${wsm}.root --rMax 10 --rMin -5 \
+    --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.1  \
+    -n BestfitSnapshotExpected --saveWorkspace 2>&1 | tee $outsdir/ExpectedBestfitMultiDimFit.txt
+    combine -M MultiDimFit -t -1 --expectSignal 1 higgsCombineBestfitSnapshotExpected.MultiDimFit.mH125.root -n ExpectedfreezeAll \
+    -m 125 --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.1 \
+    --rMin -5 --rMax 10 --algo grid --points 100 \
+    --freezeParameters allConstrainedNuisances --snapshotName MultiDimFit 2>&1 | tee $outsdir/ExpectedBreakdownMultiDimFit.txt
     
-    # plot1DScan.py higgsCombineSnapshotExpected.MultiDimFit.mH125.root --main-label "With systematics" --main-color 1 --others higgsCombineExpectedfreezeAll.MultiDimFit.mH125.root:"Stat-only":2 -o ExpectedBreakdown --breakdown Syst,Stat
+    plot1DScan.py higgsCombineSnapshotExpected.MultiDimFit.mH125.root --main-label "With systematics" --main-color 1 --others higgsCombineExpectedfreezeAll.MultiDimFit.mH125.root:"Stat-only":2 -o ExpectedBreakdown --breakdown Syst,Stat
 
     echo "Observed NLL scan, split to stat. + syst."
     ### Observed breakdown
@@ -248,10 +248,10 @@ if [ $bfit = 1 ]; then
     plot1DScan.py higgsCombineSnapshotObserved.MultiDimFit.mH125.root --main-label "With systematics" --main-color 1 --others higgsCombineObservedfreezeAll.MultiDimFit.mH125.root:"Stat-only":2 -o ObservedBreakdown --breakdown Syst,Stat
 
     # Observed total scan, if don't split to stat. + syst.
-    # combine -M MultiDimFit  -m 125 -d ${wsm}.root --rMax 15 --rMin -15 \
-    # --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.01  \
-    # -n SnapshotObserved --algo grid --points 100  2>&1 | tee $outsdir/SingleObservedMultiDimFit.txt
-    # plot1DScan.py higgsCombineSnapshotObserved.MultiDimFit.mH125.root -o single_scan_observed --main-label "Observed"
+    combine -M MultiDimFit  -m 125 -d ${wsm}.root --rMax 15 --rMin -15 \
+    --cminDefaultMinimizerStrategy 0 --cminDefaultMinimizerTolerance 0.01  \
+    -n SnapshotObserved --algo grid --points 100  2>&1 | tee $outsdir/SingleObservedMultiDimFit.txt
+    plot1DScan.py higgsCombineSnapshotObserved.MultiDimFit.mH125.root -o single_scan_observed --main-label "Observed"
 
 fi
 
