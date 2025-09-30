@@ -4,7 +4,7 @@
 void stxs()
 {
 //=========Macro generated from canvas: stxs/stxs
-//=========  (Mon Sep 29 19:47:35 2025) by ROOT version 6.30/07
+//=========  (Mon Sep 29 19:44:06 2025) by ROOT version 6.30/07
    TCanvas *stxs = new TCanvas("stxs", "stxs",0,0,800,600);
    gStyle->SetOptStat(0);
    stxs->SetHighLightColor(2);
@@ -18,11 +18,10 @@ void stxs()
    TPad *pad1__0 = new TPad("pad1", "pad1",0,0.4,0.6,1);
    pad1__0->Draw();
    pad1__0->cd();
-   pad1__0->Range(-1.042169,-0.2352941,2.572289,4.470588);
+   pad1__0->Range(-1.042169,-3294.118,2.572289,2588.235);
    pad1__0->SetFillColor(0);
    pad1__0->SetBorderMode(0);
    pad1__0->SetBorderSize(2);
-   pad1__0->SetLogy();
    pad1__0->SetLeftMargin(0.15);
    pad1__0->SetRightMargin(0.02);
    pad1__0->SetBottomMargin(0.05);
@@ -30,8 +29,8 @@ void stxs()
    pad1__0->SetFrameBorderMode(0);
    
    TH1D *h_abs_ggf__1 = new TH1D("h_abs_ggf__1","",3,-0.5,2.5);
-   h_abs_ggf__1->SetMinimum(1);
-   h_abs_ggf__1->SetMaximum(10000);
+   h_abs_ggf__1->SetMinimum(-3000);
+   h_abs_ggf__1->SetMaximum(2000);
    h_abs_ggf__1->SetStats(0);
    h_abs_ggf__1->SetLineColor(0);
    h_abs_ggf__1->SetLineWidth(3);
@@ -138,8 +137,8 @@ void stxs()
    grae->SetMarkerStyle(20);
    
    TH1F *Graph_Graph13003 = new TH1F("Graph_Graph13003","Graph",100,0,2.2);
-   Graph_Graph13003->SetMinimum(0.1875536);
-   Graph_Graph13003->SetMaximum(187.5536);
+   Graph_Graph13003->SetMinimum(-3073.306);
+   Graph_Graph13003->SetMaximum(298.0473);
    Graph_Graph13003->SetDirectory(nullptr);
    Graph_Graph13003->SetStats(0);
 
@@ -255,7 +254,7 @@ void stxs()
    TPad *pad2__1 = new TPad("pad2", "pad2",0,0,0.6,0.4);
    pad2__1->Draw();
    pad2__1->cd();
-   pad2__1->Range(-1.042169,-13.57155,2.572289,15.00029);
+   pad2__1->Range(-1.042169,-20.42871,2.572289,11.00031);
    pad2__1->SetFillColor(0);
    pad2__1->SetBorderMode(0);
    pad2__1->SetBorderSize(2);
@@ -267,8 +266,8 @@ void stxs()
    pad2__1->SetFrameBorderMode(0);
    
    TH1D *h_rat_ggf__2 = new TH1D("h_rat_ggf__2","",3,-0.5,2.5);
-   h_rat_ggf__2->SetMinimum(-5);
-   h_rat_ggf__2->SetMaximum(15);
+   h_rat_ggf__2->SetMinimum(-11);
+   h_rat_ggf__2->SetMaximum(11);
    h_rat_ggf__2->SetStats(0);
 
    ci = TColor::GetColor("#000099");
@@ -397,11 +396,10 @@ void stxs()
    TPad *pad3__2 = new TPad("pad3", "pad3",0.6,0.4,1,1);
    pad3__2->Draw();
    pad3__2->cd();
-   pad3__2->Range(2.475904,-0.2352941,3.680723,4.470588);
+   pad3__2->Range(2.475904,-3294.118,3.680723,2588.235);
    pad3__2->SetFillColor(0);
    pad3__2->SetBorderMode(0);
    pad3__2->SetBorderSize(2);
-   pad3__2->SetLogy();
    pad3__2->SetLeftMargin(0.02);
    pad3__2->SetRightMargin(0.15);
    pad3__2->SetBottomMargin(0.05);
@@ -409,8 +407,8 @@ void stxs()
    pad3__2->SetFrameBorderMode(0);
    
    TH1D *h_abs_vbf__3 = new TH1D("h_abs_vbf__3","",1,2.5,3.5);
-   h_abs_vbf__3->SetMinimum(1);
-   h_abs_vbf__3->SetMaximum(10000);
+   h_abs_vbf__3->SetMinimum(-3000);
+   h_abs_vbf__3->SetMaximum(2000);
    h_abs_vbf__3->SetStats(0);
    h_abs_vbf__3->SetLineColor(0);
    h_abs_vbf__3->SetLineWidth(3);
@@ -513,8 +511,8 @@ void stxs()
    grae->SetMarkerStyle(20);
    
    TH1F *Graph_Graph13009 = new TH1F("Graph_Graph13009","Graph",100,2.9,4.1);
-   Graph_Graph13009->SetMinimum(5.414206);
-   Graph_Graph13009->SetMaximum(104.1884);
+   Graph_Graph13009->SetMinimum(-65.09408);
+   Graph_Graph13009->SetMaximum(109.8416);
    Graph_Graph13009->SetDirectory(nullptr);
    Graph_Graph13009->SetStats(0);
 
@@ -562,7 +560,7 @@ void stxs()
    TPad *pad4__3 = new TPad("pad4", "pad4",0.6,0,1,0.4);
    pad4__3->Draw();
    pad4__3->cd();
-   pad4__3->Range(2.475904,-13.57155,3.680723,15.00029);
+   pad4__3->Range(2.475904,-20.42871,3.680723,11.00031);
    pad4__3->SetFillColor(0);
    pad4__3->SetBorderMode(0);
    pad4__3->SetBorderSize(2);
@@ -574,8 +572,8 @@ void stxs()
    pad4__3->SetFrameBorderMode(0);
    
    TH1D *h_rat_vbf__4 = new TH1D("h_rat_vbf__4","",1,2.5,3.5);
-   h_rat_vbf__4->SetMinimum(-5);
-   h_rat_vbf__4->SetMaximum(15);
+   h_rat_vbf__4->SetMinimum(-11);
+   h_rat_vbf__4->SetMaximum(11);
    h_rat_vbf__4->SetStats(0);
 
    ci = TColor::GetColor("#000099");
